@@ -1,0 +1,3569 @@
+diff --git a/package-lock.json b/package-lock.json
+index e8f5dac..c80bf08 100644
+--- a/package-lock.json
++++ b/package-lock.json
+@@ -39,7 +39,6 @@
+       "cpu": [
+         "ppc64"
+       ],
+-      "dev": true,
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -56,7 +55,6 @@
+       "cpu": [
+         "arm"
+       ],
+-      "dev": true,
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -73,7 +71,6 @@
+       "cpu": [
+         "arm64"
+       ],
+-      "dev": true,
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -90,7 +87,6 @@
+       "cpu": [
+         "x64"
+       ],
+-      "dev": true,
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -107,7 +103,6 @@
+       "cpu": [
+         "arm64"
+       ],
+-      "dev": true,
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -124,7 +119,6 @@
+       "cpu": [
+         "x64"
+       ],
+-      "dev": true,
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -141,7 +135,6 @@
+       "cpu": [
+         "arm64"
+       ],
+-      "dev": true,
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -158,7 +151,6 @@
+       "cpu": [
+         "x64"
+       ],
+-      "dev": true,
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -175,7 +167,6 @@
+       "cpu": [
+         "arm"
+       ],
+-      "dev": true,
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -192,7 +183,6 @@
+       "cpu": [
+         "arm64"
+       ],
+-      "dev": true,
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -209,7 +199,6 @@
+       "cpu": [
+         "ia32"
+       ],
+-      "dev": true,
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -226,7 +215,6 @@
+       "cpu": [
+         "loong64"
+       ],
+-      "dev": true,
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -243,7 +231,6 @@
+       "cpu": [
+         "mips64el"
+       ],
+-      "dev": true,
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -260,7 +247,6 @@
+       "cpu": [
+         "ppc64"
+       ],
+-      "dev": true,
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -277,7 +263,6 @@
+       "cpu": [
+         "riscv64"
+       ],
+-      "dev": true,
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -294,7 +279,6 @@
+       "cpu": [
+         "s390x"
+       ],
+-      "dev": true,
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -311,7 +295,6 @@
+       "cpu": [
+         "x64"
+       ],
+-      "dev": true,
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -328,7 +311,6 @@
+       "cpu": [
+         "arm64"
+       ],
+-      "dev": true,
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -345,7 +327,6 @@
+       "cpu": [
+         "x64"
+       ],
+-      "dev": true,
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -362,7 +343,6 @@
+       "cpu": [
+         "arm64"
+       ],
+-      "dev": true,
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -379,7 +359,6 @@
+       "cpu": [
+         "x64"
+       ],
+-      "dev": true,
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -396,7 +375,6 @@
+       "cpu": [
+         "arm64"
+       ],
+-      "dev": true,
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -413,7 +391,6 @@
+       "cpu": [
+         "x64"
+       ],
+-      "dev": true,
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -430,7 +407,6 @@
+       "cpu": [
+         "arm64"
+       ],
+-      "dev": true,
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -447,7 +423,6 @@
+       "cpu": [
+         "ia32"
+       ],
+-      "dev": true,
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -464,7 +439,6 @@
+       "cpu": [
+         "x64"
+       ],
+-      "dev": true,
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -588,6 +562,166 @@
+       "version": "1.1.2",
+       "license": "BSD-3-Clause"
+     },
++    "node_modules/@rolldown/binding-android-arm-eabi": {
++      "version": "1.2.15",
++      "resolved": "https://registry.npmjs.org/@rolldown/binding-android-arm-eabi/-/binding-android-arm-eabi-1.2.15.tgz",
++      "integrity": "sha512-aLcgK9gIJ3YRvrrtfSBbRa27F5WrpiTaPulnFpsHPxpUHgFlSgnU4854MHwoRGEBhfRJDWCS2WQ7lIjskE9Olw==",
++      "cpu": [
++        "arm"
++      ],
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "android"
++      ],
++      "engines": {
++        "node": "^20.19.0 || >=22.12.0"
++      }
++    },
++    "node_modules/@rolldown/binding-android-arm64": {
++      "version": "1.2.15",
++      "resolved": "https://registry.npmjs.org/@rolldown/binding-android-arm64/-/binding-android-arm64-1.2.15.tgz",
++      "integrity": "sha512-xD7DdZCrbThKuxNg7ooQmvp07ys4J/pnSEMTG3/OdOWl6daC67m/Q4fL78sRHMxTH/N4fGUbYhcPM0MF5WFHkg==",
++      "cpu": [
++        "arm64"
++      ],
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "android"
++      ],
++      "engines": {
++        "node": "^20.19.0 || >=22.12.0"
++      }
++    },
++    "node_modules/@rolldown/binding-darwin-arm64": {
++      "version": "1.2.15",
++      "resolved": "https://registry.npmjs.org/@rolldown/binding-darwin-arm64/-/binding-darwin-arm64-1.2.15.tgz",
++      "integrity": "sha512-m2WuQ6r0B4OTYxyPpNLtXaMRbRDUbG8YQV2Q3KTdSSK8Th6KHCnC8jVCJt8bvYeSB5WivkkNbc85mKadaSdOxA==",
++      "cpu": [
++        "arm64"
++      ],
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "darwin"
++      ],
++      "engines": {
++        "node": "^20.19.0 || >=22.12.0"
++      }
++    },
++    "node_modules/@rolldown/binding-darwin-x64": {
++      "version": "1.2.15",
++      "resolved": "https://registry.npmjs.org/@rolldown/binding-darwin-x64/-/binding-darwin-x64-1.2.15.tgz",
++      "integrity": "sha512-5RtnsHM36nodM9WbMy+zip0LGS/G+y5wro5RHrpOlr4ac24+1zSi9kiV2MP1myZeZ/ifEHfulQcWjnAXzc2C2A==",
++      "cpu": [
++        "x64"
++      ],
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "darwin"
++      ],
++      "engines": {
++        "node": "^20.19.0 || >=22.12.0"
++      }
++    },
++    "node_modules/@rolldown/binding-freebsd-x64": {
++      "version": "1.2.15",
++      "resolved": "https://registry.npmjs.org/@rolldown/binding-freebsd-x64/-/binding-freebsd-x64-1.2.15.tgz",
++      "integrity": "sha512-g3l09pyFqhu+135JKkbkwiKGQmwU5hUMUPJ4VdBADvuqR8d33L6H578rh8m7rtxbdp+VmX/+nzI7nvhSZlzpUQ==",
++      "cpu": [
++        "x64"
++      ],
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "freebsd"
++      ],
++      "engines": {
++        "node": "^20.19.0 || >=22.12.0"
++      }
++    },
++    "node_modules/@rolldown/binding-linux-arm-gnueabihf": {
++      "version": "1.2.15",
++      "resolved": "https://registry.npmjs.org/@rolldown/binding-linux-arm-gnueabihf/-/binding-linux-arm-gnueabihf-1.2.15.tgz",
++      "integrity": "sha512-nIe3VugI97nGQtspPxDqA4sXMUpeiocKIP/CqpY/u/vgbT+alX+cVxu1C/oVBPKg4feNTmYovE91v4DgXvXNwQ==",
++      "cpu": [
++        "arm"
++      ],
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": "^20.19.0 || >=22.12.0"
++      }
++    },
++    "node_modules/@rolldown/binding-linux-arm64-gnu": {
++      "version": "1.2.15",
++      "resolved": "https://registry.npmjs.org/@rolldown/binding-linux-arm64-gnu/-/binding-linux-arm64-gnu-1.2.15.tgz",
++      "integrity": "sha512-iTBjXx+B5QSvgI89lJfmqh4wTh8NabR1YZIIN3hNx4zSG0EVfVqkOvLulNpG4251pbd6/IAmZ/LefVk1Y4rPhw==",
++      "cpu": [
++        "arm64"
++      ],
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": "^20.19.0 || >=22.12.0"
++      }
++    },
++    "node_modules/@rolldown/binding-linux-arm64-musl": {
++      "version": "1.2.15",
++      "resolved": "https://registry.npmjs.org/@rolldown/binding-linux-arm64-musl/-/binding-linux-arm64-musl-1.2.15.tgz",
++      "integrity": "sha512-uN26XOnVR7rqQupG3V9oAG2EGGatWjcJHOeDOHUFCh4TBWmP2tHTFoVN13aYbwfm0aHqJAEmcwhAu6sooIjfqQ==",
++      "cpu": [
++        "arm64"
++      ],
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": "^20.19.0 || >=22.12.0"
++      }
++    },
++    "node_modules/@rolldown/binding-linux-ppc64-gnu": {
++      "version": "1.2.15",
++      "resolved": "https://registry.npmjs.org/@rolldown/binding-linux-ppc64-gnu/-/binding-linux-ppc64-gnu-1.2.15.tgz",
++      "integrity": "sha512-9nWkcdd+H+XhaA3fQIwpHnKIrfx/PQ6rO0pivr78Og07tXlUlctBBJoEYLPfhTmCR/QxEVdn6uPjHV5SymPhdw==",
++      "cpu": [
++        "ppc64"
++      ],
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": "^20.19.0 || >=22.12.0"
++      }
++    },
++    "node_modules/@rolldown/binding-linux-s390x-gnu": {
++      "version": "1.2.15",
++      "resolved": "https://registry.npmjs.org/@rolldown/binding-linux-s390x-gnu/-/binding-linux-s390x-gnu-1.2.15.tgz",
++      "integrity": "sha512-Ggh0ciFjLwIusLSLz7LZYEaGdxOAUJXI+Qu5JCbhPJJHEt8vP+IjRATTJheiJsdzzTYgUiHUiw3X1Ea3ZpMBdA==",
++      "cpu": [
++        "s390x"
++      ],
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": "^20.19.0 || >=22.12.0"
++      }
++    },
+     "node_modules/@rolldown/binding-linux-x64-gnu": {
+       "version": "1.2.15",
+       "cpu": [
+@@ -616,6 +750,54 @@
+         "node": "^20.19.0 || >=22.12.0"
+       }
+     },
++    "node_modules/@rolldown/binding-openharmony-arm64": {
++      "version": "1.2.15",
++      "resolved": "https://registry.npmjs.org/@rolldown/binding-openharmony-arm64/-/binding-openharmony-arm64-1.2.15.tgz",
++      "integrity": "sha512-MyzC5Hrv/sm+Z7TSGKP/j8001RO2xQm1zOpCNVL4j0cY/VhBZviludA2YFQ7i4lH6ZAXxQm0lcMdBzM+99mE7w==",
++      "cpu": [
++        "arm64"
++      ],
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "openharmony"
++      ],
++      "engines": {
++        "node": "^20.19.0 || >=22.12.0"
++      }
++    },
++    "node_modules/@rolldown/binding-win32-arm64-msvc": {
++      "version": "1.2.15",
++      "resolved": "https://registry.npmjs.org/@rolldown/binding-win32-arm64-msvc/-/binding-win32-arm64-msvc-1.2.15.tgz",
++      "integrity": "sha512-+PgYiS+AH5omy6L45ZLxybasauJaj3M8buoT83D+nzPmCayXlxUV9hydhciCKVyIg0B/v0BtXPDE1uGqNwCPpg==",
++      "cpu": [
++        "arm64"
++      ],
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "win32"
++      ],
++      "engines": {
++        "node": "^20.19.0 || >=22.12.0"
++      }
++    },
++    "node_modules/@rolldown/binding-win32-x64-msvc": {
++      "version": "1.2.15",
++      "resolved": "https://registry.npmjs.org/@rolldown/binding-win32-x64-msvc/-/binding-win32-x64-msvc-1.2.15.tgz",
++      "integrity": "sha512-HFZd2QNQYn1JbIi+Hpd7H+r/lkWxcfIu28nirZ6eCn2LafuvmExMlb/P96Sfx5tf7pPArw39IdhmCF8vmV+NhQ==",
++      "cpu": [
++        "x64"
++      ],
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "win32"
++      ],
++      "engines": {
++        "node": "^20.19.0 || >=22.12.0"
++      }
++    },
+     "node_modules/@rolldown/pluginutils": {
+       "version": "1.0.1",
+       "license": "MIT"
+@@ -660,15 +842,17 @@
+         "lightningcss-win32-x64-msvc": "1.32.0"
+       }
+     },
+-    "node_modules/@tailwindcss/node/node_modules/lightningcss/node_modules/lightningcss-linux-x64-gnu": {
++    "node_modules/@tailwindcss/node/node_modules/lightningcss-android-arm64": {
+       "version": "1.32.0",
++      "resolved": "https://registry.npmjs.org/lightningcss-android-arm64/-/lightningcss-android-arm64-1.32.0.tgz",
++      "integrity": "sha512-YK7/ClTt4kAK0vo6w3X+Pnm0D2cf2vPHbhOXdoNti1Ga0al1P4TBZhwjATvjNwLEBCnKvjJc2jQgHXH0NEwlAg==",
+       "cpu": [
+-        "x64"
++        "arm64"
+       ],
+       "license": "MPL-2.0",
+       "optional": true,
+       "os": [
+-        "linux"
++        "android"
+       ],
+       "engines": {
+         "node": ">= 12.0.0"
+@@ -678,15 +862,17 @@
+         "url": "https://opencollective.com/parcel"
+       }
+     },
+-    "node_modules/@tailwindcss/node/node_modules/lightningcss/node_modules/lightningcss-linux-x64-musl": {
++    "node_modules/@tailwindcss/node/node_modules/lightningcss-darwin-arm64": {
+       "version": "1.32.0",
++      "resolved": "https://registry.npmjs.org/lightningcss-darwin-arm64/-/lightningcss-darwin-arm64-1.32.0.tgz",
++      "integrity": "sha512-RzeG9Ju5bag2Bv1/lwlVJvBE3q6TtXskdZLLCyfg5pt+HLz9BqlICO7LZM7VHNTTn/5PRhHFBSjk5lc4cmscPQ==",
+       "cpu": [
+-        "x64"
++        "arm64"
+       ],
+       "license": "MPL-2.0",
+       "optional": true,
+       "os": [
+-        "linux"
++        "darwin"
+       ],
+       "engines": {
+         "node": ">= 12.0.0"
+@@ -696,53 +882,402 @@
+         "url": "https://opencollective.com/parcel"
+       }
+     },
+-    "node_modules/@tailwindcss/oxide": {
+-      "version": "4.3.3",
+-      "license": "MIT",
++    "node_modules/@tailwindcss/node/node_modules/lightningcss-darwin-x64": {
++      "version": "1.32.0",
++      "resolved": "https://registry.npmjs.org/lightningcss-darwin-x64/-/lightningcss-darwin-x64-1.32.0.tgz",
++      "integrity": "sha512-U+QsBp2m/s2wqpUYT/6wnlagdZbtZdndSmut/NJqlCcMLTWp5muCrID+K5UJ6jqD2BFshejCYXniPDbNh73V8w==",
++      "cpu": [
++        "x64"
++      ],
++      "license": "MPL-2.0",
++      "optional": true,
++      "os": [
++        "darwin"
++      ],
+       "engines": {
+-        "node": ">= 20"
++        "node": ">= 12.0.0"
+       },
+-      "optionalDependencies": {
+-        "@tailwindcss/oxide-android-arm64": "4.3.3",
+-        "@tailwindcss/oxide-darwin-arm64": "4.3.3",
+-        "@tailwindcss/oxide-darwin-x64": "4.3.3",
+-        "@tailwindcss/oxide-freebsd-x64": "4.3.3",
+-        "@tailwindcss/oxide-linux-arm-gnueabihf": "4.3.3",
+-        "@tailwindcss/oxide-linux-arm64-gnu": "4.3.3",
+-        "@tailwindcss/oxide-linux-arm64-musl": "4.3.3",
+-        "@tailwindcss/oxide-linux-x64-gnu": "4.3.3",
+-        "@tailwindcss/oxide-linux-x64-musl": "4.3.3",
+-        "@tailwindcss/oxide-wasm32-wasi": "4.3.3",
+-        "@tailwindcss/oxide-win32-arm64-msvc": "4.3.3",
+-        "@tailwindcss/oxide-win32-x64-msvc": "4.3.3"
++      "funding": {
++        "type": "opencollective",
++        "url": "https://opencollective.com/parcel"
+       }
+     },
+-    "node_modules/@tailwindcss/oxide-linux-x64-gnu": {
+-      "version": "4.3.3",
++    "node_modules/@tailwindcss/node/node_modules/lightningcss-freebsd-x64": {
++      "version": "1.32.0",
++      "resolved": "https://registry.npmjs.org/lightningcss-freebsd-x64/-/lightningcss-freebsd-x64-1.32.0.tgz",
++      "integrity": "sha512-JCTigedEksZk3tHTTthnMdVfGf61Fky8Ji2E4YjUTEQX14xiy/lTzXnu1vwiZe3bYe0q+SpsSH/CTeDXK6WHig==",
+       "cpu": [
+         "x64"
+       ],
+-      "license": "MIT",
++      "license": "MPL-2.0",
+       "optional": true,
+       "os": [
+-        "linux"
++        "freebsd"
+       ],
+       "engines": {
+-        "node": ">= 20"
++        "node": ">= 12.0.0"
++      },
++      "funding": {
++        "type": "opencollective",
++        "url": "https://opencollective.com/parcel"
+       }
+     },
+-    "node_modules/@tailwindcss/oxide-linux-x64-musl": {
+-      "version": "4.3.3",
++    "node_modules/@tailwindcss/node/node_modules/lightningcss-linux-arm-gnueabihf": {
++      "version": "1.32.0",
++      "resolved": "https://registry.npmjs.org/lightningcss-linux-arm-gnueabihf/-/lightningcss-linux-arm-gnueabihf-1.32.0.tgz",
++      "integrity": "sha512-x6rnnpRa2GL0zQOkt6rts3YDPzduLpWvwAF6EMhXFVZXD4tPrBkEFqzGowzCsIWsPjqSK+tyNEODUBXeeVHSkw==",
+       "cpu": [
+-        "x64"
++        "arm"
+       ],
+-      "license": "MIT",
++      "license": "MPL-2.0",
+       "optional": true,
+       "os": [
+         "linux"
+       ],
+       "engines": {
+-        "node": ">= 20"
++        "node": ">= 12.0.0"
++      },
++      "funding": {
++        "type": "opencollective",
++        "url": "https://opencollective.com/parcel"
++      }
++    },
++    "node_modules/@tailwindcss/node/node_modules/lightningcss-linux-arm64-gnu": {
++      "version": "1.32.0",
++      "resolved": "https://registry.npmjs.org/lightningcss-linux-arm64-gnu/-/lightningcss-linux-arm64-gnu-1.32.0.tgz",
++      "integrity": "sha512-0nnMyoyOLRJXfbMOilaSRcLH3Jw5z9HDNGfT/gwCPgaDjnx0i8w7vBzFLFR1f6CMLKF8gVbebmkUN3fa/kQJpQ==",
++      "cpu": [
++        "arm64"
++      ],
++      "license": "MPL-2.0",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">= 12.0.0"
++      },
++      "funding": {
++        "type": "opencollective",
++        "url": "https://opencollective.com/parcel"
++      }
++    },
++    "node_modules/@tailwindcss/node/node_modules/lightningcss-linux-arm64-musl": {
++      "version": "1.32.0",
++      "resolved": "https://registry.npmjs.org/lightningcss-linux-arm64-musl/-/lightningcss-linux-arm64-musl-1.32.0.tgz",
++      "integrity": "sha512-UpQkoenr4UJEzgVIYpI80lDFvRmPVg6oqboNHfoH4CQIfNA+HOrZ7Mo7KZP02dC6LjghPQJeBsvXhJod/wnIBg==",
++      "cpu": [
++        "arm64"
++      ],
++      "license": "MPL-2.0",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">= 12.0.0"
++      },
++      "funding": {
++        "type": "opencollective",
++        "url": "https://opencollective.com/parcel"
++      }
++    },
++    "node_modules/@tailwindcss/node/node_modules/lightningcss-win32-arm64-msvc": {
++      "version": "1.32.0",
++      "resolved": "https://registry.npmjs.org/lightningcss-win32-arm64-msvc/-/lightningcss-win32-arm64-msvc-1.32.0.tgz",
++      "integrity": "sha512-8SbC8BR40pS6baCM8sbtYDSwEVQd4JlFTOlaD3gWGHfThTcABnNDBda6eTZeqbofalIJhFx0qKzgHJmcPTnGdw==",
++      "cpu": [
++        "arm64"
++      ],
++      "license": "MPL-2.0",
++      "optional": true,
++      "os": [
++        "win32"
++      ],
++      "engines": {
++        "node": ">= 12.0.0"
++      },
++      "funding": {
++        "type": "opencollective",
++        "url": "https://opencollective.com/parcel"
++      }
++    },
++    "node_modules/@tailwindcss/node/node_modules/lightningcss-win32-x64-msvc": {
++      "version": "1.32.0",
++      "resolved": "https://registry.npmjs.org/lightningcss-win32-x64-msvc/-/lightningcss-win32-x64-msvc-1.32.0.tgz",
++      "integrity": "sha512-Amq9B/SoZYdDi1kFrojnoqPLxYhQ4Wo5XiL8EVJrVsB8ARoC1PWW6VGtT0WKCemjy8aC+louJnjS7U18x3b06Q==",
++      "cpu": [
++        "x64"
++      ],
++      "license": "MPL-2.0",
++      "optional": true,
++      "os": [
++        "win32"
++      ],
++      "engines": {
++        "node": ">= 12.0.0"
++      },
++      "funding": {
++        "type": "opencollective",
++        "url": "https://opencollective.com/parcel"
++      }
++    },
++    "node_modules/@tailwindcss/node/node_modules/lightningcss/node_modules/lightningcss-linux-x64-gnu": {
++      "version": "1.32.0",
++      "cpu": [
++        "x64"
++      ],
++      "license": "MPL-2.0",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">= 12.0.0"
++      },
++      "funding": {
++        "type": "opencollective",
++        "url": "https://opencollective.com/parcel"
++      }
++    },
++    "node_modules/@tailwindcss/node/node_modules/lightningcss/node_modules/lightningcss-linux-x64-musl": {
++      "version": "1.32.0",
++      "cpu": [
++        "x64"
++      ],
++      "license": "MPL-2.0",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">= 12.0.0"
++      },
++      "funding": {
++        "type": "opencollective",
++        "url": "https://opencollective.com/parcel"
++      }
++    },
++    "node_modules/@tailwindcss/oxide": {
++      "version": "4.3.3",
++      "license": "MIT",
++      "engines": {
++        "node": ">= 20"
++      },
++      "optionalDependencies": {
++        "@tailwindcss/oxide-android-arm64": "4.3.3",
++        "@tailwindcss/oxide-darwin-arm64": "4.3.3",
++        "@tailwindcss/oxide-darwin-x64": "4.3.3",
++        "@tailwindcss/oxide-freebsd-x64": "4.3.3",
++        "@tailwindcss/oxide-linux-arm-gnueabihf": "4.3.3",
++        "@tailwindcss/oxide-linux-arm64-gnu": "4.3.3",
++        "@tailwindcss/oxide-linux-arm64-musl": "4.3.3",
++        "@tailwindcss/oxide-linux-x64-gnu": "4.3.3",
++        "@tailwindcss/oxide-linux-x64-musl": "4.3.3",
++        "@tailwindcss/oxide-wasm32-wasi": "4.3.3",
++        "@tailwindcss/oxide-win32-arm64-msvc": "4.3.3",
++        "@tailwindcss/oxide-win32-x64-msvc": "4.3.3"
++      }
++    },
++    "node_modules/@tailwindcss/oxide-android-arm64": {
++      "version": "4.3.3",
++      "resolved": "https://registry.npmjs.org/@tailwindcss/oxide-android-arm64/-/oxide-android-arm64-4.3.3.tgz",
++      "integrity": "sha512-Y85A2gmPSkl5Ve5qR86GL4HT509cFqQh1aes9p3sSkyTPwt0Pppf3GkwGe4JPACcRYjgJIEhQgM6dBClnr0NYw==",
++      "cpu": [
++        "arm64"
++      ],
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "android"
++      ],
++      "engines": {
++        "node": ">= 20"
++      }
++    },
++    "node_modules/@tailwindcss/oxide-darwin-arm64": {
++      "version": "4.3.3",
++      "resolved": "https://registry.npmjs.org/@tailwindcss/oxide-darwin-arm64/-/oxide-darwin-arm64-4.3.3.tgz",
++      "integrity": "sha512-BiaWatpBcERQFDlOjRDpIVXuFK5PJez5SA4JMg6VYZdBYU+qKfV/vqjcIs+IYmtitf1xYQZTwXvU/8y4lfZUGw==",
++      "cpu": [
++        "arm64"
++      ],
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "darwin"
++      ],
++      "engines": {
++        "node": ">= 20"
++      }
++    },
++    "node_modules/@tailwindcss/oxide-darwin-x64": {
++      "version": "4.3.3",
++      "resolved": "https://registry.npmjs.org/@tailwindcss/oxide-darwin-x64/-/oxide-darwin-x64-4.3.3.tgz",
++      "integrity": "sha512-fAeUqfV5ndhxRwai8cXGzdLvul9utWOmeTkv69unv4ZXixjn61Z+p9lCWdwOwA3TYboG3BwdVuN/RDjhBRl0mw==",
++      "cpu": [
++        "x64"
++      ],
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "darwin"
++      ],
++      "engines": {
++        "node": ">= 20"
++      }
++    },
++    "node_modules/@tailwindcss/oxide-freebsd-x64": {
++      "version": "4.3.3",
++      "resolved": "https://registry.npmjs.org/@tailwindcss/oxide-freebsd-x64/-/oxide-freebsd-x64-4.3.3.tgz",
++      "integrity": "sha512-iyf5bV6+wnAlflVeEy7R25dupxTNECZN5QMI0qNT6eT+EgaGdZcKhGkr5SdoaWiLJ3spLqIY9VCeSGrwmtg4kw==",
++      "cpu": [
++        "x64"
++      ],
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "freebsd"
++      ],
++      "engines": {
++        "node": ">= 20"
++      }
++    },
++    "node_modules/@tailwindcss/oxide-linux-arm-gnueabihf": {
++      "version": "4.3.3",
++      "resolved": "https://registry.npmjs.org/@tailwindcss/oxide-linux-arm-gnueabihf/-/oxide-linux-arm-gnueabihf-4.3.3.tgz",
++      "integrity": "sha512-aAYUprJAJQWWbRrPvtjdroZ56Md+JM8pMiopS6xGEwDfLhqj+2ver2p4nU4Mb3CRqcMmNBjo8KkUgcxhkzVQGQ==",
++      "cpu": [
++        "arm"
++      ],
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">= 20"
++      }
++    },
++    "node_modules/@tailwindcss/oxide-linux-arm64-gnu": {
++      "version": "4.3.3",
++      "resolved": "https://registry.npmjs.org/@tailwindcss/oxide-linux-arm64-gnu/-/oxide-linux-arm64-gnu-4.3.3.tgz",
++      "integrity": "sha512-nDxldcEENOxZRzC2uu9jrutZdAAQtb+8WWDCSnWL1zvBk1+FN+x6MtDViPB5AJMfttVCUhehGWus3XBPgatM/w==",
++      "cpu": [
++        "arm64"
++      ],
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">= 20"
++      }
++    },
++    "node_modules/@tailwindcss/oxide-linux-arm64-musl": {
++      "version": "4.3.3",
++      "resolved": "https://registry.npmjs.org/@tailwindcss/oxide-linux-arm64-musl/-/oxide-linux-arm64-musl-4.3.3.tgz",
++      "integrity": "sha512-Md44bD6veX/PC5iyF8cDVnw4HBIANZepRZZ7a8DQOvkfo5WUBwcp6iAuCUz23u+4SUkhJlD3eL7hNdW8ezd/kA==",
++      "cpu": [
++        "arm64"
++      ],
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">= 20"
++      }
++    },
++    "node_modules/@tailwindcss/oxide-linux-x64-gnu": {
++      "version": "4.3.3",
++      "cpu": [
++        "x64"
++      ],
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">= 20"
++      }
++    },
++    "node_modules/@tailwindcss/oxide-linux-x64-musl": {
++      "version": "4.3.3",
++      "cpu": [
++        "x64"
++      ],
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">= 20"
++      }
++    },
++    "node_modules/@tailwindcss/oxide-wasm32-wasi": {
++      "version": "4.3.3",
++      "resolved": "https://registry.npmjs.org/@tailwindcss/oxide-wasm32-wasi/-/oxide-wasm32-wasi-4.3.3.tgz",
++      "integrity": "sha512-jx1+rPhY/5Ympkktd656HBWEBLxP7dH06losBLjjf5vgCODXvi9KhtftWcMIwTFIDqBr7cRnQkdLnAG+IOlGvQ==",
++      "bundleDependencies": [
++        "@napi-rs/wasm-runtime",
++        "@emnapi/core",
++        "@emnapi/runtime",
++        "@tybys/wasm-util",
++        "@emnapi/wasi-threads",
++        "tslib"
++      ],
++      "cpu": [
++        "wasm32"
++      ],
++      "license": "MIT",
++      "optional": true,
++      "dependencies": {
++        "@emnapi/core": "^1.11.1",
++        "@emnapi/runtime": "^1.11.1",
++        "@emnapi/wasi-threads": "^1.2.2",
++        "@napi-rs/wasm-runtime": "^1.1.4",
++        "@tybys/wasm-util": "^0.10.2",
++        "tslib": "^2.8.1"
++      },
++      "engines": {
++        "node": ">=14.0.0"
++      }
++    },
++    "node_modules/@tailwindcss/oxide-win32-arm64-msvc": {
++      "version": "4.3.3",
++      "resolved": "https://registry.npmjs.org/@tailwindcss/oxide-win32-arm64-msvc/-/oxide-win32-arm64-msvc-4.3.3.tgz",
++      "integrity": "sha512-3rc292Ca2ceK6Ulcc/bAVnTs/3nDtoPhyEKlgPv+yQJQi/JS/AMJlqzxvlDacL1nekbrcf6bTqp/jV4qgnPxNQ==",
++      "cpu": [
++        "arm64"
++      ],
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "win32"
++      ],
++      "engines": {
++        "node": ">= 20"
++      }
++    },
++    "node_modules/@tailwindcss/oxide-win32-x64-msvc": {
++      "version": "4.3.3",
++      "resolved": "https://registry.npmjs.org/@tailwindcss/oxide-win32-x64-msvc/-/oxide-win32-x64-msvc-4.3.3.tgz",
++      "integrity": "sha512-yJ0pwIVc/nYeGoV02WtsN8KYyLQv7kyI2wDnkezyJlGGjkd4QLwDGAwl47YpPJeuI0M0ObaXGSPjvWDPeTPggw==",
++      "cpu": [
++        "x64"
++      ],
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "win32"
++      ],
++      "engines": {
++        "node": ">= 20"
+       }
+     },
+     "node_modules/@tailwindcss/vite": {
+@@ -891,53 +1426,376 @@
+         "@types/node": "*"
+       }
+     },
+-    "node_modules/@types/send/node_modules/@types/node": {
+-      "version": "26.6.5",
++    "node_modules/@types/send/node_modules/@types/node": {
++      "version": "26.6.5",
++      "dev": true,
++      "license": "MIT",
++      "dependencies": {
++        "undici-types": "~8.9.0"
++      }
++    },
++    "node_modules/@types/send/node_modules/@types/node/node_modules/undici-types": {
++      "version": "8.9.0",
++      "dev": true,
++      "license": "MIT"
++    },
++    "node_modules/@types/serve-static": {
++      "version": "1.15.10",
++      "dev": true,
++      "license": "MIT",
++      "dependencies": {
++        "@types/http-errors": "*",
++        "@types/node": "*",
++        "@types/send": "<1"
++      }
++    },
++    "node_modules/@types/serve-static/node_modules/@types/node": {
++      "version": "26.6.5",
++      "dev": true,
++      "license": "MIT",
++      "dependencies": {
++        "undici-types": "~8.9.0"
++      }
++    },
++    "node_modules/@types/serve-static/node_modules/@types/node/node_modules/undici-types": {
++      "version": "8.9.0",
++      "dev": true,
++      "license": "MIT"
++    },
++    "node_modules/@types/serve-static/node_modules/@types/send": {
++      "version": "0.17.6",
++      "dev": true,
++      "license": "MIT",
++      "dependencies": {
++        "@types/mime": "^1",
++        "@types/node": "*"
++      }
++    },
++    "node_modules/@typescript/typescript-aix-ppc64": {
++      "version": "7.0.2",
++      "resolved": "https://registry.npmjs.org/@typescript/typescript-aix-ppc64/-/typescript-aix-ppc64-7.0.2.tgz",
++      "integrity": "sha512-MTKKkWB7p/0E9xi1d1tHtZ5PiLkGEMIq88pK2CubZjOsLtYTLqhgIgi6zepFa+9GHZ6h05NMCkQxGKiPXMxXtQ==",
++      "cpu": [
++        "ppc64"
++      ],
++      "dev": true,
++      "license": "Apache-2.0",
++      "optional": true,
++      "os": [
++        "aix"
++      ],
++      "engines": {
++        "node": ">=16.20.0"
++      }
++    },
++    "node_modules/@typescript/typescript-darwin-arm64": {
++      "version": "7.0.2",
++      "resolved": "https://registry.npmjs.org/@typescript/typescript-darwin-arm64/-/typescript-darwin-arm64-7.0.2.tgz",
++      "integrity": "sha512-gowzar9MwS/aRWp6f3a4KUqzRjAZjOsmGNCM6LcTgXum+dBfgsBVMN+AgvOCCbguXyick6LJhpBszxMebJ8syA==",
++      "cpu": [
++        "arm64"
++      ],
++      "dev": true,
++      "license": "Apache-2.0",
++      "optional": true,
++      "os": [
++        "darwin"
++      ],
++      "engines": {
++        "node": ">=16.20.0"
++      }
++    },
++    "node_modules/@typescript/typescript-darwin-x64": {
++      "version": "7.0.2",
++      "resolved": "https://registry.npmjs.org/@typescript/typescript-darwin-x64/-/typescript-darwin-x64-7.0.2.tgz",
++      "integrity": "sha512-SZ9xZInqApNlNGc9s0W1VSsktYSOe9cFqNOIqmN1Gs8SmkjKZYFt017G4VwPxASInODuAdbTW7sXiFUf893RgA==",
++      "cpu": [
++        "x64"
++      ],
++      "dev": true,
++      "license": "Apache-2.0",
++      "optional": true,
++      "os": [
++        "darwin"
++      ],
++      "engines": {
++        "node": ">=16.20.0"
++      }
++    },
++    "node_modules/@typescript/typescript-freebsd-arm64": {
++      "version": "7.0.2",
++      "resolved": "https://registry.npmjs.org/@typescript/typescript-freebsd-arm64/-/typescript-freebsd-arm64-7.0.2.tgz",
++      "integrity": "sha512-W5NH4y/J0plIIS5b2xvTEkU7JFxyqdMAOgf+Ilhl0vHQXKO5dZoxd+C/jEtq56c4F3wk71RB4BMRQ2XdI+bwYQ==",
++      "cpu": [
++        "arm64"
++      ],
++      "dev": true,
++      "license": "Apache-2.0",
++      "optional": true,
++      "os": [
++        "freebsd"
++      ],
++      "engines": {
++        "node": ">=16.20.0"
++      }
++    },
++    "node_modules/@typescript/typescript-freebsd-x64": {
++      "version": "7.0.2",
++      "resolved": "https://registry.npmjs.org/@typescript/typescript-freebsd-x64/-/typescript-freebsd-x64-7.0.2.tgz",
++      "integrity": "sha512-UMGDx5sTpzNw3WiPebH7l90IWfJggEd+egHt/q6p7/Cm3zqoV7VxkGXt+3DxPIw8CcmvAB0j3sVVfbhX+M4Tpw==",
++      "cpu": [
++        "x64"
++      ],
++      "dev": true,
++      "license": "Apache-2.0",
++      "optional": true,
++      "os": [
++        "freebsd"
++      ],
++      "engines": {
++        "node": ">=16.20.0"
++      }
++    },
++    "node_modules/@typescript/typescript-linux-arm": {
++      "version": "7.0.2",
++      "resolved": "https://registry.npmjs.org/@typescript/typescript-linux-arm/-/typescript-linux-arm-7.0.2.tgz",
++      "integrity": "sha512-gffT3xPz9sR7j/YJExkyPntrI0P2EP9XbOyWzth2/Gs0RstK+90RBcO0ncXoXy/beYll1SXw846Nf2zdnEz0QQ==",
++      "cpu": [
++        "arm"
++      ],
++      "dev": true,
++      "license": "Apache-2.0",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">=16.20.0"
++      }
++    },
++    "node_modules/@typescript/typescript-linux-arm64": {
++      "version": "7.0.2",
++      "resolved": "https://registry.npmjs.org/@typescript/typescript-linux-arm64/-/typescript-linux-arm64-7.0.2.tgz",
++      "integrity": "sha512-Qh4eU4/y3yDjnfjjyPYihMj5/ODIlmt+Bzu17OI+fiSRDW57QmU5SiN63exPRNJPKUzcc1INa1NXdrJ+MqHjUQ==",
++      "cpu": [
++        "arm64"
++      ],
++      "dev": true,
++      "license": "Apache-2.0",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">=16.20.0"
++      }
++    },
++    "node_modules/@typescript/typescript-linux-loong64": {
++      "version": "7.0.2",
++      "resolved": "https://registry.npmjs.org/@typescript/typescript-linux-loong64/-/typescript-linux-loong64-7.0.2.tgz",
++      "integrity": "sha512-uEHck9i8hoAzXPiYRib1O7miOnz23SxIeVl6F4LXox+qov1K35jHcEW6VHKvZI+pyvl7fZEP4MCU5LYvIq1GuQ==",
++      "cpu": [
++        "loong64"
++      ],
++      "dev": true,
++      "license": "Apache-2.0",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">=16.20.0"
++      }
++    },
++    "node_modules/@typescript/typescript-linux-mips64el": {
++      "version": "7.0.2",
++      "resolved": "https://registry.npmjs.org/@typescript/typescript-linux-mips64el/-/typescript-linux-mips64el-7.0.2.tgz",
++      "integrity": "sha512-R4KvAMnE43W5Qeqb0Ly56O3mWMWIAgsMyz36DCaycd5nbg/9kzm0liw3JocfRqyJY0KPmzFjbswozXyW0DnIYA==",
++      "cpu": [
++        "mips64el"
++      ],
++      "dev": true,
++      "license": "Apache-2.0",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">=16.20.0"
++      }
++    },
++    "node_modules/@typescript/typescript-linux-ppc64": {
++      "version": "7.0.2",
++      "resolved": "https://registry.npmjs.org/@typescript/typescript-linux-ppc64/-/typescript-linux-ppc64-7.0.2.tgz",
++      "integrity": "sha512-DORx5b3sd/4S7eayxm4FQv+A7CrkUIGRaHiwI8oiHTAI1fAPWhF4J0vAlkC8biAlHSVVwxMQ3tjZ2/DVbnQiiA==",
++      "cpu": [
++        "ppc64"
++      ],
++      "dev": true,
++      "license": "Apache-2.0",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">=16.20.0"
++      }
++    },
++    "node_modules/@typescript/typescript-linux-riscv64": {
++      "version": "7.0.2",
++      "resolved": "https://registry.npmjs.org/@typescript/typescript-linux-riscv64/-/typescript-linux-riscv64-7.0.2.tgz",
++      "integrity": "sha512-wf0jqEDOjrPRnKwYRyyJDRo11KMbvMFrU+q4zqKyChODBzvlkbhNQfKvLxQCcwTpdDaXSHZTVuh0JoCrKCUMHQ==",
++      "cpu": [
++        "riscv64"
++      ],
++      "dev": true,
++      "license": "Apache-2.0",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">=16.20.0"
++      }
++    },
++    "node_modules/@typescript/typescript-linux-s390x": {
++      "version": "7.0.2",
++      "resolved": "https://registry.npmjs.org/@typescript/typescript-linux-s390x/-/typescript-linux-s390x-7.0.2.tgz",
++      "integrity": "sha512-IkwJc3L7yhytWd/ewjyxNDfOmswCm9GWMJT/ue/dU4aZNbwZeYAetq42VyLmsmSjvoX7z74X6ZaYCtzAr0EuGw==",
++      "cpu": [
++        "s390x"
++      ],
++      "dev": true,
++      "license": "Apache-2.0",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">=16.20.0"
++      }
++    },
++    "node_modules/@typescript/typescript-linux-x64": {
++      "version": "7.0.2",
++      "cpu": [
++        "x64"
++      ],
++      "dev": true,
++      "license": "Apache-2.0",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">=16.20.0"
++      }
++    },
++    "node_modules/@typescript/typescript-netbsd-arm64": {
++      "version": "7.0.2",
++      "resolved": "https://registry.npmjs.org/@typescript/typescript-netbsd-arm64/-/typescript-netbsd-arm64-7.0.2.tgz",
++      "integrity": "sha512-+polYF4MF04aPpO5FTkHran9yUQDSXqy5GiSDKpsll5jy3l3+g9QLhpf39T+ePtefhXLOGrLl0QIjkQP6VnelA==",
++      "cpu": [
++        "arm64"
++      ],
+       "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "undici-types": "~8.9.0"
++      "license": "Apache-2.0",
++      "optional": true,
++      "os": [
++        "netbsd"
++      ],
++      "engines": {
++        "node": ">=16.20.0"
+       }
+     },
+-    "node_modules/@types/send/node_modules/@types/node/node_modules/undici-types": {
+-      "version": "8.9.0",
++    "node_modules/@typescript/typescript-netbsd-x64": {
++      "version": "7.0.2",
++      "resolved": "https://registry.npmjs.org/@typescript/typescript-netbsd-x64/-/typescript-netbsd-x64-7.0.2.tgz",
++      "integrity": "sha512-8YIT0EHM/3dq10ZOVF/A7pc/YSMtbcecct4rWtexrnSCHOPcpC2KTLXfTCR6vDpnSiY12heNb1GiN/wu+T/FyA==",
++      "cpu": [
++        "x64"
++      ],
+       "dev": true,
+-      "license": "MIT"
++      "license": "Apache-2.0",
++      "optional": true,
++      "os": [
++        "netbsd"
++      ],
++      "engines": {
++        "node": ">=16.20.0"
++      }
+     },
+-    "node_modules/@types/serve-static": {
+-      "version": "1.15.10",
++    "node_modules/@typescript/typescript-openbsd-arm64": {
++      "version": "7.0.2",
++      "resolved": "https://registry.npmjs.org/@typescript/typescript-openbsd-arm64/-/typescript-openbsd-arm64-7.0.2.tgz",
++      "integrity": "sha512-APT8+ClYnuYm1u9+kgGXoMj2VzWzcymwh2gNSQVySHfkRDGOTVkoWLjCmOQSaO+PoqQ57B0flRp9SA+7GnnkzQ==",
++      "cpu": [
++        "arm64"
++      ],
+       "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "@types/http-errors": "*",
+-        "@types/node": "*",
+-        "@types/send": "<1"
++      "license": "Apache-2.0",
++      "optional": true,
++      "os": [
++        "openbsd"
++      ],
++      "engines": {
++        "node": ">=16.20.0"
+       }
+     },
+-    "node_modules/@types/serve-static/node_modules/@types/node": {
+-      "version": "26.6.5",
++    "node_modules/@typescript/typescript-openbsd-x64": {
++      "version": "7.0.2",
++      "resolved": "https://registry.npmjs.org/@typescript/typescript-openbsd-x64/-/typescript-openbsd-x64-7.0.2.tgz",
++      "integrity": "sha512-yX7s+Q0Dln0Dt9tEzZsAjXXR/+ytBM7AlglaqyeMPxQszJ1JhlJdZ6jLA+IzldHtflX81em7lDao1xXu+aRRkg==",
++      "cpu": [
++        "x64"
++      ],
+       "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "undici-types": "~8.9.0"
++      "license": "Apache-2.0",
++      "optional": true,
++      "os": [
++        "openbsd"
++      ],
++      "engines": {
++        "node": ">=16.20.0"
+       }
+     },
+-    "node_modules/@types/serve-static/node_modules/@types/node/node_modules/undici-types": {
+-      "version": "8.9.0",
++    "node_modules/@typescript/typescript-sunos-x64": {
++      "version": "7.0.2",
++      "resolved": "https://registry.npmjs.org/@typescript/typescript-sunos-x64/-/typescript-sunos-x64-7.0.2.tgz",
++      "integrity": "sha512-dLJDGaLZ1D4HPQn62u1n8mBDkJREwMsAkCdkwd4Ieqw+x3TUyTsqY0YiBCtE6H6OzzgGk3iuZ3vFWRS+E8/d1g==",
++      "cpu": [
++        "x64"
++      ],
+       "dev": true,
+-      "license": "MIT"
++      "license": "Apache-2.0",
++      "optional": true,
++      "os": [
++        "sunos"
++      ],
++      "engines": {
++        "node": ">=16.20.0"
++      }
+     },
+-    "node_modules/@types/serve-static/node_modules/@types/send": {
+-      "version": "0.17.6",
++    "node_modules/@typescript/typescript-win32-arm64": {
++      "version": "7.0.2",
++      "resolved": "https://registry.npmjs.org/@typescript/typescript-win32-arm64/-/typescript-win32-arm64-7.0.2.tgz",
++      "integrity": "sha512-Gyl1Vy6OsWesLzmq+EP0Fb7b4Nid5232AvcA2SFcdYreldpNtYFFofPjnt62y9hQy7VTaZp65ICJjuAQRaVcIQ==",
++      "cpu": [
++        "arm64"
++      ],
+       "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "@types/mime": "^1",
+-        "@types/node": "*"
++      "license": "Apache-2.0",
++      "optional": true,
++      "os": [
++        "win32"
++      ],
++      "engines": {
++        "node": ">=16.20.0"
+       }
+     },
+-    "node_modules/@typescript/typescript-linux-x64": {
++    "node_modules/@typescript/typescript-win32-x64": {
+       "version": "7.0.2",
++      "resolved": "https://registry.npmjs.org/@typescript/typescript-win32-x64/-/typescript-win32-x64-7.0.2.tgz",
++      "integrity": "sha512-0BQ3HkAHHlKLSp1qRvf3SUhGpGsDuhB/jgFw75guyqbxJqEaS0Cw/VFO8i2nHglJUzQCRtMMR/IBAKE3ETMC4g==",
+       "cpu": [
+         "x64"
+       ],
+@@ -945,7 +1803,7 @@
+       "license": "Apache-2.0",
+       "optional": true,
+       "os": [
+-        "linux"
++        "win32"
+       ],
+       "engines": {
+         "node": ">=16.20.0"
+@@ -1812,6 +2670,146 @@
+         "lightningcss-win32-x64-msvc": "1.33.0"
+       }
+     },
++    "node_modules/lightningcss-android-arm64": {
++      "version": "1.33.0",
++      "resolved": "https://registry.npmjs.org/lightningcss-android-arm64/-/lightningcss-android-arm64-1.33.0.tgz",
++      "integrity": "sha512-gEpRTalKdosp4Bb8qWtc2iOgE5SeIHlpS1up9bFq2wAyYhl1UdTObYiHe98zEM9SQvSoqQZ1IQD0JNpg3Ml5pg==",
++      "cpu": [
++        "arm64"
++      ],
++      "license": "MPL-2.0",
++      "optional": true,
++      "os": [
++        "android"
++      ],
++      "engines": {
++        "node": ">= 12.0.0"
++      },
++      "funding": {
++        "type": "opencollective",
++        "url": "https://opencollective.com/parcel"
++      }
++    },
++    "node_modules/lightningcss-darwin-arm64": {
++      "version": "1.33.0",
++      "resolved": "https://registry.npmjs.org/lightningcss-darwin-arm64/-/lightningcss-darwin-arm64-1.33.0.tgz",
++      "integrity": "sha512-Sciaz8eenNTKn9b3t7+xr0ipTp9YxKQY4npwQ3mrRuL0BAVHBLyZxofhaKBAVtzmtRZ/zTyo0/to4B1uWG/Djg==",
++      "cpu": [
++        "arm64"
++      ],
++      "license": "MPL-2.0",
++      "optional": true,
++      "os": [
++        "darwin"
++      ],
++      "engines": {
++        "node": ">= 12.0.0"
++      },
++      "funding": {
++        "type": "opencollective",
++        "url": "https://opencollective.com/parcel"
++      }
++    },
++    "node_modules/lightningcss-darwin-x64": {
++      "version": "1.33.0",
++      "resolved": "https://registry.npmjs.org/lightningcss-darwin-x64/-/lightningcss-darwin-x64-1.33.0.tgz",
++      "integrity": "sha512-Z5UPAxzrjlWNNyGy6i65cJzzvgJ5D3T6wMvs+gWpY9d7qRhANrxqAp6LhxIgZhWEw18RfJTGcRxjuLIBr+m8XQ==",
++      "cpu": [
++        "x64"
++      ],
++      "license": "MPL-2.0",
++      "optional": true,
++      "os": [
++        "darwin"
++      ],
++      "engines": {
++        "node": ">= 12.0.0"
++      },
++      "funding": {
++        "type": "opencollective",
++        "url": "https://opencollective.com/parcel"
++      }
++    },
++    "node_modules/lightningcss-freebsd-x64": {
++      "version": "1.33.0",
++      "resolved": "https://registry.npmjs.org/lightningcss-freebsd-x64/-/lightningcss-freebsd-x64-1.33.0.tgz",
++      "integrity": "sha512-QQM/Ti/hQajJwCY+RiWuCZ9sdtI/XQk7nDK5vC8kkdwixezOlDgvDx7+RT+QjK6FcFT4MpsuoBnHIo/O3StRRg==",
++      "cpu": [
++        "x64"
++      ],
++      "license": "MPL-2.0",
++      "optional": true,
++      "os": [
++        "freebsd"
++      ],
++      "engines": {
++        "node": ">= 12.0.0"
++      },
++      "funding": {
++        "type": "opencollective",
++        "url": "https://opencollective.com/parcel"
++      }
++    },
++    "node_modules/lightningcss-linux-arm-gnueabihf": {
++      "version": "1.33.0",
++      "resolved": "https://registry.npmjs.org/lightningcss-linux-arm-gnueabihf/-/lightningcss-linux-arm-gnueabihf-1.33.0.tgz",
++      "integrity": "sha512-N7FVBe6iS24MlM6R/4RBTxGhQheZGs7tiQ9U32UtF75NzP5Q7xWPRqLBCKxlRQRk3rY1jCIPLzx7WzOhuUIRLQ==",
++      "cpu": [
++        "arm"
++      ],
++      "license": "MPL-2.0",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">= 12.0.0"
++      },
++      "funding": {
++        "type": "opencollective",
++        "url": "https://opencollective.com/parcel"
++      }
++    },
++    "node_modules/lightningcss-linux-arm64-gnu": {
++      "version": "1.33.0",
++      "resolved": "https://registry.npmjs.org/lightningcss-linux-arm64-gnu/-/lightningcss-linux-arm64-gnu-1.33.0.tgz",
++      "integrity": "sha512-j2v/itmy4HlNxlc6voKXYgBqNi0Ng2LShg4z7GufpEgs05P+2suBVyi9I6YHq5uoVFx9ETin3eCEhLVyXGQnKg==",
++      "cpu": [
++        "arm64"
++      ],
++      "license": "MPL-2.0",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">= 12.0.0"
++      },
++      "funding": {
++        "type": "opencollective",
++        "url": "https://opencollective.com/parcel"
++      }
++    },
++    "node_modules/lightningcss-linux-arm64-musl": {
++      "version": "1.33.0",
++      "resolved": "https://registry.npmjs.org/lightningcss-linux-arm64-musl/-/lightningcss-linux-arm64-musl-1.33.0.tgz",
++      "integrity": "sha512-yiO5ROMuYQgXbC60yjZU5CYSFZGKXL0HFATXt9mHJn1+zW55oCtMI9NfcVhYLMFDL7gV7oBPon/EmMMGg2OvtQ==",
++      "cpu": [
++        "arm64"
++      ],
++      "license": "MPL-2.0",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">= 12.0.0"
++      },
++      "funding": {
++        "type": "opencollective",
++        "url": "https://opencollective.com/parcel"
++      }
++    },
+     "node_modules/lightningcss-linux-x64-gnu": {
+       "version": "1.33.0",
+       "cpu": [
+@@ -1848,6 +2846,46 @@
+         "url": "https://opencollective.com/parcel"
+       }
+     },
++    "node_modules/lightningcss-win32-arm64-msvc": {
++      "version": "1.33.0",
++      "resolved": "https://registry.npmjs.org/lightningcss-win32-arm64-msvc/-/lightningcss-win32-arm64-msvc-1.33.0.tgz",
++      "integrity": "sha512-1K+MPfLSFVpphzpdbfkhlWk6wBrTObBzS2T6db10PNOZgR9GoVsAWzwNyuhUYYbTp23j+4RrncfujZ4uAzXvwA==",
++      "cpu": [
++        "arm64"
++      ],
++      "license": "MPL-2.0",
++      "optional": true,
++      "os": [
++        "win32"
++      ],
++      "engines": {
++        "node": ">= 12.0.0"
++      },
++      "funding": {
++        "type": "opencollective",
++        "url": "https://opencollective.com/parcel"
++      }
++    },
++    "node_modules/lightningcss-win32-x64-msvc": {
++      "version": "1.33.0",
++      "resolved": "https://registry.npmjs.org/lightningcss-win32-x64-msvc/-/lightningcss-win32-x64-msvc-1.33.0.tgz",
++      "integrity": "sha512-OlEICDx/Xl0FqSp4bry8zFnCvGpig3Gl4gCquvYwHuqJKEC1+n9NgDniFvqHGmMv1ZkqDJrDqKKSykTDX+ehuA==",
++      "cpu": [
++        "x64"
++      ],
++      "license": "MPL-2.0",
++      "optional": true,
++      "os": [
++        "win32"
++      ],
++      "engines": {
++        "node": ">= 12.0.0"
++      },
++      "funding": {
++        "type": "opencollective",
++        "url": "https://opencollective.com/parcel"
++      }
++    },
+     "node_modules/long": {
+       "version": "5.3.2",
+       "license": "Apache-2.0"
+diff --git a/src/App.tsx b/src/App.tsx
+index 629de9e..c85d5b6 100644
+--- a/src/App.tsx
++++ b/src/App.tsx
+@@ -159,7 +159,7 @@ export default function App() {
+         currentView={currentView}
+       />
+ 
+-      <main>
++      <main id="main-content" tabIndex={-1}>
+         {currentView === 'about' && (
+           <AboutUsPage onOpenApply={handleOpenApply} onNavigate={handleNavigate} />
+         )}
+@@ -197,6 +197,11 @@ export default function App() {
+               onNavigateProduct={(prodId) => handleNavigate('product-detail', prodId)}
+             />
+ 
++            {/* 5. "comprehensive product portfolio" (Opens dedicated Product Pages) */}
++            <ProductBento
++              onSelectProduct={(prodId) => handleNavigate('product-detail', prodId)}
++            />
++
+             {/* 3. "Institutional payroll..." (TrustMarquee) */}
+             <div id="partners">
+               <TrustMarquee />
+@@ -205,11 +210,6 @@ export default function App() {
+             {/* 4. 15-Minute Prompt Disbursement */}
+             <MoveMoneySection onOpenApply={handleOpenApply} />
+ 
+-            {/* 5. "comprehensive product portfolio" (Opens dedicated Product Pages) */}
+-            <ProductBento
+-              onSelectProduct={(prodId) => handleNavigate('product-detail', prodId)}
+-            />
+-
+             {/* 6. "Real calculations..." */}
+             <InteractiveCalculator onOpenApply={handleOpenApply} />
+ 
+diff --git a/src/components/Hero.tsx b/src/components/Hero.tsx
+index 358c1fd..0236916 100644
+--- a/src/components/Hero.tsx
++++ b/src/components/Hero.tsx
+@@ -1,466 +1,243 @@
+-import React, { useState, useEffect, useCallback } from 'react';
+-import { motion, AnimatePresence } from 'motion/react';
++import React, { useEffect, useState } from "react";
+ import {
+   ArrowRight,
+-  CheckCircle,
++  ArrowUpRight,
+   CaretLeft,
+   CaretRight,
++  Check,
++  MapPin,
+   Pause,
+   Play,
+-} from '@phosphor-icons/react';
+-
++} from "@phosphor-icons/react";
++import { useReducedMotion } from "motion/react";
+ interface HeroProps {
+   onOpenApply: (productName?: string, amount?: number, tenure?: number) => void;
+   onScrollToCalculator: () => void;
+   onNavigateProduct?: (productId: string) => void;
+ }
+-
+-interface SlideData {
+-  id: string;
+-  targetProductId: string;
+-  headlineLine1: string;
+-  headlineLine2Prefix?: string;
+-  headlineLine2Highlight: string;
+-  description: string;
+-  features: [string, string, string, string];
+-  primaryCtaText: string;
+-  primaryProduct: string;
+-  defaultAmount: number;
+-  defaultTenure: number;
+-  secondaryCtaText: string;
+-  image: string;
+-  imageAlt: string;
+-}
+-
+-const HERO_SLIDES: SlideData[] = [
++const slides = [
+   {
+-    id: 'car-for-cash',
+-    targetProductId: 'car-for-cash',
+-    headlineLine1: 'Turn your',
+-    headlineLine2Prefix: 'Car ',
+-    headlineLine2Highlight: 'into Cash!',
++    id: "car-for-cash",
++    name: "Car-for-Cash",
++    eyebrow: "Make more of what you own",
++    line1: "Turn your car",
++    line2: "into cash.",
+     description:
+-      'A short-term collateralized loan that allows vehicle owners to access urgent funds using their fully paid, registered car as security — safely parked, inspected, and protected in our 24/7 insured, climate-controlled depot.',
+-    features: [
+-      'Insured 24/7 climate depot storage',
+-      'Immediate same-day payout up to 70%',
+-      'Up to ₦25,000,000 vehicle equity',
+-      'Pristine vehicle return upon payoff',
+-    ],
+-    primaryCtaText: 'Apply for Car for Cash',
+-    primaryProduct: 'Car-for-Cash (CFC)',
+-    defaultAmount: 5000000,
+-    defaultTenure: 1,
+-    secondaryCtaText: 'Estimate Vehicle Equity',
+-    image: './assets/nexus/hero_car.jpg',
+-    imageAlt: 'Luxury executive sports car in dark studio representing Car for Cash loan',
++      "Put your vehicle’s value to work. Access a short-term loan while your car is held securely until repayment.",
++    benefits: ["Up to 70% of vehicle value", "Subject to appraisal & approval"],
++    product: "Car-for-Cash (CFC)",
++    amount: 5000000,
++    image: "hero_car.jpg",
++    alt: "Executive car in a dark studio, illustrating vehicle-backed lending",
++    category: "Asset-backed lending",
++    caption: "An asset today.\nAn opportunity tomorrow.",
+   },
+   {
+-    id: 'suremoney',
+-    targetProductId: 'suremoney-loan',
+-    headlineLine1: 'Get ₦1 Million',
+-    headlineLine2Highlight: 'in Minutes!',
++    id: "suremoney-loan",
++    name: "Suremoney Loan",
++    eyebrow: "For the moments that matter",
++    line1: "Get ₦1 million.",
++    line2: "Keep moving.",
+     description:
+-      'Your trusted financial partner specializing in providing quick and flexible loan options to meet your personal and business needs with prompt disbursement directly to your account.',
+-    features: [
+-      'No collateral required',
+-      'Disbursement in 15 mins',
+-      'Up to ₦10,000,000 instant credit',
+-      'Competitive monthly rates from 3% to 5%',
+-    ],
+-    primaryCtaText: 'Apply for Suremoney Loan',
+-    primaryProduct: 'Suremoney Loan',
+-    defaultAmount: 1000000,
+-    defaultTenure: 1,
+-    secondaryCtaText: 'Estimate Repayments',
+-    image: './assets/nexus/naira_1000_stacks.jpg',
+-    imageAlt: 'Authentic crisp stacks of ₦1,000 Nigerian Naira banknotes with official wrappers symbolizing instant liquidity',
++      "Handle an unexpected expense or take the next step in your business with a flexible personal or business loan.",
++    benefits: ["No collateral required", "Subject to eligibility & approval"],
++    product: "Suremoney Loan",
++    amount: 1000000,
++    image: "entrepreneur.webp",
++    alt: "Entrepreneur in a fashion studio, illustrating personal and business finance",
++    category: "Personal & business loans",
++    caption: "For your plans.\nAnd everything in between.",
+   },
+   {
+-    id: 'travel-financing',
+-    targetProductId: 'travel-financing',
+-    headlineLine1: 'Need Travel',
+-    headlineLine2Highlight: 'Financing?',
++    id: "travel-financing",
++    name: "Travel Financing",
++    eyebrow: "Give your next chapter a start",
++    line1: "Big plans.",
++    line2: "New horizons.",
+     description:
+-      'Our Travel Financing & Proof of Capability service delivers a professional, bank-verified statement that confirms your financial standing for visa applications, international study, contracts, or major overseas travel.',
+-    features: [
+-      '100% legally recognized & certified',
+-      'Bank-verified & embassy-accepted',
+-      'Fast confidential 12–24hr turnaround',
+-      'Accepted for UK, US, Canada & Schengen',
+-    ],
+-    primaryCtaText: 'Apply for Travel Financing',
+-    primaryProduct: 'Travel Financing',
+-    defaultAmount: 15000000,
+-    defaultTenure: 1,
+-    secondaryCtaText: 'Verify Travel Criteria',
+-    image: './assets/nexus/travel_documents.jpg',
+-    imageAlt: 'International passport and verified financial certificate on dark slate',
++      "Explore financing and financial documentation options for study, relocation, and your next journey abroad.",
++    benefits: ["Discuss your requirements", "Clear guidance from our team"],
++    product: "Travel Financing",
++    amount: 15000000,
++    image: "travel_documents.jpg",
++    alt: "Travel documents illustrating travel financing",
++    category: "Travel financing",
++    caption: "A world of possibilities.\nA team in your corner.",
+   },
+ ];
+-
+-const AUTO_SLIDE_DURATION = 6500; // 6.5s per slide
+-
+ export const Hero: React.FC<HeroProps> = ({
+   onOpenApply,
+   onScrollToCalculator,
+   onNavigateProduct,
+ }) => {
+-  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+-  const [direction, setDirection] = useState(1);
+-  const [isPaused, setIsPaused] = useState(false);
+-  const [progress, setProgress] = useState(0);
+-  const [scrollY, setScrollY] = useState(0);
+-
+-  // Subtle scroll parallax tracking
++  const [index, setIndex] = useState(0);
++  const [paused, setPaused] = useState(false);
++  const [hovered, setHovered] = useState(false);
++  const [focused, setFocused] = useState(false);
++  const [pageVisible, setPageVisible] = useState(true);
++  const reduceMotion = useReducedMotion();
++  const slide = slides[index];
+   useEffect(() => {
+-    const handleScroll = () => {
+-      setScrollY(window.scrollY);
+-    };
+-    window.addEventListener('scroll', handleScroll, { passive: true });
+-    return () => window.removeEventListener('scroll', handleScroll);
+-  }, []);
+-
+-  const activeSlide = HERO_SLIDES[currentSlideIndex];
+-
+-  const handleNextSlide = useCallback(() => {
+-    setDirection(1);
+-    setCurrentSlideIndex((prev) => (prev + 1) % HERO_SLIDES.length);
+-    setProgress(0);
+-  }, []);
+-
+-  const handlePrevSlide = useCallback(() => {
+-    setDirection(-1);
+-    setCurrentSlideIndex((prev) => (prev - 1 + HERO_SLIDES.length) % HERO_SLIDES.length);
+-    setProgress(0);
++    const update = () => setPageVisible(!document.hidden);
++    document.addEventListener("visibilitychange", update);
++    return () => document.removeEventListener("visibilitychange", update);
+   }, []);
+-
+-  const handleSelectSlide = (index: number) => {
+-    setDirection(index > currentSlideIndex ? 1 : -1);
+-    setCurrentSlideIndex(index);
+-    setProgress(0);
+-  };
+-
+-  // Timer interval for auto sliding
+-  useEffect(() => {
+-    if (isPaused) return;
+-
+-    const intervalStep = 50;
+-    const increment = (intervalStep / AUTO_SLIDE_DURATION) * 100;
+-
+-    const timer = setInterval(() => {
+-      setProgress((prev) => {
+-        if (prev >= 100) {
+-          handleNextSlide();
+-          return 0;
+-        }
+-        return prev + increment;
+-      });
+-    }, intervalStep);
+-
+-    return () => clearInterval(timer);
+-  }, [isPaused, handleNextSlide]);
+-
+-  // Keyboard navigation
+   useEffect(() => {
+-    const handleKeyDown = (e: KeyboardEvent) => {
+-      if (e.key === 'ArrowRight') {
+-        handleNextSlide();
+-      } else if (e.key === 'ArrowLeft') {
+-        handlePrevSlide();
+-      }
+-    };
+-    window.addEventListener('keydown', handleKeyDown);
+-    return () => window.removeEventListener('keydown', handleKeyDown);
+-  }, [handleNextSlide, handlePrevSlide]);
+-
+-  const [mouseOffset, setMouseOffset] = useState({ x: 0, y: 0 });
+-
+-  const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
+-    const rect = e.currentTarget.getBoundingClientRect();
+-    const x = ((e.clientX - rect.left) / rect.width - 0.5) * 2; // -1 to 1
+-    const y = ((e.clientY - rect.top) / rect.height - 0.5) * 2; // -1 to 1
+-    setMouseOffset({ x, y });
+-  };
+-
+-  const handleMouseLeave = () => {
+-    setIsPaused(false);
+-    setMouseOffset({ x: 0, y: 0 });
++    if (paused || hovered || focused || reduceMotion || !pageVisible) return;
++    const timer = window.setTimeout(
++      () => setIndex((previous) => (previous + 1) % slides.length),
++      10000,
++    );
++    return () => window.clearTimeout(timer);
++  }, [index, paused, hovered, focused, reduceMotion, pageVisible]);
++  const select = (next: number) => {
++    setIndex((next + slides.length) % slides.length);
++    setPaused(true);
+   };
+-
+   return (
+     <section
+-      className="relative bg-black text-white overflow-hidden select-none font-body pt-28 pb-12 md:pt-36 md:pb-16 min-h-[660px] lg:min-h-[720px] flex flex-col justify-between"
+-      onMouseEnter={() => setIsPaused(true)}
+-      onMouseMove={handleMouseMove}
+-      onMouseLeave={handleMouseLeave}
++      className="nx-hero"
++      aria-label="Featured Nexus products"
+       aria-roledescription="carousel"
+-      aria-label="Nexus Finance Featured Products"
++      onMouseEnter={() => setHovered(true)}
++      onMouseLeave={() => setHovered(false)}
++      onFocusCapture={() => setFocused(true)}
++      onBlurCapture={(event) => {
++        if (!event.currentTarget.contains(event.relatedTarget as Node))
++          setFocused(false);
++      }}
+     >
+-      {/* FULL-BLEED CINEMATIC BACKGROUND IMAGE (RIGHT 60% WITH DARK VIGNETTE & SUBTLE PARALLAX) */}
+-      <div className="absolute top-0 right-0 w-full lg:w-[62%] h-full pointer-events-none select-none overflow-hidden z-0">
+-        <motion.div
+-          className="w-full h-full relative"
+-          animate={{
+-            x: mouseOffset.x * 18,
+-            y: Math.min(scrollY * 0.16, 90) + mouseOffset.y * 14,
+-            scale: 1.06,
+-          }}
+-          transition={{
+-            type: 'spring',
+-            stiffness: 65,
+-            damping: 26,
+-            mass: 0.5,
+-          }}
++      <div className="nx-container">
++        <div className="nx-hero-topline">
++          <span>Finance, with you in mind.</span>
++          <span>
++            <MapPin size={14} aria-hidden="true" /> Abuja, Nigeria
++          </span>
++        </div>
++        <div
++          className="nx-hero-grid"
++          aria-live={paused || focused ? "polite" : "off"}
+         >
+-          <AnimatePresence custom={direction} mode="wait">
+-            <motion.img
+-              key={activeSlide.id}
+-              src={activeSlide.image}
+-              alt={activeSlide.imageAlt}
+-              initial={{ opacity: 0, scale: 1.08 }}
+-              animate={{ opacity: 1, scale: 1 }}
+-              exit={{ opacity: 0, scale: 0.96 }}
+-              transition={{ duration: 0.8, ease: 'easeOut' }}
+-              className="w-full h-full object-cover object-center lg:object-right"
+-              loading="eager"
++          <div className="nx-hero-copy" key={`copy-${slide.id}`}>
++            <p className="nx-eyebrow">
++              <span className="nx-line" />
++              {slide.eyebrow}
++            </p>
++            <h1>
++              {slide.line1}
++              <br />
++              <span>{slide.line2}</span>
++            </h1>
++            <p className="nx-hero-description">{slide.description}</p>
++            <div className="nx-hero-cta">
++              <button
++                className="nx-button"
++                onClick={() => onOpenApply(slide.product, slide.amount, 1)}
++              >
++                Start your application{" "}
++                <ArrowUpRight size={21} aria-hidden="true" />
++              </button>
++              <button
++                className="nx-text-link"
++                onClick={() =>
++                  onNavigateProduct
++                    ? onNavigateProduct(slide.id)
++                    : onScrollToCalculator()
++                }
++              >
++                How it works <ArrowRight size={18} aria-hidden="true" />
++              </button>
++            </div>
++            <ul className="nx-hero-benefits">
++              {slide.benefits.map((benefit) => (
++                <li key={benefit}>
++                  <Check size={16} aria-hidden="true" />
++                  {benefit}
++                </li>
++              ))}
++            </ul>
++          </div>
++          <div
++            className={`nx-hero-visual nx-visual-${slide.id}`}
++            key={`image-${slide.id}`}
++          >
++            <img
++              src={`./assets/nexus/${slide.image}`}
++              alt={slide.alt}
++              width="900"
++              height="1000"
+               fetchPriority="high"
+             />
+-          </AnimatePresence>
+-        </motion.div>
+-
+-        {/* Seamless Dark Gradients blending into the black content area */}
+-        <div
+-          className="absolute inset-0 bg-gradient-to-r from-black via-black/90 lg:from-black lg:via-black/75 to-transparent pointer-events-none"
+-          aria-hidden="true"
+-        />
+-        <div
+-          className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/60 pointer-events-none"
+-          aria-hidden="true"
+-        />
+-        <div
+-          className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black pointer-events-none"
+-          aria-hidden="true"
+-        />
+-      </div>
+-
+-      {/* FOREGROUND HERO CONTENT */}
+-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto">
+-        <div className="max-w-2xl text-left">
+-          <AnimatePresence custom={direction} mode="wait">
+-            <motion.div
+-              key={activeSlide.id}
+-              initial={{ opacity: 0, y: 16 }}
+-              animate={{ opacity: 1, y: 0 }}
+-              exit={{ opacity: 0, y: -16 }}
+-              transition={{ duration: 0.45, ease: 'easeOut' }}
+-            >
+-              {/* Massive Main Display Headline */}
+-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.25rem] font-black tracking-tight text-white font-display leading-[1.05] mb-6">
+-                {activeSlide.headlineLine1}
+-                <br />
+-                {activeSlide.headlineLine2Prefix && (
+-                  <span>{activeSlide.headlineLine2Prefix}</span>
+-                )}
+-                <span className="text-[#00e575] drop-shadow-[0_0_35px_rgba(0,229,117,0.45)]">
+-                  {activeSlide.headlineLine2Highlight}
+-                </span>
+-              </h1>
+-
+-              {/* Subtitle Description */}
+-              <p className="text-base sm:text-lg md:text-xl text-neutral-300 font-normal leading-relaxed max-w-xl mb-8">
+-                {activeSlide.description}
+-              </p>
+-
+-              {/* 2x2 Feature Checkmarks matching Screenshot */}
+-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3.5 gap-x-6 max-w-xl mb-10 font-sans">
+-                <div className="flex items-center gap-2.5 text-xs sm:text-sm text-neutral-200">
+-                  <span className="text-[#00e575] shrink-0">
+-                    <CheckCircle className="w-4 h-4" weight="bold" />
+-                  </span>
+-                  <span className="font-medium">{activeSlide.features[0]}</span>
+-                </div>
+-
+-                <div className="flex items-center gap-2.5 text-xs sm:text-sm text-neutral-200">
+-                  <span className="text-[#00e575] shrink-0">
+-                    <CheckCircle className="w-4 h-4" weight="bold" />
+-                  </span>
+-                  <span className="font-medium">{activeSlide.features[1]}</span>
+-                </div>
+-
+-                <div className="flex items-center gap-2.5 text-xs sm:text-sm text-neutral-200">
+-                  <span className="text-[#00e575] shrink-0">
+-                    <CheckCircle className="w-4 h-4" weight="bold" />
+-                  </span>
+-                  <span className="font-medium">{activeSlide.features[2]}</span>
+-                </div>
+-
+-                <div className="flex items-center gap-2.5 text-xs sm:text-sm text-neutral-200">
+-                  <span className="text-[#00e575] shrink-0">
+-                    <CheckCircle className="w-4 h-4" weight="bold" />
+-                  </span>
+-                  <span className="font-medium">{activeSlide.features[3]}</span>
+-                </div>
+-              </div>
+-
+-              {/* Action Buttons matching Screenshot */}
+-              <div className="flex flex-wrap items-center gap-4 font-sans">
+-                <button
+-                  onClick={() => {
+-                    if (onNavigateProduct) {
+-                      onNavigateProduct(activeSlide.targetProductId);
+-                    } else {
+-                      onOpenApply(
+-                        activeSlide.primaryProduct,
+-                        activeSlide.defaultAmount,
+-                        activeSlide.defaultTenure
+-                      );
+-                    }
+-                  }}
+-                  className="px-8 py-4 bg-[#00e575] hover:bg-[#15f38a] text-black font-bold text-sm sm:text-base rounded-full transition-all duration-200 shadow-xl shadow-[#00e575]/25 cursor-pointer flex items-center gap-2 group active:scale-95"
+-                >
+-                  <span>{activeSlide.primaryCtaText}</span>
+-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+-                </button>
+-
+-                <button
+-                  onClick={onScrollToCalculator}
+-                  className="px-7 py-4 bg-neutral-900/80 hover:bg-neutral-800 text-white font-medium text-sm sm:text-base rounded-full border border-white/10 transition-all duration-200 cursor-pointer flex items-center gap-1.5 backdrop-blur-md hover:border-white/20 active:scale-95"
+-                >
+-                  <span>{activeSlide.secondaryCtaText}</span>
+-                  <span className="text-xs">↓</span>
+-                </button>
+-              </div>
+-            </motion.div>
+-          </AnimatePresence>
++            <div className="nx-image-shade" aria-hidden="true" />
++            <span className="nx-image-category">{slide.category}</span>
++            <div className="nx-image-caption">{slide.caption}</div>
++            <img
++              className="nx-image-mark"
++              src="./assets/nexus/NEXUS-mark-BW-1x1-WH.png"
++              alt=""
++              width="64"
++              height="64"
++              aria-hidden="true"
++            />
++          </div>
+         </div>
+-      </div>
+-
+-      {/* SLIDE CONTROLS & BOTTOM NAVIGATION BAR */}
+-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-10">
+-        <div className="pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-6">
+-          {/* Slide Indicator Tabs with Auto-Play Progress Fill */}
+-          <div className="grid grid-cols-3 gap-2 sm:gap-3 w-full md:w-auto font-sans">
+-            {HERO_SLIDES.map((slide, idx) => {
+-              const isActive = idx === currentSlideIndex;
+-              return (
+-                <button
+-                  key={slide.id}
+-                  onClick={() => handleSelectSlide(idx)}
+-                  className={`text-left p-2.5 sm:p-3 rounded-2xl border transition-all duration-300 cursor-pointer relative overflow-hidden ${
+-                    isActive
+-                      ? 'bg-neutral-900/90 border-white/20 shadow-lg'
+-                      : 'bg-neutral-950/40 border-white/5 hover:border-white/15 text-neutral-400 hover:text-white'
+-                  }`}
+-                  aria-label={`Go to slide ${idx + 1}: ${slide.headlineLine1} ${slide.headlineLine2Highlight}`}
+-                  aria-selected={isActive}
+-                >
+-                  {/* Progress Line for Active Slide */}
+-                  {isActive && (
+-                    <div
+-                      className="absolute bottom-0 left-0 top-0 opacity-15 pointer-events-none transition-all"
+-                      style={{
+-                        width: `${progress}%`,
+-                        backgroundColor: '#00e575',
+-                      }}
+-                    />
+-                  )}
+-
+-                  <div className="relative z-10">
+-                    <div className="flex items-center justify-between text-[11px] font-sans mb-1">
+-                      <span className={isActive ? 'font-bold text-white' : 'text-neutral-500'}>
+-                        0{idx + 1}
+-                      </span>
+-                      {isActive && (
+-                        <span className="w-1.5 h-1.5 rounded-full bg-[#00e575]" />
+-                      )}
+-                    </div>
+-                    <div
+-                      className={`text-xs sm:text-sm font-semibold truncate ${
+-                        isActive ? 'text-white' : 'text-neutral-400'
+-                      }`}
+-                    >
+-                      {idx === 0 && 'Car into Cash'}
+-                      {idx === 1 && '₦1M in Minutes'}
+-                      {idx === 2 && 'Travel Financing'}
+-                    </div>
+-                  </div>
+-                </button>
+-              );
+-            })}
++        <div className="nx-hero-bottom">
++          <div
++            className="nx-slide-options"
++            aria-label="Choose featured product"
++          >
++            {slides.map((item, i) => (
++              <button
++                key={item.id}
++                aria-pressed={index === i}
++                onClick={() => select(i)}
++              >
++                <span>0{i + 1}</span>
++                {item.name}
++                <ArrowUpRight size={17} aria-hidden="true" />
++              </button>
++            ))}
+           </div>
+-
+-          {/* Controls: Prev/Next & Play/Pause */}
+-          <div className="flex items-center gap-3 shrink-0">
+-            {/* Play/Pause Button */}
++          <div className="nx-slide-controls">
+             <button
+-              onClick={() => setIsPaused(!isPaused)}
+-              className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-neutral-300 hover:text-white transition-colors cursor-pointer"
+-              title={isPaused ? 'Resume auto-sliding' : 'Pause auto-sliding'}
+-              aria-label={isPaused ? 'Resume auto-sliding' : 'Pause auto-sliding'}
++              className="nx-icon-button"
++              aria-label="Previous featured product"
++              onClick={() => select(index - 1)}
+             >
+-              {isPaused ? <Play className="w-4 h-4" /> : <Pause className="w-4 h-4" />}
++              <CaretLeft size={19} aria-hidden="true" />
+             </button>
+-
+-            {/* Previous Arrow */}
+             <button
+-              onClick={handlePrevSlide}
+-              className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-neutral-300 hover:text-white transition-colors cursor-pointer"
+-              aria-label="Previous slide"
++              className="nx-icon-button"
++              aria-label={
++                paused || reduceMotion
++                  ? "Play featured products"
++                  : "Pause featured products"
++              }
++              disabled={!!reduceMotion}
++              onClick={() => setPaused(!paused)}
+             >
+-              <CaretLeft className="w-5 h-5" />
++              {paused || reduceMotion ? (
++                <Play size={16} aria-hidden="true" />
++              ) : (
++                <Pause size={16} aria-hidden="true" />
++              )}
+             </button>
+-
+-            {/* Next Arrow */}
+             <button
+-              onClick={handleNextSlide}
+-              className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-neutral-300 hover:text-white transition-colors cursor-pointer"
+-              aria-label="Next slide"
++              className="nx-icon-button"
++              aria-label="Next featured product"
++              onClick={() => select(index + 1)}
+             >
+-              <CaretRight className="w-5 h-5" />
++              <CaretRight size={19} aria-hidden="true" />
+             </button>
+           </div>
+         </div>
+-
+-        {/* PROOF PANEL METRICS STRIP FROM USER SITE */}
+-        <div className="mt-10 pt-6 border-t border-white/10">
+-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+-            <div className="p-4 rounded-2xl bg-neutral-900/30 border border-white/5">
+-              <div className="text-3xl sm:text-4xl font-extrabold text-white font-display tabular-nums">
+-                29 <span className="text-base sm:text-lg font-normal text-neutral-400">years</span>
+-              </div>
+-              <p className="text-xs sm:text-sm text-neutral-400 mt-1">
+-                Combined 29 years of leadership experience in lending.
+-              </p>
+-            </div>
+-
+-            <div className="p-4 rounded-2xl bg-neutral-900/30 border border-white/5">
+-              <div className="text-3xl sm:text-4xl font-extrabold text-white font-display tabular-nums">
+-                50,000<span className="text-[#00e575]">+</span>
+-              </div>
+-              <p className="text-xs sm:text-sm text-neutral-400 mt-1">
+-                Loans impacted over 50k people and institutions nationwide.
+-              </p>
+-            </div>
+-
+-            <div className="p-4 rounded-2xl bg-neutral-900/30 border border-white/5">
+-              <div className="text-3xl sm:text-4xl font-extrabold text-white font-display tabular-nums">
+-                ₦15<span className="text-base sm:text-lg font-normal text-neutral-400">bn</span>
+-              </div>
+-              <p className="text-xs sm:text-sm text-neutral-400 mt-1">
+-                Successfully managed over ₦15 billion in transactions.
+-              </p>
+-            </div>
+-
+-            <div className="p-4 rounded-2xl bg-neutral-900/30 border border-white/5">
+-              <div className="text-3xl sm:text-4xl font-extrabold text-[#00e575] font-display tabular-nums">
+-                15 <span className="text-base sm:text-lg font-normal text-neutral-400">mins</span>
+-              </div>
+-              <p className="text-xs sm:text-sm text-neutral-400 mt-1">
+-                Prompt loan disbursement in minutes.
+-              </p>
+-            </div>
+-          </div>
++        <div className="nx-hero-footnote">
++          <span>
++            Personal goals. Business ambitions. One financial partner.
++          </span>
++          <button className="nx-text-link" onClick={onScrollToCalculator}>
++            Explore your repayments <ArrowRight size={18} aria-hidden="true" />
++          </button>
+         </div>
+       </div>
+     </section>
+diff --git a/src/components/InteractiveCalculator.tsx b/src/components/InteractiveCalculator.tsx
+index 9bf2da2..e76ebdd 100644
+--- a/src/components/InteractiveCalculator.tsx
++++ b/src/components/InteractiveCalculator.tsx
+@@ -255,7 +255,7 @@ export const InteractiveCalculator: React.FC<InteractiveCalculatorProps> = ({ on
+                   </div>
+                 </div>
+ 
+-                {/* Tenure Selector (Default 12 Months) */}
++                {/* Tenure Selector (Default 1 Month) */}
+                 <div className="mb-6">
+                   <div className="flex items-center justify-between mb-2">
+                     <div>
+@@ -263,11 +263,11 @@ export const InteractiveCalculator: React.FC<InteractiveCalculatorProps> = ({ on
+                         3. Repayment Tenure
+                       </label>
+                       <span className="text-[11px] text-slate-400 font-sans">
+-                        Default is 12 months; tap to customize:
++                        Default is 1 month; choose your repayment period:
+                       </span>
+                     </div>
+                     <span className="text-base font-bold font-display text-[#00e575] bg-emerald-500/10 px-3 py-1 rounded-xl border border-emerald-500/20">
+-                      {loanTenure} Months {loanTenure === 12 && '(Default)'}
++                      {loanTenure} {loanTenure === 1 ? 'month' : 'months'} {loanTenure === 1 && '(Default)'}
+                     </span>
+                   </div>
+ 
+diff --git a/src/components/Navbar.tsx b/src/components/Navbar.tsx
+index 754901b..c3f696c 100644
+--- a/src/components/Navbar.tsx
++++ b/src/components/Navbar.tsx
+@@ -1,589 +1,217 @@
+-import React, { useState, useEffect, useRef } from 'react';
++import React, { useEffect, useRef, useState } from "react";
+ import {
+-  List,
+-  X,
++  ArrowUpRight,
+   CaretDown,
+-  Sun,
++  List,
+   Moon,
+-  Sparkle,
+-  ShieldCheck,
+-  CreditCard,
+-  Bank,
+-  Car,
+-  AirplaneTilt,
+-  Users,
+-  Storefront,
+-  Receipt,
+-  Coins,
+-  NewspaperClipping,
+-  Image as ImageIcon,
+-  Briefcase,
+-  LockKey,
+-} from '@phosphor-icons/react';
+-import { useTheme } from '../hooks/useTheme';
++  Sun,
++  X,
++} from "@phosphor-icons/react";
++import { useTheme } from "../hooks/useTheme";
++import { NEXUS_PRODUCTS } from "../data/content";
+ 
+ interface NavbarProps {
+   onOpenApply: (productName?: string) => void;
+   onNavigate: (view: string, productId?: string) => void;
+   currentView?: string;
+ }
+-
+-export const Navbar: React.FC<NavbarProps> = ({ onOpenApply, onNavigate, currentView = 'home' }) => {
+-  const [scrolled, setScrolled] = useState(false);
+-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+-  const [activeDropdown, setActiveDropdown] = useState<'who' | 'products' | null>(null);
+-  const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
+-  const [mobileWhoOpen, setMobileWhoOpen] = useState(false);
++const companyLinks = [
++  ["About Nexus", "about"],
++  ["Our people", "leadership"],
++  ["News & insights", "blog"],
++  ["Gallery", "gallery"],
++  ["Careers", "careers"],
++];
++
++export const Navbar: React.FC<NavbarProps> = ({
++  onOpenApply,
++  onNavigate,
++  currentView = "home",
++}) => {
+   const { theme, toggleTheme } = useTheme();
+-
+-  const dropdownRef = useRef<HTMLDivElement>(null);
+-
++  const [menuOpen, setMenuOpen] = useState(false);
++  const [dropdown, setDropdown] = useState<"company" | "products" | null>(null);
++  const headerRef = useRef<HTMLElement>(null);
++  const mobileTrigger = useRef<HTMLButtonElement>(null);
++  const companyTrigger = useRef<HTMLButtonElement>(null);
++  const productTrigger = useRef<HTMLButtonElement>(null);
+   useEffect(() => {
+-    const handleScroll = () => {
+-      setScrolled(window.scrollY > 20);
+-    };
+-    window.addEventListener('scroll', handleScroll, { passive: true });
+-    return () => window.removeEventListener('scroll', handleScroll);
+-  }, []);
+-
+-  // Click outside to close dropdowns
+-  useEffect(() => {
+-    const handleClickOutside = (event: MouseEvent) => {
+-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+-        setActiveDropdown(null);
++    const closeOutside = (event: PointerEvent) => {
++      if (!headerRef.current?.contains(event.target as Node)) {
++        setDropdown(null);
++        setMenuOpen(false);
+       }
+     };
+-    document.addEventListener('mousedown', handleClickOutside);
+-    return () => document.removeEventListener('mousedown', handleClickOutside);
++    document.addEventListener("pointerdown", closeOutside);
++    return () => document.removeEventListener("pointerdown", closeOutside);
+   }, []);
+-
+-  const handleNavClick = (view: string, productId?: string) => {
+-    setActiveDropdown(null);
+-    setMobileMenuOpen(false);
++  const navigate = (view: string, productId?: string) => {
++    setMenuOpen(false);
++    setDropdown(null);
+     onNavigate(view, productId);
+   };
+-
+   return (
+     <header
+-      ref={dropdownRef}
+-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 font-sans ${
+-        scrolled
+-          ? 'bg-black/92 backdrop-blur-xl border-b border-white/10 shadow-2xl py-3.5'
+-          : 'bg-transparent py-5'
+-      }`}
++      className="nx-header"
++      ref={headerRef}
++      onKeyDown={(event) => {
++        if (event.key !== "Escape") return;
++        if (dropdown === "company") companyTrigger.current?.focus();
++        if (dropdown === "products") productTrigger.current?.focus();
++        if (menuOpen) mobileTrigger.current?.focus();
++        setDropdown(null);
++        setMenuOpen(false);
++      }}
+     >
+-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+-        <div className="flex items-center justify-between gap-4 md:gap-6">
+-          {/* Brand Logo: Official NEXUS FINANCE Logo */}
++      <a className="nx-skip" href="#main-content">
++        Skip to content
++      </a>
++      <div className="nx-container nx-nav-row">
++        <button
++          className="nx-brand"
++          aria-label="Nexus Finance home"
++          onClick={() => navigate("home")}
++        >
++          <img
++            src={`./assets/nexus/NEXUS-coloured-HOR${theme === "dark" ? "-dark" : ""}.png`}
++            alt="Nexus Finance"
++            width="150"
++            height="48"
++          />
++        </button>
++        <nav className="nx-desktop-nav" aria-label="Main navigation">
+           <button
+-            onClick={() => handleNavClick('home')}
+-            className="flex items-center shrink-0 focus-visible:outline-none cursor-pointer"
+-            aria-label="Nexus Finance Home"
++            aria-current={currentView === "home" ? "page" : undefined}
++            onClick={() => navigate("home")}
+           >
+-            <img
+-              src={theme === 'light' ? './assets/nexus/NEXUS-coloured-HOR.png' : './assets/nexus/NEXUS-coloured-HOR-dark.png'}
+-              alt="Nexus Finance"
+-              className="h-8 sm:h-9 md:h-10 w-auto object-contain transition-opacity duration-200"
+-            />
++            Home
+           </button>
+-
+-          {/* Desktop & Tablet Navigation Bar */}
+-          <nav className="hidden xl:flex items-center gap-6 text-sm font-medium text-neutral-300 font-sans shrink-0">
+-            {/* Home */}
++          <div className="nx-nav-group">
+             <button
+-              onClick={() => handleNavClick('home')}
+-              className={`hover:text-white transition-colors whitespace-nowrap cursor-pointer ${
+-                currentView === 'home' ? 'text-[#00e575] font-semibold' : ''
+-              }`}
++              ref={companyTrigger}
++              aria-expanded={dropdown === "company"}
++              aria-controls="nx-company-menu"
++              onClick={() =>
++                setDropdown(dropdown === "company" ? null : "company")
++              }
+             >
+-              Home
+-            </button>
+-
+-            {/* Who We Are (Dropdown) */}
+-            <div
+-              className="relative"
+-              onMouseEnter={() => setActiveDropdown('who')}
+-              onMouseLeave={() => setActiveDropdown(null)}
+-            >
+-              <button
+-                onClick={() => setActiveDropdown(activeDropdown === 'who' ? null : 'who')}
+-                className={`flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-white/[0.05] hover:text-white transition-all cursor-pointer focus:outline-none whitespace-nowrap ${
+-                  ['about', 'blog', 'gallery', 'careers'].includes(currentView)
+-                    ? 'text-[#00e575] font-semibold'
+-                    : ''
+-                }`}
+-              >
+-                <span>Who We Are</span>
+-                <CaretDown
+-                  className={`w-3.5 h-3.5 transition-transform duration-200 shrink-0 ml-0.5 mr-0.5 ${
+-                    activeDropdown === 'who' ? 'rotate-180 text-[#00e575]' : ''
+-                  }`}
+-                />
+-              </button>
+-
+-              {activeDropdown === 'who' && (
+-                <div className="absolute top-full left-0 w-72 pt-2 -mt-1 z-50">
+-                  <div className="rounded-2xl bg-neutral-950/98 border border-white/15 p-2.5 shadow-2xl backdrop-blur-2xl space-y-1">
+-                    <button
+-                      onClick={() => handleNavClick('about')}
+-                      className="w-full flex items-center gap-3 p-2.5 rounded-xl hover:bg-white/10 text-left transition-colors cursor-pointer"
+-                    >
+-                      <ShieldCheck className="w-4 h-4 text-[#00e575] shrink-0" weight="bold" />
+-                      <div>
+-                        <div className="text-xs font-semibold text-white">About Us</div>
+-                        <div className="text-[10px] text-neutral-400">Institutional mandate &amp; vision</div>
+-                      </div>
+-                    </button>
+-
+-                    <button
+-                      onClick={() => handleNavClick('leadership')}
+-                      className="w-full flex items-center gap-3 p-2.5 rounded-xl hover:bg-white/10 text-left transition-colors cursor-pointer"
+-                    >
+-                      <Users className="w-4 h-4 text-emerald-400 shrink-0" weight="bold" />
+-                      <div>
+-                        <div className="text-xs font-semibold text-white">Leadership Team</div>
+-                        <div className="text-[10px] text-neutral-400">Led by veterans of Tier-1 banking</div>
+-                      </div>
+-                    </button>
+-
+-                    <button
+-                      onClick={() => handleNavClick('blog')}
+-                      className="w-full flex items-center gap-3 p-2.5 rounded-xl hover:bg-white/10 text-left transition-colors cursor-pointer"
+-                    >
+-                      <NewspaperClipping className="w-4 h-4 text-cyan-400 shrink-0" weight="bold" />
+-                      <div>
+-                        <div className="text-xs font-semibold text-white">
+-                          Blog &amp; News
+-                        </div>
+-                        <div className="text-[10px] text-neutral-400">Financial insights &amp; guides</div>
+-                      </div>
+-                    </button>
+-
+-                    <button
+-                      onClick={() => handleNavClick('gallery')}
+-                      className="w-full flex items-center gap-3 p-2.5 rounded-xl hover:bg-white/10 text-left transition-colors cursor-pointer"
+-                    >
+-                      <ImageIcon className="w-4 h-4 text-amber-400 shrink-0" weight="bold" />
+-                      <div>
+-                        <div className="text-xs font-semibold text-white">Gallery</div>
+-                        <div className="text-[10px] text-neutral-400">Headquarters &amp; office highlights</div>
+-                      </div>
+-                    </button>
+-
+-                    <button
+-                      onClick={() => handleNavClick('careers')}
+-                      className="w-full flex items-center gap-3 p-2.5 rounded-xl hover:bg-white/10 text-left transition-colors cursor-pointer"
+-                    >
+-                      <Briefcase className="w-4 h-4 text-pink-400 shrink-0" weight="bold" />
+-                      <div>
+-                        <div className="text-xs font-semibold text-white">
+-                          Careers
+-                        </div>
+-                        <div className="text-[10px] text-neutral-400">Join our high-performing team</div>
+-                      </div>
+-                    </button>
+-
+-                    <button
+-                      onClick={() => handleNavClick('partners')}
+-                      className="w-full flex items-center gap-3 p-2.5 rounded-xl hover:bg-white/10 text-left transition-colors cursor-pointer border-t border-white/5 pt-2"
+-                    >
+-                      <Bank className="w-4 h-4 text-sky-400 shrink-0" weight="bold" />
+-                      <div>
+-                        <div className="text-xs font-semibold text-white">Institutional Partners</div>
+-                        <div className="text-[10px] text-neutral-400">National commands &amp; MDAs</div>
+-                      </div>
+-                    </button>
+-                  </div>
+-                </div>
+-              )}
+-            </div>
+-
+-            {/* Products (Dropdown linking to dedicated Product Pages) */}
+-            <div
+-              className="relative"
+-              onMouseEnter={() => setActiveDropdown('products')}
+-              onMouseLeave={() => setActiveDropdown(null)}
+-            >
+-              <button
+-                onClick={() => setActiveDropdown(activeDropdown === 'products' ? null : 'products')}
+-                className={`flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-white/[0.05] hover:text-white transition-all cursor-pointer focus:outline-none whitespace-nowrap ${
+-                  currentView === 'product-detail' ? 'text-[#00e575] font-semibold' : ''
+-                }`}
+-              >
+-                <span>Products</span>
+-                <CaretDown
+-                  className={`w-3.5 h-3.5 transition-transform duration-200 shrink-0 ml-0.5 mr-0.5 ${
+-                    activeDropdown === 'products' ? 'rotate-180 text-[#00e575]' : ''
+-                  }`}
+-                />
+-              </button>
+-
+-              {activeDropdown === 'products' && (
+-                <div className="absolute top-full -left-16 w-84 pt-2 -mt-1 z-50">
+-                  <div className="rounded-2xl bg-neutral-950/98 border border-white/15 p-3 shadow-2xl backdrop-blur-2xl max-h-[480px] overflow-y-auto space-y-1">
+-                    <div className="px-2.5 py-1 text-[10px] uppercase font-bold text-[#00e575] tracking-wider font-sans">
+-                      Core Credit Facilities
+-                    </div>
+-
+-                    <button
+-                      onClick={() => handleNavClick('product-detail', 'suremoney-loan')}
+-                      className="w-full flex items-center gap-3 p-2 rounded-xl hover:bg-white/10 text-left transition-colors cursor-pointer"
+-                    >
+-                      <Sparkle className="w-4 h-4 text-[#00e575] shrink-0" weight="bold" />
+-                      <div>
+-                        <div className="text-xs font-semibold text-white flex items-center gap-1.5">
+-                          Suremoney Loan
+-                          <span className="text-[9px] bg-[#00e575]/20 text-[#00e575] px-1.5 py-0.2 rounded">15 Mins</span>
+-                        </div>
+-                        <div className="text-[10px] text-neutral-400">Quick personal &amp; business emergency loan</div>
+-                      </div>
+-                    </button>
+-
+-                    <button
+-                      onClick={() => handleNavClick('product-detail', 'nexus-credit')}
+-                      className="w-full flex items-center gap-3 p-2 rounded-xl hover:bg-white/10 text-left transition-colors cursor-pointer"
+-                    >
+-                      <CreditCard className="w-4 h-4 text-emerald-400 shrink-0" weight="bold" />
+-                      <div>
+-                        <div className="text-xs font-semibold text-white flex items-center gap-1.5">
+-                          Nexus Credit
+-                          <span className="text-[9px] bg-emerald-500/20 text-[#00e575] px-1.5 py-0.2 rounded font-mono">Remita</span>
+-                        </div>
+-                        <div className="text-[10px] text-neutral-400">Salary-based instant payroll credit</div>
+-                      </div>
+-                    </button>
+-
+-                    <button
+-                      onClick={() => handleNavClick('product-detail', 'car-for-cash')}
+-                      className="w-full flex items-center gap-3 p-2 rounded-xl hover:bg-white/10 text-left transition-colors cursor-pointer"
+-                    >
+-                      <Car className="w-4 h-4 text-amber-400 shrink-0" weight="bold" />
+-                      <div>
+-                        <div className="text-xs font-semibold text-white flex items-center gap-1.5">
+-                          Car-for-Cash (CFC)
+-                          <span className="text-[9px] bg-amber-500/20 text-amber-300 px-1.5 py-0.2 rounded">2hr Disbursal</span>
+-                        </div>
+-                        <div className="text-[10px] text-neutral-400">Urgent cash · Insured depot storage</div>
+-                      </div>
+-                    </button>
+-
+-                    <button
+-                      onClick={() => handleNavClick('product-detail', 'travel-financing')}
+-                      className="w-full flex items-center gap-3 p-2 rounded-xl hover:bg-white/10 text-left transition-colors cursor-pointer"
+-                    >
+-                      <AirplaneTilt className="w-4 h-4 text-sky-400 shrink-0" weight="bold" />
+-                      <div>
+-                        <div className="text-xs font-semibold text-white">Travel Financing</div>
+-                        <div className="text-[10px] text-neutral-400">Embassy visa &amp; study proof of funds</div>
+-                      </div>
+-                    </button>
+-
+-                    <button
+-                      onClick={() => handleNavClick('product-detail', 'women-empowerment')}
+-                      className="w-full flex items-center gap-3 p-2 rounded-xl hover:bg-white/10 text-left transition-colors cursor-pointer"
+-                    >
+-                      <Users className="w-4 h-4 text-pink-400 shrink-0" weight="bold" />
+-                      <div>
+-                        <div className="text-xs font-semibold text-white">Women Empowerment (NWEL)</div>
+-                        <div className="text-[10px] text-neutral-400">Concessionary capital for female enterprise</div>
+-                      </div>
+-                    </button>
+-
+-                    <div className="border-t border-white/10 my-1 pt-1">
+-                      <button
+-                        onClick={() => handleNavClick('product-detail', 'shop-owned-sme')}
+-                        className="w-full flex items-center gap-3 p-2 rounded-xl hover:bg-white/10 text-left transition-colors cursor-pointer"
+-                      >
+-                        <Storefront className="w-4 h-4 text-emerald-400 shrink-0" />
+-                        <div>
+-                          <div className="text-xs font-semibold text-white">Shop-Owned Loan</div>
+-                          <div className="text-[10px] text-neutral-400">SME &amp; retail merchant inventory</div>
+-                        </div>
+-                      </button>
+-
+-                      <button
+-                        onClick={() => handleNavClick('product-detail', 'invoice-discounting')}
+-                        className="w-full flex items-center gap-3 p-2 rounded-xl hover:bg-white/10 text-left transition-colors cursor-pointer"
+-                      >
+-                        <Receipt className="w-4 h-4 text-indigo-400 shrink-0" />
+-                        <div>
+-                          <div className="text-xs font-semibold text-white">Invoice Discounting</div>
+-                          <div className="text-[10px] text-neutral-400">Unlock 60–90 day receivables</div>
+-                        </div>
+-                      </button>
+-
+-                      <button
+-                        onClick={() => handleNavClick('product-detail', 'gold-for-cash')}
+-                        className="w-full flex items-center gap-3 p-2 rounded-xl hover:bg-white/10 text-left transition-colors cursor-pointer"
+-                      >
+-                        <Coins className="w-4 h-4 text-amber-300 shrink-0" />
+-                        <div>
+-                          <div className="text-xs font-semibold text-white">Gold-for-Cash (GFC)</div>
+-                          <div className="text-[10px] text-neutral-400">Appraised physical precious assets</div>
+-                        </div>
+-                      </button>
+-
+-                      <button
+-                        onClick={() => handleNavClick('product-detail', 'high-yield-investments')}
+-                        className="w-full flex items-center gap-3 p-2 rounded-xl hover:bg-white/10 text-left transition-colors cursor-pointer"
+-                      >
+-                        <LockKey className="w-4 h-4 text-cyan-400 shrink-0" />
+-                        <div>
+-                          <div className="text-xs font-semibold text-white flex items-center gap-1.5">
+-                            Fixed Deposit Vaults
+-                            <span className="text-[9px] bg-cyan-500/20 text-cyan-300 px-1.5 py-0.2 rounded font-mono">15.5% APY</span>
+-                          </div>
+-                          <div className="text-[10px] text-neutral-400">Guaranteed wealth preservation</div>
+-                        </div>
+-                      </button>
+-                    </div>
+-                  </div>
+-                </div>
+-              )}
+-            </div>
+-
+-            {/* Loan Calculator */}
+-            <button
+-              onClick={() => handleNavClick('calculator')}
+-              className={`hover:text-white transition-colors whitespace-nowrap cursor-pointer ${
+-                currentView === 'calculator' ? 'text-[#00e575] font-semibold' : ''
+-              }`}
+-            >
+-              Loan Calculator
+-            </button>
+-
+-            {/* Contact Us */}
+-            <button
+-              onClick={() => handleNavClick('contact')}
+-              className={`hover:text-white transition-colors whitespace-nowrap cursor-pointer ${
+-                currentView === 'contact' ? 'text-[#00e575] font-semibold' : ''
+-              }`}
+-            >
+-              Contact Us
+-            </button>
+-          </nav>
+-
+-          {/* Action cluster: Theme Toggle + CTA Pill */}
+-          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+-            {/* Theme Toggle Button (Light/Dark mode) */}
+-            <button
+-              onClick={toggleTheme}
+-              className="p-2 sm:px-3 sm:py-2 rounded-full bg-white/10 hover:bg-white/15 text-neutral-200 hover:text-white border border-white/10 transition-colors flex items-center gap-1.5 cursor-pointer text-xs font-medium"
+-              title={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} mode`}
+-              aria-label={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} mode`}
+-            >
+-              {theme === 'dark' ? (
+-                <>
+-                  <Sun className="w-4 h-4 text-amber-300" weight="bold" />
+-                  <span className="hidden sm:inline text-[11px] font-sans">Light</span>
+-                </>
+-              ) : (
+-                <>
+-                  <Moon className="w-4 h-4 text-indigo-400" weight="bold" />
+-                  <span className="hidden sm:inline text-[11px] font-sans">Dark</span>
+-                </>
+-              )}
+-            </button>
+-
+-            {/* Apply Now Button */}
+-            <button
+-              onClick={() => onOpenApply()}
+-              className="inline-flex items-center justify-center px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-bold text-black bg-[#00e575] hover:bg-[#15f38a] active:scale-95 rounded-full transition-all duration-200 shadow-md shadow-[#00e575]/25 cursor-pointer whitespace-nowrap font-sans"
+-            >
+-              Apply Now
+-            </button>
+-
+-            {/* Mobile / Tablet menu toggle button */}
+-            <button
+-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+-              className="xl:hidden p-2 text-neutral-300 hover:text-white focus:outline-none rounded-lg"
+-              aria-label="Toggle menu"
+-            >
+-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <List className="w-6 h-6" />}
++              Who we are <CaretDown size={14} aria-hidden="true" />
+             </button>
++            {dropdown === "company" && (
++              <div id="nx-company-menu" className="nx-dropdown">
++                <span className="nx-eyebrow">Meet Nexus</span>
++                {companyLinks.map(([label, view]) => (
++                  <button key={view} onClick={() => navigate(view)}>
++                    {label}
++                    <ArrowUpRight size={17} aria-hidden="true" />
++                  </button>
++                ))}
++              </div>
++            )}
+           </div>
+-        </div>
+-      </div>
+-
+-      {/* Mobile & Tablet Drawer Menu */}
+-      {mobileMenuOpen && (
+-        <div className="xl:hidden bg-black/98 border-b border-white/10 px-6 py-6 backdrop-blur-2xl max-h-[85vh] overflow-y-auto font-sans">
+-          <nav className="flex flex-col gap-3 text-sm font-medium text-neutral-300">
++          <div className="nx-nav-group">
+             <button
+-              onClick={() => handleNavClick('home')}
+-              className="text-left py-1.5 text-base font-semibold text-white hover:text-[#00e575]"
++              ref={productTrigger}
++              aria-expanded={dropdown === "products"}
++              aria-controls="nx-product-menu"
++              onClick={() =>
++                setDropdown(dropdown === "products" ? null : "products")
++              }
+             >
+-              Home
++              Our products <CaretDown size={14} aria-hidden="true" />
+             </button>
+-
+-            {/* Mobile Who We Are Accordion */}
+-            <div className="border-t border-white/10 pt-2">
+-              <button
+-                onClick={() => setMobileWhoOpen(!mobileWhoOpen)}
+-                className="w-full flex items-center justify-between py-1.5 text-base font-semibold text-white"
+-              >
+-                <span>Who We Are</span>
+-                <CaretDown className={`w-4 h-4 transition-transform ${mobileWhoOpen ? 'rotate-180 text-[#00e575]' : ''}`} />
+-              </button>
+-              {mobileWhoOpen && (
+-                <div className="pl-4 space-y-2 py-2 text-xs text-neutral-300">
+-                  <button
+-                    onClick={() => handleNavClick('about')}
+-                    className="block text-left w-full py-1 hover:text-[#00e575]"
+-                  >
+-                    About Us
+-                  </button>
+-                  <button
+-                    onClick={() => handleNavClick('leadership')}
+-                    className="block text-left w-full py-1 hover:text-[#00e575]"
+-                  >
+-                    Leadership Team
+-                  </button>
+-                  <button
+-                    onClick={() => handleNavClick('blog')}
+-                    className="block text-left w-full py-1 hover:text-[#00e575] font-semibold"
+-                  >
+-                    Blog &amp; News
+-                  </button>
+-                  <button
+-                    onClick={() => handleNavClick('gallery')}
+-                    className="block text-left w-full py-1 hover:text-[#00e575]"
+-                  >
+-                    Gallery &amp; Office Highlights
+-                  </button>
+-                  <button
+-                    onClick={() => handleNavClick('careers')}
+-                    className="block text-left w-full py-1 hover:text-[#00e575]"
+-                  >
+-                    Careers
+-                  </button>
+-                  <button
+-                    onClick={() => handleNavClick('partners')}
+-                    className="block text-left w-full py-1 hover:text-[#00e575]"
+-                  >
+-                    Institutional Partners
+-                  </button>
+-                </div>
+-              )}
+-            </div>
+-
+-            {/* Mobile Products Accordion */}
+-            <div className="border-t border-white/10 pt-2">
+-              <button
+-                onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
+-                className="w-full flex items-center justify-between py-1.5 text-base font-semibold text-white"
++            {dropdown === "products" && (
++              <div
++                id="nx-product-menu"
++                className="nx-dropdown nx-dropdown-products"
+               >
+-                <span>Products</span>
+-                <CaretDown className={`w-4 h-4 transition-transform ${mobileProductsOpen ? 'rotate-180 text-[#00e575]' : ''}`} />
+-              </button>
+-              {mobileProductsOpen && (
+-                <div className="pl-4 space-y-2 py-2 text-xs text-neutral-300">
+-                  <button
+-                    onClick={() => handleNavClick('product-detail', 'suremoney-loan')}
+-                    className="block text-left w-full py-1 text-white hover:text-[#00e575] font-semibold"
+-                  >
+-                    Suremoney Loan (15-Min Disbursal)
+-                  </button>
+-                  <button
+-                    onClick={() => handleNavClick('product-detail', 'nexus-credit')}
+-                    className="block text-left w-full py-1 text-white hover:text-[#00e575] font-semibold"
+-                  >
+-                    Nexus Credit (Remita Salary)
+-                  </button>
+-                  <button
+-                    onClick={() => handleNavClick('product-detail', 'car-for-cash')}
+-                    className="block text-left w-full py-1 text-white hover:text-[#00e575] font-semibold"
+-                  >
+-                    Car-for-Cash (2hr Disbursal · Depot)
+-                  </button>
+-                  <button
+-                    onClick={() => handleNavClick('product-detail', 'travel-financing')}
+-                    className="block text-left w-full py-1 text-white hover:text-[#00e575] font-semibold"
+-                  >
+-                    Travel Financing (Visa &amp; Study)
+-                  </button>
++                <span className="nx-eyebrow">Find your next move</span>
++                {NEXUS_PRODUCTS.map((product) => (
+                   <button
+-                    onClick={() => handleNavClick('product-detail', 'women-empowerment')}
+-                    className="block text-left w-full py-1 text-white hover:text-[#00e575]"
++                    key={product.id}
++                    onClick={() => navigate("product-detail", product.id)}
+                   >
+-                    Women Empowerment (NWEL)
++                    {product.name}
++                    <ArrowUpRight size={17} aria-hidden="true" />
+                   </button>
+-                  <button
+-                    onClick={() => handleNavClick('product-detail', 'shop-owned-sme')}
+-                    className="block text-left w-full py-1 text-white hover:text-[#00e575]"
+-                  >
+-                    Shop-Owned Loan (SOBL)
+-                  </button>
+-                  <button
+-                    onClick={() => handleNavClick('product-detail', 'invoice-discounting')}
+-                    className="block text-left w-full py-1 text-white hover:text-[#00e575]"
+-                  >
+-                    Invoice Discounting Facility (IDF)
+-                  </button>
+-                  <button
+-                    onClick={() => handleNavClick('product-detail', 'gold-for-cash')}
+-                    className="block text-left w-full py-1 text-white hover:text-[#00e575]"
+-                  >
+-                    Gold-for-Cash (GFC)
+-                  </button>
+-                  <button
+-                    onClick={() => handleNavClick('product-detail', 'high-yield-investments')}
+-                    className="block text-left w-full py-1 text-cyan-400 hover:text-white"
+-                  >
+-                    Fixed Deposit Vaults (15.5% APY)
+-                  </button>
+-                </div>
+-              )}
+-            </div>
+-
+-            <button
+-              onClick={() => handleNavClick('calculator')}
+-              className="text-left py-1.5 text-base font-semibold text-white hover:text-[#00e575] border-t border-white/10 pt-2"
+-            >
+-              Loan Calculator
+-            </button>
+-
+-            <button
+-              onClick={() => handleNavClick('contact')}
+-              className="text-left py-1.5 text-base font-semibold text-white hover:text-[#00e575]"
+-            >
+-              Contact Us
+-            </button>
+-
+-            {/* Mobile Theme Toggle Row */}
+-            <div className="pt-3 flex items-center justify-between border-t border-white/10 text-sm">
+-              <span className="text-neutral-400">Appearance</span>
+-              <button
+-                onClick={toggleTheme}
+-                className="px-3.5 py-1.5 rounded-full bg-white/10 border border-white/10 flex items-center gap-2 text-xs font-semibold text-white cursor-pointer"
+-              >
+-                {theme === 'dark' ? (
+-                  <>
+-                    <Sun className="w-3.5 h-3.5 text-amber-300" weight="bold" />
+-                    <span>Switch to Light</span>
+-                  </>
+-                ) : (
+-                  <>
+-                    <Moon className="w-3.5 h-3.5 text-indigo-400" weight="bold" />
+-                    <span>Switch to Dark</span>
+-                  </>
+-                )}
++                ))}
++              </div>
++            )}
++          </div>
++          <button onClick={() => navigate("calculator")}>
++            Loan calculator
++          </button>
++          <button onClick={() => navigate("contact")}>Contact</button>
++        </nav>
++        <div className="nx-nav-actions">
++          <button
++            className="nx-icon-button nx-theme-button"
++            aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
++            onClick={toggleTheme}
++          >
++            {theme === "light" ? (
++              <Moon size={20} aria-hidden="true" />
++            ) : (
++              <Sun size={20} aria-hidden="true" />
++            )}
++          </button>
++          <button
++            className="nx-button nx-nav-apply"
++            onClick={() => {
++              setMenuOpen(false);
++              setDropdown(null);
++              onOpenApply();
++            }}
++          >
++            Apply now <ArrowUpRight size={18} aria-hidden="true" />
++          </button>
++          <button
++            ref={mobileTrigger}
++            className="nx-icon-button nx-menu-trigger"
++            aria-expanded={menuOpen}
++            aria-controls="nx-mobile-nav"
++            aria-label={menuOpen ? "Close navigation" : "Open navigation"}
++            onClick={() => setMenuOpen(!menuOpen)}
++          >
++            {menuOpen ? (
++              <X size={24} aria-hidden="true" />
++            ) : (
++              <List size={24} aria-hidden="true" />
++            )}
++          </button>
++        </div>
++      </div>
++      {menuOpen && (
++        <nav
++          id="nx-mobile-nav"
++          className="nx-mobile-nav nx-container"
++          aria-label="Mobile navigation"
++        >
++          <button onClick={() => navigate("home")}>Home</button>
++          <details>
++            <summary>Who we are</summary>
++            {companyLinks.map(([label, view]) => (
++              <button key={view} onClick={() => navigate(view)}>
++                {label}
+               </button>
+-            </div>
+-
+-            <div className="pt-3">
++            ))}
++          </details>
++          <details>
++            <summary>Our products</summary>
++            {NEXUS_PRODUCTS.map((product) => (
+               <button
+-                onClick={() => {
+-                  setMobileMenuOpen(false);
+-                  onOpenApply();
+-                }}
+-                className="w-full py-3 bg-[#00e575] hover:bg-[#15f38a] text-black font-bold text-sm rounded-full text-center shadow-lg shadow-[#00e575]/25 cursor-pointer"
++                key={product.id}
++                onClick={() => navigate("product-detail", product.id)}
+               >
+-                Apply Now
++                {product.name}
+               </button>
+-            </div>
+-          </nav>
+-        </div>
++            ))}
++          </details>
++          <button onClick={() => navigate("calculator")}>
++            Loan calculator
++          </button>
++          <button onClick={() => navigate("contact")}>Contact us</button>
++        </nav>
+       )}
+     </header>
+   );
+diff --git a/src/components/ProductBento.tsx b/src/components/ProductBento.tsx
+index bd7f7bc..a4e1539 100644
+--- a/src/components/ProductBento.tsx
++++ b/src/components/ProductBento.tsx
+@@ -1,305 +1,241 @@
+-import React, { useState } from 'react';
+-import { motion } from 'motion/react';
+-import { NEXUS_PRODUCTS } from '../data/content';
+-import { ArrowUpRight, Check } from '@phosphor-icons/react';
+-
++import React, { useState } from "react";
++import {
++  ArrowRight,
++  ArrowUpRight,
++  Bank,
++  Briefcase,
++  Car,
++  Coins,
++  CreditCard,
++  Storefront,
++  Receipt,
++  AirplaneTilt,
++} from "@phosphor-icons/react";
++import { NEXUS_PRODUCTS } from "../data/content";
+ interface ProductBentoProps {
+-  onSelectProduct: (productName: string) => void;
++  onSelectProduct: (productId: string) => void;
+ }
+-
+-const containerVariants = {
+-  hidden: { opacity: 0 },
+-  visible: {
+-    opacity: 1,
+-    transition: {
+-      staggerChildren: 0.1,
+-      delayChildren: 0.05,
+-    },
++const categories = [
++  "Featured",
++  "Personal",
++  "Business",
++  "Investments",
++  "All products",
++] as const;
++type Category = (typeof categories)[number];
++const featuredIds = ["car-for-cash", "suremoney-loan", "nexus-credit"];
++const presentation: Record<
++  string,
++  { description: string; image: string; icon: typeof Car; label: string }
++> = {
++  "car-for-cash": {
++    description:
++      "Access short-term funding using your vehicle as security. Your car is held until the loan is repaid.",
++    image: "hero_car.jpg",
++    icon: Car,
++    label: "Put your assets to work",
+   },
+-};
+-
+-const cardItemVariants = {
+-  hidden: { opacity: 0, y: 35 },
+-  visible: {
+-    opacity: 1,
+-    y: 0,
+-    transition: {
+-      duration: 0.55,
+-      ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
+-    },
++  "suremoney-loan": {
++    description:
++      "Flexible funding for unexpected expenses and opportunities, with no collateral required.",
++    image: "entrepreneur.webp",
++    icon: CreditCard,
++    label: "For everyday possibilities",
++  },
++  "nexus-credit": {
++    description:
++      "Salary-based financing with repayments collected through your payroll.",
++    image: "corporate_salary_exec.jpg",
++    icon: Bank,
++    label: "Make your salary go further",
++  },
++  "travel-financing": {
++    description:
++      "Explore financing and documentation options for study, relocation, and overseas travel.",
++    image: "travel_documents.jpg",
++    icon: AirplaneTilt,
++    label: "For your next chapter",
++  },
++  "women-empowerment": {
++    description:
++      "Funding designed to help women build, manage, and grow their businesses.",
++    image: "entrepreneur.webp",
++    icon: Briefcase,
++    label: "Back your ambition",
++  },
++  "shop-owned-sme": {
++    description:
++      "Working capital for shop owners, retailers, and distributors ready to grow.",
++    image: "entrepreneur.webp",
++    icon: Storefront,
++    label: "Keep business moving",
++  },
++  "invoice-discounting": {
++    description:
++      "Access working capital against eligible invoices while you wait for payment.",
++    image: "corporate_salary_exec.jpg",
++    icon: Receipt,
++    label: "Unlock your receivables",
++  },
++  "gold-for-cash": {
++    description:
++      "Explore a short-term loan secured against your appraised gold assets.",
++    image: "gold_vault.jpg",
++    icon: Coins,
++    label: "Unlock the value you hold",
++  },
++  "high-yield-investments": {
++    description:
++      "Explore fixed-term investment options, tenures, and payout schedules with our team.",
++    image: "gold_vault.jpg",
++    icon: Coins,
++    label: "Plan beyond today",
+   },
+ };
+-
+-export const ProductBento: React.FC<ProductBentoProps> = ({ onSelectProduct }) => {
+-  const [activeCategory, setActiveCategory] = useState<'all' | 'mda' | 'individual' | 'business' | 'investment'>('all');
+-
+-  const mainProducts = [
+-    {
+-      id: 'suremoney-loan',
+-      name: 'Suremoney Loan',
+-      category: 'mda',
+-      tag: '15 Mins',
+-      badge: 'Prompt Emergency Credit',
+-      image: './assets/nexus/naira_1000_stacks.jpg',
+-      imageAlt: 'Authentic crisp stacks of ₦1,000 Nigerian Central Bank notes with official wrappers',
+-      description: 'A flexible, no-collateral personal and business loan designed for prompt access to funds during emergencies with flexible tenures up to 24 months.',
+-      bullets: [
+-        'No collateral required with rapid settlement',
+-        'Up to ₦10,000,000 facility limit',
+-      ],
+-      buttonText: 'View Suremoney Details',
+-    },
+-    {
+-      id: 'nexus-credit',
+-      name: 'Nexus Credit',
+-      category: 'mda',
+-      tag: 'Instant Remita',
+-      badge: 'Salary-Based Remita Facility',
+-      image: './assets/nexus/corporate_salary_exec.jpg',
+-      imageAlt: 'Senior Nigerian professional in corporate boardroom managing salary-backed credit',
+-      description: 'A quick, non-collateral, salary-based credit facility offering competitive interest rates with ultra-fast Remita payroll disbursement and automatic deductions.',
+-      bullets: [
+-        'Direct Remita salary integration with zero stress',
+-        'Up to ₦5,000,000 facility limit',
+-      ],
+-      buttonText: 'View Nexus Credit Details',
+-    },
+-    {
+-      id: 'car-for-cash',
+-      name: 'Car-for-Cash (CFC)',
+-      category: 'individual',
+-      tag: '2hr Disbursal',
+-      badge: 'Insured Depot Storage',
+-      image: './assets/nexus/hero_car.jpg',
+-      imageAlt: 'Car-for-Cash Asset Depot Storage with 24/7 insured protection',
+-      description: 'Unlock urgent capital leveraging your vehicle value. The customer does not keep and drive the car; vehicle is safely held in our 24/7 insured climate-controlled depot.',
+-      bullets: [
+-        'Customer does not keep or drive the vehicle',
+-        'Up to ₦25,000,000 facility limit (70% value)',
+-      ],
+-      buttonText: 'View Car-for-Cash Details',
+-    },
+-    {
+-      id: 'travel-financing',
+-      name: 'Travel Financing',
+-      category: 'individual',
+-      tag: '12–24hr Issuance',
+-      badge: 'Visa, Study & Relocation',
+-      image: './assets/nexus/travel_documents.jpg',
+-      imageAlt: 'Nigerian passport, verified bank financial statement and international flight documents',
+-      description: 'Certified, bank-verified proof of capability and travel documentation for international visa applications, university study permits, relocation, and contracts.',
+-      bullets: [
+-        'Embassy-accepted for UK, US, Canada & Schengen',
+-        'Up to ₦100,000,000+ verification capacity',
+-      ],
+-      buttonText: 'View Travel Financing Details',
+-    },
+-    {
+-      id: 'high-yield-investments',
+-      name: 'Fixed Deposit Vaults',
+-      category: 'investment',
+-      tag: 'Guaranteed Yield',
+-      badge: '15.5% Annualized APY',
+-      image: './assets/nexus/gold_vault.jpg',
+-      imageAlt: 'Pure 1kg fine gold bullion bars stacked inside bank safety deposit box vault',
+-      description: 'Capital preservation and inflation-hedged yields designed for high-net-worth members, cooperative societies, and corporate reserves.',
+-      bullets: [
+-        'Monthly cash-flow distributions available',
+-        'Over 3x the yield of commercial bank accounts',
+-      ],
+-      buttonText: 'View Wealth Vault Details',
+-    },
+-    {
+-      id: 'women-empowerment',
+-      name: 'Women Empowerment (NWEL)',
+-      category: 'business',
+-      tag: 'Subsidized Terms',
+-      badge: 'Women in Enterprise',
+-      image: './assets/nexus/entrepreneur.webp',
+-      imageAlt: 'Nigerian female entrepreneur in her commercial fashion boutique and design studio',
+-      description: 'Closing the female entrepreneurship credit gap. Customized working capital with advisory support, flexible tenures, and growth coaching.',
+-      bullets: [
+-        'Concessionary interest rate and flexible tenure',
+-        'Up to ₦5,000,000 facility limit',
+-      ],
+-      buttonText: 'View NWEL Facility Details',
+-    },
+-  ];
+-
+-  const filteredProducts = activeCategory === 'all'
+-    ? mainProducts
+-    : mainProducts.filter((p) => p.category === activeCategory);
+-
++export const ProductBento: React.FC<ProductBentoProps> = ({
++  onSelectProduct,
++}) => {
++  const [category, setCategory] = useState<Category>("Featured");
++  const filtered =
++    category === "Featured"
++      ? featuredIds.map(
++          (id) => NEXUS_PRODUCTS.find((product) => product.id === id)!,
++        )
++      : NEXUS_PRODUCTS.filter(
++          (product) =>
++            category === "All products" ||
++            (category === "Personal" &&
++              (product.category === "individual" ||
++                product.category === "mda")) ||
++            (category === "Business" &&
++              (product.category === "business" ||
++                product.id === "women-empowerment")) ||
++            (category === "Investments" && product.category === "investment"),
++        );
+   return (
+-    <section id="products" className="py-24 relative bg-[#07090e] io-reveal">
+-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+-        {/* Section Heading & Category Filter Tabs (Optimized for desktop, tablet, and mobile) */}
+-        <div className="flex flex-col xl:flex-row xl:items-end justify-between mb-12 gap-6">
+-          <div className="max-w-xl">
+-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white font-display leading-[1.15]">
+-              Tailored liquidity for every <span className="text-gradient-emerald">financial frontier.</span>
+-            </h2>
+-            <p className="text-xs sm:text-sm text-slate-400 mt-2 font-sans">
+-              Discover dedicated credit, asset-backed liquidity, and concessionary facilities structured for Nigeria's workforce.
++    <section
++      id="products"
++      className="nx-products"
++      aria-labelledby="nx-products-title"
++    >
++      <div className="nx-container">
++        <div className="nx-section-intro">
++          <div>
++            <p className="nx-eyebrow">
++              <span className="nx-line" />
++              Our products
+             </p>
++            <h2 id="nx-products-title">
++              A little support.
++              <br />A bigger possibility.
++            </h2>
+           </div>
+-
+-          {/* Category Filter Tabs - clean wrapping without cut-off */}
+-          <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 p-1.5 rounded-2xl bg-white/[0.04] border border-white/10 w-fit max-w-full font-sans">
+-            {[
+-              { id: 'all', label: 'All Facilities' },
+-              { id: 'mda', label: 'MDA & Paramilitary' },
+-              { id: 'individual', label: 'Asset-Backed' },
+-              { id: 'business', label: 'SME & Corporate' },
+-              { id: 'investment', label: 'Wealth Vaults' },
+-            ].map((tab) => (
+-              <button
+-                key={tab.id}
+-                onClick={() => setActiveCategory(tab.id as any)}
+-                className={`px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap ${
+-                  activeCategory === tab.id
+-                    ? 'bg-white text-black font-semibold shadow-md'
+-                    : 'text-slate-400 hover:text-white'
+-                }`}
+-              >
+-                {tab.label}
+-              </button>
+-            ))}
+-          </div>
++          <p>
++            For the things you need today,
++            <br className="nx-desktop-break" /> and the plans you have for
++            tomorrow.
++          </p>
+         </div>
+-
+-        {/* Staggered Animated Bento Grid via Framer Motion */}
+-        <motion.div
+-          key={activeCategory}
+-          variants={containerVariants}
+-          initial="hidden"
+-          whileInView="visible"
+-          viewport={{ once: true, amount: 0.1 }}
+-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
++        <div
++          className="nx-product-filters"
++          role="group"
++          aria-label="Filter financial products"
+         >
+-          {filteredProducts.map((prod) => (
+-            <motion.div
+-              key={prod.id}
+-              variants={cardItemVariants}
+-              whileHover={{ y: -4, transition: { duration: 0.2 } }}
+-              className="rounded-3xl p-6 bg-gradient-to-br from-[#0e1320] to-[#07090e] border border-white/10 hover:border-emerald-500/40 transition-colors duration-300 flex flex-col justify-between group overflow-hidden"
++          {categories.map((item) => (
++            <button
++              key={item}
++              aria-pressed={category === item}
++              onClick={() => setCategory(item)}
+             >
+-              <div>
+-                {/* Image asset container with overlay badge */}
+-                <div className="relative aspect-[16/11] rounded-2xl overflow-hidden mb-5 border border-white/10 bg-black">
+-                  <img
+-                    src={prod.image}
+-                    alt={prod.imageAlt}
+-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+-                    referrerPolicy="no-referrer"
+-                  />
+-                  <div className="absolute top-2.5 left-2.5 bg-black/70 backdrop-blur-md px-3 py-1.5 rounded-lg text-xs font-sans font-medium text-[#00e575] border border-white/10">
+-                    {prod.badge}
++              {item}
++              {item === "All products" && (
++                <ArrowUpRight size={16} aria-hidden="true" />
++              )}
++            </button>
++          ))}
++        </div>
++        <div
++          className={`nx-product-layout ${filtered.length === 1 ? "nx-product-layout-single" : ""}`}
++        >
++          {filtered.map((product, i) => {
++            const visual = presentation[product.id];
++            const Icon = visual.icon;
++            return (
++              <article
++                key={product.id}
++                className={`nx-product-card ${i === 0 ? "nx-product-feature" : "nx-product-compact"}`}
++              >
++                {i === 0 && (
++                  <div className="nx-product-photo">
++                    <img
++                      src={`./assets/nexus/${visual.image}`}
++                      alt={`${product.name} illustration`}
++                      width="1000"
++                      height="650"
++                      loading="lazy"
++                    />
++                    <span>01 / {visual.label}</span>
+                   </div>
+-                </div>
+-
+-                {/* Title & Tag header row */}
+-                <div className="flex items-center justify-between mb-2">
+-                  <h3 className="text-xl font-bold text-white font-display">{prod.name}</h3>
+-                  <span className="text-xs font-sans text-cyan-400 font-semibold">{prod.tag}</span>
+-                </div>
+-
+-                {/* Description */}
+-                <p className="text-xs text-slate-300 leading-relaxed mb-4 font-sans">
+-                  {prod.description}
+-                </p>
+-
+-                {/* Feature bullets */}
+-                <div className="space-y-1.5 text-xs text-slate-300 mb-6 font-sans">
+-                  {prod.bullets.map((bullet, bIdx) => (
+-                    <div key={bIdx} className="flex items-center gap-2">
+-                      <Check className="w-3.5 h-3.5 text-[#00e575] shrink-0" weight="bold" />
+-                      <span>{bullet}</span>
++                )}
++                <div className="nx-product-content">
++                  <div className="nx-product-top">
++                    <Icon size={26} weight="regular" aria-hidden="true" />
++                    <span>
++                      {i === 0
++                        ? "Featured solution"
++                        : `0${i + 1} / ${visual.label}`}
++                    </span>
++                  </div>
++                  <h3>{product.name}</h3>
++                  <p>{visual.description}</p>
++                  <div className="nx-product-facts">
++                    <div>
++                      <span>
++                        {product.category === "investment"
++                          ? "Annualised return"
++                          : "Loan amount"}
++                      </span>
++                      <strong>
++                        {product.category === "investment"
++                          ? product.rateInfo
++                          : `Up to ${product.maxAmount}`}
++                      </strong>
++                    </div>
++                    <div>
++                      <span>Tenure</span>
++                      <strong>
++                        {(product.tenure || "Discuss with our team")
++                          .replace(" Flexible", "")
++                          .replace("Months", "months")}
++                      </strong>
+                     </div>
+-                  ))}
++                  </div>
++                  <button
++                    className="nx-text-link"
++                    onClick={() => onSelectProduct(product.id)}
++                  >
++                    Explore{" "}
++                    {product.name
++                      .replace(" (CFC)", "")
++                      .replace("Institutional ", "")}
++                    <ArrowUpRight size={20} aria-hidden="true" />
++                  </button>
+                 </div>
+-              </div>
+-
+-              {/* Action Button */}
+-              <button
+-                onClick={() => onSelectProduct(prod.id)}
+-                className="w-full py-3 rounded-xl bg-white/[0.06] hover:bg-white/[0.12] text-white border border-white/10 text-xs font-semibold font-sans flex items-center justify-center gap-2 transition-colors cursor-pointer"
+-              >
+-                <span>{prod.buttonText}</span>
+-                <ArrowUpRight className="w-3.5 h-3.5" />
+-              </button>
+-            </motion.div>
+-          ))}
+-        </motion.div>
+-
+-        {/* Secondary Products Row (Shop-Owned Loan, Invoice Discounting, Gold-for-Cash) with staggered motion */}
+-        <motion.div
+-          variants={containerVariants}
+-          initial="hidden"
+-          whileInView="visible"
+-          viewport={{ once: true, amount: 0.15 }}
+-          className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 font-sans"
+-        >
+-          <motion.div
+-            variants={cardItemVariants}
+-            whileHover={{ y: -3, transition: { duration: 0.2 } }}
+-            className="p-6 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-white/20 transition-all flex flex-col justify-between"
+-          >
+-            <div>
+-              <div className="text-xs font-sans font-semibold text-[#00e575] mb-1">SOBL SME</div>
+-              <h4 className="text-lg font-bold text-white mb-2 font-display">Shop-Owned Loan</h4>
+-              <p className="text-xs text-slate-300 mb-4 font-sans leading-relaxed">
+-                Capital support for registered retail shopkeepers and market stall owners with matching cash-flow collections.
+-              </p>
+-            </div>
+-            <button
+-              onClick={() => onSelectProduct('shop-owned-sme')}
+-              className="text-xs font-semibold text-[#00e575] hover:text-white flex items-center gap-1 transition-colors cursor-pointer font-sans"
+-            >
+-              <span>View Requirements &rarr;</span>
+-            </button>
+-          </motion.div>
+-
+-          <motion.div
+-            variants={cardItemVariants}
+-            whileHover={{ y: -3, transition: { duration: 0.2 } }}
+-            className="p-6 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-white/20 transition-all flex flex-col justify-between"
+-          >
+-            <div>
+-              <div className="text-xs font-sans font-semibold text-cyan-400 mb-1">IDF Receivables</div>
+-              <h4 className="text-lg font-bold text-white mb-2 font-display">Invoice Discounting</h4>
+-              <p className="text-xs text-slate-300 mb-4 font-sans leading-relaxed">
+-                Convert verified purchase orders and invoices into immediate working cash without waiting 60–90 days for client payout.
+-              </p>
+-            </div>
+-            <button
+-              onClick={() => onSelectProduct('invoice-discounting')}
+-              className="text-xs font-semibold text-cyan-400 hover:text-white flex items-center gap-1 transition-colors cursor-pointer font-sans"
+-            >
+-              <span>Discount Your Invoices &rarr;</span>
+-            </button>
+-          </motion.div>
+-
+-          <motion.div
+-            variants={cardItemVariants}
+-            whileHover={{ y: -3, transition: { duration: 0.2 } }}
+-            className="p-6 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-white/20 transition-all flex flex-col justify-between"
+-          >
+-            <div>
+-              <div className="text-xs font-sans font-semibold text-amber-400 mb-1">Precious Asset Facility</div>
+-              <h4 className="text-lg font-bold text-white mb-2 font-display">Gold-for-Cash (GFC)</h4>
+-              <p className="text-xs text-slate-300 mb-4 font-sans leading-relaxed">
+-                Instant credit backed by physical bullion and certified gold, safeguarded in insured high-security vaults until redemption.
+-              </p>
+-            </div>
+-            <button
+-              onClick={() => onSelectProduct('gold-for-cash')}
+-              className="text-xs font-semibold text-amber-400 hover:text-white flex items-center gap-1 transition-colors cursor-pointer font-sans"
+-            >
+-              <span>Secure Gold Facility &rarr;</span>
+-            </button>
+-          </motion.div>
+-        </motion.div>
++              </article>
++            );
++          })}
++        </div>
++        <div className="nx-product-help">
++          <span>Not sure where to start? Let’s find the right fit.</span>
++          <a className="nx-text-link" href="#contact">
++            Talk to our team <ArrowRight size={18} aria-hidden="true" />
++          </a>
++        </div>
++        <p className="nx-product-disclaimer">
++          Loan amounts and terms are subject to eligibility, assessment, and
++          approval. Review the product details for requirements and applicable
++          charges.
++        </p>
+       </div>
+     </section>
+   );
+diff --git a/src/index.css b/src/index.css
+index 8f106d9..631eb89 100644
+--- a/src/index.css
++++ b/src/index.css
+@@ -1,4 +1,5 @@
+ @import "tailwindcss";
++@import "./nexus-first-pass.css";
+ 
+ @layer base {
+   :root {
+diff --git a/vite.config.ts b/vite.config.ts
+index ed4b1c8..4e69ff2 100644
+--- a/vite.config.ts
++++ b/vite.config.ts
+@@ -13,6 +13,8 @@ export default defineConfig(() => {
+       },
+     },
+     server: {
++      // Named host used by the development preview.
++      allowedHosts: ['terminal.local'],
+       // HMR is disabled in AI Studio via DISABLE_HMR env var.
+       // Do not modify—file watching is disabled to prevent flickering during agent edits.
+       hmr: process.env.DISABLE_HMR !== 'true',

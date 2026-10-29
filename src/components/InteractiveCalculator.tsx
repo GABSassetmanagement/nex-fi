@@ -255,7 +255,7 @@ export const InteractiveCalculator: React.FC<InteractiveCalculatorProps> = ({ on
                   </div>
                 </div>
 
-                {/* Tenure Selector (Default 12 Months) */}
+                {/* Tenure Selector (Default 1 Month) */}
                 <div className="mb-6">
                   <div className="flex items-center justify-between mb-2">
                     <div>
@@ -263,11 +263,11 @@ export const InteractiveCalculator: React.FC<InteractiveCalculatorProps> = ({ on
                         3. Repayment Tenure
                       </label>
                       <span className="text-[11px] text-slate-400 font-sans">
-                        Default is 12 months; tap to customize:
+                        Default is 1 month; choose your repayment period:
                       </span>
                     </div>
                     <span className="text-base font-bold font-display text-[#00e575] bg-emerald-500/10 px-3 py-1 rounded-xl border border-emerald-500/20">
-                      {loanTenure} Months {loanTenure === 12 && '(Default)'}
+                      {loanTenure} {loanTenure === 1 ? 'month' : 'months'} {loanTenure === 1 && '(Default)'}
                     </span>
                   </div>
 

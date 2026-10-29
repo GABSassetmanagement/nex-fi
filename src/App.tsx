@@ -159,7 +159,7 @@ export default function App() {
         currentView={currentView}
       />
 
-      <main>
+      <main id="main-content" tabIndex={-1}>
         {currentView === 'about' && (
           <AboutUsPage onOpenApply={handleOpenApply} onNavigate={handleNavigate} />
         )}
@@ -197,6 +197,11 @@ export default function App() {
               onNavigateProduct={(prodId) => handleNavigate('product-detail', prodId)}
             />
 
+            {/* 5. "comprehensive product portfolio" (Opens dedicated Product Pages) */}
+            <ProductBento
+              onSelectProduct={(prodId) => handleNavigate('product-detail', prodId)}
+            />
+
             {/* 3. "Institutional payroll..." (TrustMarquee) */}
             <div id="partners">
               <TrustMarquee />
@@ -204,11 +209,6 @@ export default function App() {
 
             {/* 4. 15-Minute Prompt Disbursement */}
             <MoveMoneySection onOpenApply={handleOpenApply} />
-
-            {/* 5. "comprehensive product portfolio" (Opens dedicated Product Pages) */}
-            <ProductBento
-              onSelectProduct={(prodId) => handleNavigate('product-detail', prodId)}
-            />
 
             {/* 6. "Real calculations..." */}
             <InteractiveCalculator onOpenApply={handleOpenApply} />

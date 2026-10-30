@@ -1,0 +1,37 @@
+/* One theme contract for every public page, form, modal and staff screen. */
+:root,
+.nx-inverse {
+  --nx-canvas: #0d1624;
+  --nx-surface: #121e2e;
+  --nx-subtle: #192a3e;
+  --nx-ink: #f3f6fa;
+  --nx-muted: #b3bfd0;
+  --nx-rule: #34475d;
+  --nx-blue: #8ab8ff;
+  --nx-button: #0d51b2;
+  --nx-button-hover: #093f8d;
+  --nx-green: #69d3b0;
+  --nx-accent-soft: #1b304b;
+  --nx-header: #0d1624;
+  --nx-danger: #ffaca9;
+  --nx-danger-soft: #40262e;
+  --nx-warning: #f3ce87;
+  --nx-warning-soft: #3b3222;
+  --nx-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+html.light {
+  --nx-canvas: #f7f8fa;
+  --nx-surface: #ffffff;
+  --nx-subtle: #edf2f6;
+  --nx-ink: #101e30;
+  --nx-muted: #526174;
+  --nx-rule: #dce3eb;
+  --nx-blue: #0d51b2;
+  --nx-green: #007b58;
+  --nx-accent-soft: #eaf1fc;
+  --nx-header: #ffffff;
+  --nx-danger: #b52f38;
+  --nx-danger-soft: #ffedef;
+  --nx-warning: #865600;
+  --nx-warning-soft: #fff3d9;
+}

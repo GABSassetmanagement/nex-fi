@@ -1,0 +1,299 @@
+/* Shared editorial scale. Component layouts retain their own information hierarchy. */
+.nx-app {
+  color: var(--nx-ink);
+  background: var(--nx-canvas);
+  line-height: 1.6;
+}
+.nx-app h1 {
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  line-height: 1.08;
+}
+.nx-app h2 {
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.12;
+}
+.nx-app h3 {
+  font-weight: 500;
+  line-height: 1.25;
+}
+.nx-app :is(h4, h5, h6) {
+  font-family: var(--font-sans);
+  font-weight: 600;
+}
+.nx-app .nx-page-title {
+  font-size: clamp(36px, 4.5vw, 64px);
+}
+.nx-app .nx-section-title {
+  font-size: clamp(30px, 3.7vw, 50px);
+}
+.nx-app .text-xs {
+  line-height: 1.6;
+}
+.nx-app .text-sm {
+  line-height: 1.65;
+}
+.nx-app :is(button, a).uppercase {
+  text-transform: none;
+  letter-spacing: 0.01em;
+}
+.nx-app :is(button, a).bg-action {
+  border-radius: 7px;
+  min-height: 44px;
+  font-weight: 600;
+  box-shadow: none;
+  color: #fff;
+}
+.nx-app :is(button, a).bg-action:hover {
+  background: var(--nx-button-hover);
+}
+.nx-app :is(button, a):focus-visible {
+  outline: 3px solid var(--nx-blue);
+  outline-offset: 4px;
+}
+.nx-app :is(input, select, textarea):focus-visible {
+  outline: 2px solid var(--nx-blue);
+  outline-offset: 2px;
+}
+.nx-app
+  :is(input, select, textarea):not([type="range"]):not([type="checkbox"]):not(
+    [type="radio"]
+  ) {
+  border-radius: 7px;
+}
+.nx-app input[type="range"] {
+  accent-color: var(--nx-button);
+}
+.nx-app input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+.nx-app .max-w-7xl {
+  max-width: 1344px;
+  padding-inline: 48px;
+}
+.nx-app .max-w-6xl {
+  max-width: 1248px;
+  padding-inline: 48px;
+}
+.nx-app section.py-24 {
+  padding-block: 88px;
+}
+.nx-app :is(.blur-3xl, .blur-\[160px\], .blur-\[100px\], .blur-\[120px\]) {
+  display: none;
+}
+.nx-app
+  :is(.bg-gradient-to-br, .bg-gradient-to-b):has(> :is(form, h1, h2, h3)) {
+  background-image: none;
+  background-color: var(--nx-surface);
+}
+.nx-app .from-surface {
+  background-color: var(--nx-surface);
+  background-image: none;
+}
+.nx-app :is(.bg-black\/80, .bg-black\/85, .bg-black\/90, .bg-black\/92) {
+  color: #f3f6fa;
+}
+.nx-app
+  :is(.bg-black\/80, .bg-black\/85, .bg-black\/90, .bg-black\/92)
+  > .text-brand {
+  color: #8ab8ff;
+}
+.nx-app .nx-inverse {
+  color: var(--nx-ink);
+}
+.nx-app .nx-inverse :is(.text-ink, .text-muted) {
+  color: inherit;
+}
+.nx-app .nx-savings {
+  background: #0d2442;
+  color: #f3f6fa;
+  padding-block: 80px;
+}
+.nx-savings .nx-balance {
+  font-size: clamp(30px, 6vw, 76px);
+  line-height: 1.15;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+.nx-app footer {
+  background: var(--nx-surface);
+}
+.nx-app footer .text-xs {
+  font-size: 13px;
+}
+.nx-app #faq .space-y-4 > div {
+  border-radius: 0;
+  border-width: 0 0 1px;
+  background: transparent;
+}
+.nx-app #faq .space-y-4 {
+  border-top: 1px solid var(--nx-rule);
+}
+.nx-app #faq .space-y-4 > div > button {
+  padding-inline: 0;
+  min-height: 72px;
+}
+.nx-app #faq .space-y-4 > div > div {
+  padding-inline: 0;
+  border-top: 0;
+}
+.nx-app #disbursal .space-y-3\.5 > div {
+  border: 0;
+  border-bottom: 1px solid var(--nx-rule);
+  border-radius: 0;
+  background: transparent;
+  padding: 16px 0;
+}
+.nx-app #contact iframe {
+  filter: none;
+}
+html.dark .nx-app #contact iframe {
+  filter: invert(0.88) hue-rotate(180deg);
+}
+.nx-app .nx-phone-balance {
+  color: var(--nx-ink);
+}
+@media (max-width: 1140px) {
+  .nx-app :is(.max-w-7xl, .max-w-6xl) {
+    padding-inline: 32px;
+  }
+}
+@media (max-width: 700px) {
+  .nx-app :is(.max-w-7xl, .max-w-6xl) {
+    padding-inline: 20px;
+  }
+  .nx-app section.py-24 {
+    padding-block: 56px;
+  }
+  .nx-app .nx-savings {
+    padding-block: 56px;
+  }
+  .nx-app #contact > div > div {
+    gap: 32px;
+  }
+  .nx-app #contact form {
+    min-width: 0;
+  }
+  .nx-app #contact .lg\:col-span-7 {
+    padding: 24px 20px;
+  }
+  .nx-app :is(input, select, textarea):not([type="range"]) {
+    font-size: 16px;
+  }
+  .nx-app .grid > * {
+    min-width: 0;
+  }
+  .nx-app .fixed.inset-0 {
+    padding: 12px;
+  }
+  .nx-app .nx-phone-balance {
+    font-size: 26px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.nx-app .nx-image-badge {
+  color: #f3f6fa;
+}
+.nx-app .nx-image-badge.text-brand,
+.nx-app .nx-image-badge .text-brand {
+  color: #b9d4ff;
+}
+.nx-logo-light {
+  display: none;
+}
+html.light .nx-logo-light {
+  display: block;
+}
+html.light .nx-logo-dark {
+  display: none;
+}
+.nx-partners {
+  padding-block: 32px;
+  background: var(--nx-canvas);
+  border-block: 1px solid var(--nx-rule);
+}
+.nx-partner-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.nx-partner-heading .nx-icon-button {
+  width: 36px;
+  height: 36px;
+}
+.nx-partner-list {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 24px 0 16px;
+  margin-top: 16px;
+  list-style: none;
+}
+.nx-partner-list li {
+  flex: 0 0 20%;
+  min-width: 190px;
+  padding: 0 24px;
+  border-left: 1px solid var(--nx-rule);
+  scroll-snap-align: start;
+}
+.nx-partner-list li:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+.nx-partner-list strong {
+  display: block;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--nx-ink);
+  letter-spacing: -0.025em;
+}
+.nx-partner-list span {
+  display: block;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--nx-muted);
+  margin-top: 6px;
+  max-width: 160px;
+}
+@media (max-width: 700px) {
+  .nx-partner-list li {
+    flex-basis: 65%;
+  }
+  .nx-partner-heading {
+    gap: 12px;
+  }
+}
+.nx-app p.text-xs {
+  font-size: 13px;
+  line-height: 1.65;
+}
+.nx-app
+  :is(input, select, textarea):not([type="range"]):not([type="checkbox"]):not(
+    [type="radio"]
+  ):not(.font-display) {
+  font-size: 14px;
+}
+@media (max-width: 700px) {
+  .nx-app
+    :is(input, select, textarea):not([type="range"]):not([type="checkbox"]):not(
+      [type="radio"]
+    ):not(.font-display) {
+    font-size: 16px;
+  }
+}
+.nx-app :is(button,a).rounded-xl,
+.nx-app :is(button,a).rounded-lg,
+.nx-app :is(button,a).rounded-full[class*="px-"] { border-radius: 7px; }
+.nx-app form :is(input,select,textarea):not([type="range"]):not([type="checkbox"]):not([type="radio"]) { background-color: var(--nx-subtle); border-color: var(--nx-rule); color: var(--nx-ink); }

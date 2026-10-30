@@ -151,7 +151,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white selection:bg-[#00e575] selection:text-black font-body transition-colors duration-300">
+    <div className="nx-app min-h-screen bg-canvas text-ink selection:bg-action selection:text-ink font-body transition-colors duration-300">
       {/* 1. Menu (Navbar) with dynamic routing */}
       <Navbar
         onOpenApply={handleOpenApply}

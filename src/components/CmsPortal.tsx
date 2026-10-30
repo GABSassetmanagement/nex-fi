@@ -168,7 +168,7 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
   // -------------------------------------------------------------
   if (!isAuthenticated) {
     return (
-      <div className="pt-24 pb-20 min-h-screen bg-[#07090e] text-white font-sans flex items-center justify-center p-4">
+      <div className="pt-24 pb-20 min-h-screen bg-canvas text-ink font-sans flex items-center justify-center p-4">
         {/* Forgot Password Modal */}
         {isForgotModalOpen && (
           <div
@@ -176,15 +176,15 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
             aria-modal="true"
             className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4"
           >
-            <div className="max-w-md w-full bg-[#0d121e] border border-white/20 rounded-3xl p-6 sm:p-8 space-y-4 shadow-2xl">
+            <div className="max-w-md w-full bg-surface border border-rule rounded-xl p-6 sm:p-8 space-y-4 shadow-sm">
               <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2 text-[#00e575]">
-                  <Key className="w-5 h-5" weight="bold" />
-                  <h3 className="text-base font-bold text-white font-display">Staff Password Recovery</h3>
+                <div className="flex items-center gap-2 text-brand">
+                  <Key className="w-5 h-5" weight="regular" />
+                  <h3 className="text-base font-semibold text-ink font-display">Staff Password Recovery</h3>
                 </div>
                 <button
                   onClick={() => setIsForgotModalOpen(false)}
-                  className="p-1 text-slate-400 hover:text-white"
+                  className="p-1 text-muted hover:text-ink"
                 >
                   <X className="w-4 h-4" />
                 </button>
@@ -192,71 +192,71 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
 
               {!recoverySent ? (
                 <div className="space-y-4">
-                  <p className="text-xs text-slate-300 leading-relaxed">
+                  <p className="text-xs text-muted leading-relaxed">
                     Provide the authorized executive management email to receive an instant one-time recovery token.
                   </p>
                   <div>
-                    <label className="text-[11px] uppercase font-bold text-slate-400 block mb-1">
+                    <label htmlFor="cmsportal-field-1" className="text-[11px] uppercase font-semibold text-muted block mb-1">
                       Authorized Admin Email
                     </label>
-                    <input
+                    <input id="cmsportal-field-1"
                       type="email"
                       value={recoveryEmail}
                       onChange={(e) => setRecoveryEmail(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.04] border border-white/10 text-white text-xs focus:outline-none focus:border-[#00e575]"
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-subtle border border-rule text-ink text-xs focus:outline-none focus:border-brand"
                     />
                   </div>
                   <button
                     onClick={handleTriggerRecovery}
-                    className="w-full py-3 rounded-xl bg-[#00e575] hover:bg-[#15f38a] text-black font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer"
+                    className="w-full py-3 rounded-xl bg-action hover:bg-action-hover text-on-action font-semibold text-xs uppercase tracking-wider transition-colors cursor-pointer"
                   >
                     Dispatch Recovery Code
                   </button>
                 </div>
               ) : recoverySuccess ? (
-                <div className="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-center space-y-1">
-                  <Check className="w-6 h-6 text-[#00e575] mx-auto" />
-                  <div className="text-xs font-bold text-white">Password Updated Successfully</div>
-                  <div className="text-[10px] text-slate-400">Returning to login screen...</div>
+                <div className="p-4 rounded-xl bg-accent-soft border border-brand/25 text-center space-y-1">
+                  <Check className="w-6 h-6 text-brand mx-auto" />
+                  <div className="text-xs font-semibold text-ink">Password Updated Successfully</div>
+                  <div className="text-[10px] text-muted">Returning to login screen...</div>
                 </div>
               ) : (
                 <div className="space-y-4">
-                  <div className="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-xs text-emerald-300">
-                    One-time reset code dispatched to <strong className="text-white">{recoveryEmail}</strong>.
-                    <div className="text-[10px] text-slate-400 mt-1">
-                      Simulated token: <strong className="text-[#00e575] font-mono text-sm">{recoveryToken}</strong>
+                  <div className="p-3 rounded-xl bg-accent-soft border border-brand/25 text-xs text-success">
+                    One-time reset code dispatched to <strong className="text-ink">{recoveryEmail}</strong>.
+                    <div className="text-[10px] text-muted mt-1">
+                      Simulated token: <strong className="text-brand font-mono text-sm">{recoveryToken}</strong>
                     </div>
                   </div>
 
                   <div>
-                    <label className="text-[11px] uppercase font-bold text-slate-400 block mb-1">
+                    <label htmlFor="cmsportal-field-2" className="text-[11px] uppercase font-semibold text-muted block mb-1">
                       Enter 6-Digit Code
                     </label>
-                    <input
+                    <input id="cmsportal-field-2"
                       type="text"
                       placeholder="e.g. 749102"
                       value={enteredToken}
                       onChange={(e) => setEnteredToken(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.04] border border-white/10 text-white text-xs font-mono focus:outline-none focus:border-[#00e575]"
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-subtle border border-rule text-ink text-xs font-mono focus:outline-none focus:border-brand"
                     />
                   </div>
 
                   <div>
-                    <label className="text-[11px] uppercase font-bold text-slate-400 block mb-1">
+                    <label htmlFor="cmsportal-field-3" className="text-[11px] uppercase font-semibold text-muted block mb-1">
                       New Administrative Password
                     </label>
-                    <input
+                    <input id="cmsportal-field-3"
                       type="password"
                       placeholder="Minimum 6 characters"
                       value={newPassword}
                       onChange={(e) => setNewPassword(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.04] border border-white/10 text-white text-xs focus:outline-none focus:border-[#00e575]"
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-subtle border border-rule text-ink text-xs focus:outline-none focus:border-brand"
                     />
                   </div>
 
                   <button
                     onClick={handleCompleteReset}
-                    className="w-full py-3 rounded-xl bg-[#00e575] hover:bg-[#15f38a] text-black font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer"
+                    className="w-full py-3 rounded-xl bg-action hover:bg-action-hover text-on-action font-semibold text-xs uppercase tracking-wider transition-colors cursor-pointer"
                   >
                     Set New Password &amp; Login
                   </button>
@@ -266,38 +266,38 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
           </div>
         )}
 
-        <div className="max-w-md w-full bg-[#0d121e] border border-white/15 rounded-3xl p-8 shadow-2xl space-y-6">
+        <div className="max-w-md w-full bg-surface border border-rule rounded-xl p-8 shadow-sm space-y-6">
           <div className="text-center space-y-2">
-            <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-[#00e575] mx-auto mb-2">
-              <LockKey className="w-6 h-6" weight="bold" />
+            <div className="w-12 h-12 rounded-xl bg-accent-soft border border-brand/25 flex items-center justify-center text-brand mx-auto mb-2">
+              <LockKey className="w-6 h-6" weight="regular" />
             </div>
-            <h2 className="text-2xl font-black text-white font-display tracking-tight">
+            <h2 className="text-2xl font-semibold text-ink font-display tracking-tight">
               Nexus Staff CMS Portal
             </h2>
-            <p className="text-xs text-slate-400">
+            <p className="text-xs text-muted">
               Unified administration hub for Blog Articles, Gallery Folders, and Career Postings.
             </p>
           </div>
 
           <form onSubmit={handleLogin} className="space-y-4">
             <div>
-              <label className="text-[11px] uppercase font-bold text-slate-300 block mb-1.5">
+              <label htmlFor="cmsportal-field-4" className="text-[11px] uppercase font-semibold text-muted block mb-1.5">
                 Staff Authorization Password
               </label>
-              <input
+              <input id="cmsportal-field-4"
                 type="password"
                 required
                 value={passwordInput}
                 onChange={(e) => setPasswordInput(e.target.value)}
                 placeholder="Enter password..."
-                className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/15 text-white text-xs focus:outline-none focus:border-[#00e575] transition-colors"
+                className="w-full px-4 py-3 rounded-xl bg-subtle border border-rule text-ink text-xs focus:outline-none focus:border-brand transition-colors"
               />
-              <div className="mt-1 text-[11px] text-slate-400 flex justify-between">
+              <div className="mt-1 text-[11px] text-muted flex justify-between">
                 <span>Default: Master or Editor credentials</span>
                 <button
                   type="button"
                   onClick={() => setIsForgotModalOpen(true)}
-                  className="text-[#00e575] hover:underline cursor-pointer"
+                  className="text-brand hover:underline cursor-pointer"
                 >
                   Forgot password?
                 </button>
@@ -305,24 +305,24 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
             </div>
 
             {authError && (
-              <div className="p-3 rounded-xl bg-red-500/10 border border-red-500/20 text-xs text-red-400">
+              <div className="p-3 rounded-xl bg-danger-soft border border-danger/25 text-xs text-danger">
                 {authError}
               </div>
             )}
 
             <button
               type="submit"
-              className="w-full py-3.5 rounded-xl bg-[#00e575] hover:bg-[#15f38a] text-black font-bold text-xs uppercase tracking-wider transition-all shadow-lg shadow-[#00e575]/25 cursor-pointer"
+              className="w-full py-3.5 rounded-xl bg-action hover:bg-action-hover text-on-action font-semibold text-xs uppercase tracking-wider transition-all shadow-sm cursor-pointer"
             >
               Sign In to CMS Hub
             </button>
           </form>
 
-          <div className="pt-2 border-t border-white/10 flex items-center justify-between text-xs text-slate-400">
+          <div className="pt-2 border-t border-rule flex items-center justify-between text-xs text-muted">
             <button
               type="button"
               onClick={() => onNavigate('home')}
-              className="hover:text-white flex items-center gap-1 cursor-pointer"
+              className="hover:text-ink flex items-center gap-1 cursor-pointer"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
               <span>Return to Public Site</span>
@@ -338,19 +338,19 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
   // AUTHENTICATED DASHBOARD
   // -------------------------------------------------------------
   return (
-    <div className="pt-24 pb-20 min-h-screen bg-[#07090e] text-white font-sans">
+    <div className="pt-24 pb-20 min-h-screen bg-canvas text-ink font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         {/* Top Header Bar */}
-        <div className="p-6 rounded-3xl bg-gradient-to-r from-[#0e1320] via-[#090d16] to-[#07090e] border border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-xl">
+        <div className="p-6 rounded-xl bg-gradient-to-r from-surface via-surface to-surface border border-rule flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-sm">
           <div className="space-y-1">
             <div className="flex items-center gap-2 text-xs">
-              <span className="w-2 h-2 rounded-full bg-[#00e575] animate-pulse" />
-              <span className="text-[#00e575] font-bold uppercase tracking-wider">
+              <span className="w-2 h-2 rounded-full bg-action" />
+              <span className="text-brand font-semibold uppercase tracking-wider">
                 Nexus Unified CMS Hub
               </span>
-              <span className="text-slate-400">&middot; Logged in as: {userRole}</span>
+              <span className="text-muted">&middot; Logged in as: {userRole}</span>
             </div>
-            <h1 className="text-2xl sm:text-3xl font-black text-white font-display">
+            <h1 className="text-2xl sm:text-3xl font-semibold text-ink font-display">
               Content &amp; Operations Management
             </h1>
           </div>
@@ -358,7 +358,7 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
           <div className="flex items-center gap-3">
             <button
               onClick={() => onNavigate('home')}
-              className="px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-semibold flex items-center gap-1.5 border border-white/10 cursor-pointer"
+              className="px-4 py-2 rounded-xl bg-subtle hover:bg-subtle text-muted text-xs font-semibold flex items-center gap-1.5 border border-rule cursor-pointer"
             >
               <Eye className="w-4 h-4" />
               <span>Live Website</span>
@@ -366,7 +366,7 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
 
             <button
               onClick={handleLogout}
-              className="px-4 py-2 rounded-xl bg-red-500/10 hover:bg-red-500/20 text-red-400 text-xs font-semibold flex items-center gap-1.5 border border-red-500/20 cursor-pointer"
+              className="px-4 py-2 rounded-xl bg-danger-soft hover:bg-danger-soft text-danger text-xs font-semibold flex items-center gap-1.5 border border-danger/25 cursor-pointer"
             >
               <SignOut className="w-4 h-4" />
               <span>Sign Out</span>
@@ -375,40 +375,40 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
         </div>
 
         {/* 3 Main Management Tabs */}
-        <div className="flex items-center gap-2 p-1.5 rounded-2xl bg-white/[0.04] border border-white/10 w-fit">
+        <div className="flex items-center gap-2 p-1.5 rounded-xl bg-subtle border border-rule w-fit">
           <button
             onClick={() => setActiveTab('blog')}
-            className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+            className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
               activeTab === 'blog'
-                ? 'bg-[#00e575] text-black shadow-md'
-                : 'text-slate-400 hover:text-white'
+                ? 'bg-action text-on-action shadow-sm'
+                : 'text-muted hover:text-ink'
             }`}
           >
-            <NewspaperClipping className="w-4 h-4" weight="bold" />
+            <NewspaperClipping className="w-4 h-4" weight="regular" />
             <span>Blog Articles ({blogPosts.length})</span>
           </button>
 
           <button
             onClick={() => setActiveTab('gallery')}
-            className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+            className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
               activeTab === 'gallery'
-                ? 'bg-[#00e575] text-black shadow-md'
-                : 'text-slate-400 hover:text-white'
+                ? 'bg-action text-on-action shadow-sm'
+                : 'text-muted hover:text-ink'
             }`}
           >
-            <ImageIcon className="w-4 h-4" weight="bold" />
+            <ImageIcon className="w-4 h-4" weight="regular" />
             <span>Gallery Folders ({galleryItems.length})</span>
           </button>
 
           <button
             onClick={() => setActiveTab('careers')}
-            className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+            className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
               activeTab === 'careers'
-                ? 'bg-[#00e575] text-black shadow-md'
-                : 'text-slate-400 hover:text-white'
+                ? 'bg-action text-on-action shadow-sm'
+                : 'text-muted hover:text-ink'
             }`}
           >
-            <Briefcase className="w-4 h-4" weight="bold" />
+            <Briefcase className="w-4 h-4" weight="regular" />
             <span>Careers &amp; Jobs ({careersList.length})</span>
           </button>
         </div>
@@ -420,8 +420,8 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
           <div className="space-y-6">
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="text-xl font-bold text-white font-display">Blog &amp; Media Articles</h3>
-                <p className="text-xs text-slate-400">
+                <h3 className="text-xl font-semibold text-ink font-display">Blog &amp; Media Articles</h3>
+                <p className="text-xs text-muted">
                   Publish, update, or remove insights shown on the public News &amp; Media page.
                 </p>
               </div>
@@ -429,7 +429,7 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => saveBlogPosts(INITIAL_BLOG_POSTS)}
-                  className="px-3.5 py-2 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-semibold flex items-center gap-1.5 border border-white/10 cursor-pointer"
+                  className="px-3.5 py-2 rounded-xl bg-subtle hover:bg-subtle text-muted text-xs font-semibold flex items-center gap-1.5 border border-rule cursor-pointer"
                   title="Reset to default seed articles"
                 >
                   <ArrowCounterClockwise className="w-3.5 h-3.5" />
@@ -457,24 +457,24 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
                     });
                     setIsPostFormOpen(true);
                   }}
-                  className="px-4 py-2 rounded-xl bg-[#00e575] hover:bg-[#15f38a] text-black text-xs font-bold flex items-center gap-1.5 cursor-pointer shadow-md"
+                  className="px-4 py-2 rounded-xl bg-action hover:bg-action-hover text-on-action text-xs font-semibold flex items-center gap-1.5 cursor-pointer shadow-sm"
                 >
-                  <Plus className="w-4 h-4" weight="bold" />
+                  <Plus className="w-4 h-4" weight="regular" />
                   <span>Create Article</span>
                 </button>
               </div>
             </div>
 
             {/* Posts Table */}
-            <div className="rounded-3xl bg-[#0b0f19] border border-white/10 overflow-hidden shadow-xl">
+            <div className="rounded-xl bg-surface border border-rule overflow-hidden shadow-sm">
               <div className="divide-y divide-white/10">
                 {blogPosts.map((post) => (
                   <div
                     key={post.id}
-                    className="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-white/[0.02] transition-colors"
+                    className="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-subtle transition-colors"
                   >
                     <div className="flex items-center gap-4">
-                      <div className="w-16 h-12 rounded-xl overflow-hidden bg-slate-900 border border-white/10 shrink-0">
+                      <div className="w-16 h-12 rounded-xl overflow-hidden bg-subtle border border-rule shrink-0">
                         <img
                           src={post.image}
                           alt={post.title}
@@ -483,18 +483,18 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
                       </div>
                       <div>
                         <div className="flex items-center gap-2 mb-1">
-                          <span className="text-[10px] uppercase font-bold text-[#00e575] bg-emerald-500/10 px-2 py-0.2 rounded border border-emerald-500/20">
+                          <span className="text-[10px] uppercase font-semibold text-brand bg-accent-soft px-2 py-0.2 rounded border border-brand/25">
                             {post.category}
                           </span>
                           {post.featured && (
-                            <span className="text-[10px] uppercase font-bold text-amber-300 bg-amber-500/10 px-2 py-0.2 rounded border border-amber-500/20">
+                            <span className="text-[10px] uppercase font-semibold text-warning bg-warning-soft px-2 py-0.2 rounded border border-warning/25">
                               Featured
                             </span>
                           )}
-                          <span className="text-[11px] text-slate-400">{post.date}</span>
+                          <span className="text-[11px] text-muted">{post.date}</span>
                         </div>
-                        <h4 className="text-sm font-bold text-white line-clamp-1">{post.title}</h4>
-                        <div className="text-xs text-slate-400">By {post.author}</div>
+                        <h4 className="text-sm font-semibold text-ink line-clamp-1">{post.title}</h4>
+                        <div className="text-xs text-muted">By {post.author}</div>
                       </div>
                     </div>
 
@@ -504,7 +504,7 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
                           setEditingPost(post);
                           setIsPostFormOpen(true);
                         }}
-                        className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-colors cursor-pointer"
+                        className="p-2 rounded-lg bg-subtle hover:bg-subtle text-muted hover:text-ink border border-rule transition-colors cursor-pointer"
                         title="Edit Article"
                       >
                         <PencilSimple className="w-4 h-4" />
@@ -515,7 +515,7 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
                             saveBlogPosts(blogPosts.filter((p) => p.id !== post.id));
                           }
                         }}
-                        className="p-2 rounded-lg bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/20 transition-colors cursor-pointer"
+                        className="p-2 rounded-lg bg-danger-soft hover:bg-danger-soft text-danger border border-danger/25 transition-colors cursor-pointer"
                         title="Delete Article"
                       >
                         <Trash className="w-4 h-4" />
@@ -535,8 +535,8 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
           <div className="space-y-6">
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="text-xl font-bold text-white font-display">Gallery Media &amp; Folders</h3>
-                <p className="text-xs text-slate-400">
+                <h3 className="text-xl font-semibold text-ink font-display">Gallery Media &amp; Folders</h3>
+                <p className="text-xs text-muted">
                   Manage the 5 categories: Office, CSR, Store Marketing, Store Operations, Executive Summits.
                 </p>
               </div>
@@ -544,7 +544,7 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => saveGalleryItems(INITIAL_GALLERY_ITEMS)}
-                  className="px-3.5 py-2 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-semibold flex items-center gap-1.5 border border-white/10 cursor-pointer"
+                  className="px-3.5 py-2 rounded-xl bg-subtle hover:bg-subtle text-muted text-xs font-semibold flex items-center gap-1.5 border border-rule cursor-pointer"
                   title="Reset to default seed gallery"
                 >
                   <ArrowCounterClockwise className="w-3.5 h-3.5" />
@@ -563,9 +563,9 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
                     });
                     setIsGalleryFormOpen(true);
                   }}
-                  className="px-4 py-2 rounded-xl bg-[#00e575] hover:bg-[#15f38a] text-black text-xs font-bold flex items-center gap-1.5 cursor-pointer shadow-md"
+                  className="px-4 py-2 rounded-xl bg-action hover:bg-action-hover text-on-action text-xs font-semibold flex items-center gap-1.5 cursor-pointer shadow-sm"
                 >
-                  <Plus className="w-4 h-4" weight="bold" />
+                  <Plus className="w-4 h-4" weight="regular" />
                   <span>Add Gallery Item</span>
                 </button>
               </div>
@@ -576,33 +576,33 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
               {galleryItems.map((item) => (
                 <div
                   key={item.id}
-                  className="p-4 rounded-3xl bg-[#0b0f19] border border-white/10 flex flex-col justify-between space-y-3"
+                  className="p-4 rounded-xl bg-surface border border-rule flex flex-col justify-between space-y-3"
                 >
                   <div>
-                    <div className="aspect-[16/10] rounded-2xl overflow-hidden bg-slate-900 mb-3 border border-white/10 relative">
+                    <div className="aspect-[16/10] rounded-xl overflow-hidden bg-subtle mb-3 border border-rule relative">
                       <img
                         src={item.image}
                         alt={item.title}
                         className="w-full h-full object-cover"
                       />
-                      <span className="absolute top-2 left-2 text-[10px] uppercase font-bold text-[#00e575] bg-black/80 px-2 py-0.5 rounded border border-white/10">
+                      <span className="absolute top-2 left-2 text-[10px] uppercase font-semibold text-brand nx-image-badge bg-black/80 px-2 py-0.5 rounded border border-rule">
                         {item.category}
                       </span>
                     </div>
-                    <h4 className="text-sm font-bold text-white font-display line-clamp-1">{item.title}</h4>
-                    <p className="text-xs text-slate-400 line-clamp-2 mt-1">{item.description}</p>
-                    <div className="text-[11px] text-slate-400 mt-2">{item.location} &middot; {item.date}</div>
+                    <h4 className="text-sm font-semibold text-ink font-display line-clamp-1">{item.title}</h4>
+                    <p className="text-xs text-muted line-clamp-2 mt-1">{item.description}</p>
+                    <div className="text-[11px] text-muted mt-2">{item.location} &middot; {item.date}</div>
                   </div>
 
-                  <div className="pt-3 border-t border-white/10 flex items-center justify-between">
-                    <span className="text-[10px] text-slate-400">ID: {item.id}</span>
+                  <div className="pt-3 border-t border-rule flex items-center justify-between">
+                    <span className="text-[10px] text-muted">ID: {item.id}</span>
                     <div className="flex items-center gap-2">
                       <button
                         onClick={() => {
                           setEditingGalleryItem(item);
                           setIsGalleryFormOpen(true);
                         }}
-                        className="p-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-colors cursor-pointer"
+                        className="p-1.5 rounded-lg bg-subtle hover:bg-subtle text-muted hover:text-ink border border-rule transition-colors cursor-pointer"
                         title="Edit Item"
                       >
                         <PencilSimple className="w-3.5 h-3.5" />
@@ -613,7 +613,7 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
                             saveGalleryItems(galleryItems.filter((i) => i.id !== item.id));
                           }
                         }}
-                        className="p-1.5 rounded-lg bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/20 transition-colors cursor-pointer"
+                        className="p-1.5 rounded-lg bg-danger-soft hover:bg-danger-soft text-danger border border-danger/25 transition-colors cursor-pointer"
                         title="Delete Item"
                       >
                         <Trash className="w-3.5 h-3.5" />
@@ -633,8 +633,8 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
           <div className="space-y-6">
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="text-xl font-bold text-white font-display">Careers &amp; Job Openings</h3>
-                <p className="text-xs text-slate-400">
+                <h3 className="text-xl font-semibold text-ink font-display">Careers &amp; Job Openings</h3>
+                <p className="text-xs text-muted">
                   Manage active positions displayed on the public Careers portal.
                 </p>
               </div>
@@ -642,7 +642,7 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => saveCareers(JOB_OPENINGS)}
-                  className="px-3.5 py-2 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-semibold flex items-center gap-1.5 border border-white/10 cursor-pointer"
+                  className="px-3.5 py-2 rounded-xl bg-subtle hover:bg-subtle text-muted text-xs font-semibold flex items-center gap-1.5 border border-rule cursor-pointer"
                   title="Reset to default seed openings"
                 >
                   <ArrowCounterClockwise className="w-3.5 h-3.5" />
@@ -664,9 +664,9 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
                     });
                     setIsJobFormOpen(true);
                   }}
-                  className="px-4 py-2 rounded-xl bg-[#00e575] hover:bg-[#15f38a] text-black text-xs font-bold flex items-center gap-1.5 cursor-pointer shadow-md"
+                  className="px-4 py-2 rounded-xl bg-action hover:bg-action-hover text-on-action text-xs font-semibold flex items-center gap-1.5 cursor-pointer shadow-sm"
                 >
-                  <Plus className="w-4 h-4" weight="bold" />
+                  <Plus className="w-4 h-4" weight="regular" />
                   <span>Post New Role</span>
                 </button>
               </div>
@@ -677,30 +677,30 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
               {careersList.map((job) => (
                 <div
                   key={job.id}
-                  className="p-5 rounded-3xl bg-[#0b0f19] border border-white/10 flex flex-col md:flex-row md:items-center justify-between gap-4"
+                  className="p-5 rounded-xl bg-surface border border-rule flex flex-col md:flex-row md:items-center justify-between gap-4"
                 >
                   <div className="space-y-1">
                     <div className="flex items-center gap-2">
-                      <span className="text-[10px] uppercase font-bold text-[#00e575] bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
+                      <span className="text-[10px] uppercase font-semibold text-brand bg-accent-soft px-2 py-0.5 rounded border border-brand/25">
                         {job.department}
                       </span>
-                      <span className="text-[10px] text-slate-400 bg-white/5 px-2 py-0.5 rounded">
+                      <span className="text-[10px] text-muted bg-subtle px-2 py-0.5 rounded">
                         {job.type}
                       </span>
-                      <span className="text-xs text-slate-400">{job.location}</span>
+                      <span className="text-xs text-muted">{job.location}</span>
                     </div>
-                    <h4 className="text-base font-bold text-white font-display">{job.title}</h4>
-                    <p className="text-xs text-slate-400 line-clamp-1">{job.description}</p>
+                    <h4 className="text-base font-semibold text-ink font-display">{job.title}</h4>
+                    <p className="text-xs text-muted line-clamp-1">{job.description}</p>
                   </div>
 
                   <div className="flex items-center gap-2 shrink-0">
-                    <span className="text-xs text-emerald-400 font-semibold mr-2">{job.salaryRange}</span>
+                    <span className="text-xs text-success font-semibold mr-2">{job.salaryRange}</span>
                     <button
                       onClick={() => {
                         setEditingJob(job);
                         setIsJobFormOpen(true);
                       }}
-                      className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-colors cursor-pointer"
+                      className="p-2 rounded-lg bg-subtle hover:bg-subtle text-muted hover:text-ink border border-rule transition-colors cursor-pointer"
                       title="Edit Role"
                     >
                       <PencilSimple className="w-4 h-4" />
@@ -711,7 +711,7 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
                           saveCareers(careersList.filter((j) => j.id !== job.id));
                         }
                       }}
-                      className="p-2 rounded-lg bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/20 transition-colors cursor-pointer"
+                      className="p-2 rounded-lg bg-danger-soft hover:bg-danger-soft text-danger border border-danger/25 transition-colors cursor-pointer"
                       title="Delete Role"
                     >
                       <Trash className="w-4 h-4" />
@@ -732,14 +732,14 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
             aria-modal="true"
             className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md overflow-y-auto p-4 sm:p-6 flex items-center justify-center"
           >
-            <div className="max-w-2xl w-full max-h-[90vh] bg-[#0d121e] border border-white/20 rounded-3xl p-6 sm:p-8 space-y-4 shadow-2xl overflow-y-auto">
-              <div className="flex items-center justify-between border-b border-white/10 pb-3">
-                <h3 className="text-lg font-bold text-white font-display">
+            <div className="max-w-2xl w-full max-h-[90vh] bg-surface border border-rule rounded-xl p-6 sm:p-8 space-y-4 shadow-sm overflow-y-auto">
+              <div className="flex items-center justify-between border-b border-rule pb-3">
+                <h3 className="text-lg font-semibold text-ink font-display">
                   {blogPosts.some((p) => p.id === editingPost.id) ? 'Edit Article' : 'Create Article'}
                 </h3>
                 <button
                   onClick={() => setIsPostFormOpen(false)}
-                  className="p-1 text-slate-400 hover:text-white"
+                  className="p-1 text-muted hover:text-ink"
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -747,27 +747,27 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
 
               <div className="space-y-3 text-xs">
                 <div>
-                  <label className="text-[11px] uppercase font-bold text-slate-300 block mb-1">
+                  <label htmlFor="cmsportal-field-5" className="text-[11px] uppercase font-semibold text-muted block mb-1">
                     Article Title
                   </label>
-                  <input
+                  <input id="cmsportal-field-5"
                     type="text"
                     value={editingPost.title}
                     onChange={(e) => setEditingPost({ ...editingPost, title: e.target.value })}
-                    className="w-full px-3 py-2 rounded-xl bg-white/[0.04] border border-white/10 text-white focus:outline-none focus:border-[#00e575]"
+                    className="w-full px-3 py-2 rounded-xl bg-subtle border border-rule text-ink focus:outline-none focus:border-brand"
                     placeholder="Headline..."
                   />
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
-                    <label className="text-[11px] uppercase font-bold text-slate-300 block mb-1">
+                    <label htmlFor="cmsportal-field-6" className="text-[11px] uppercase font-semibold text-muted block mb-1">
                       Category
                     </label>
-                    <select
+                    <select id="cmsportal-field-6"
                       value={editingPost.category}
                       onChange={(e) => setEditingPost({ ...editingPost, category: e.target.value as any })}
-                      className="w-full px-3 py-2 rounded-xl bg-[#080b12] border border-white/10 text-white focus:outline-none focus:border-[#00e575]"
+                      className="w-full px-3 py-2 rounded-xl bg-surface border border-rule text-ink focus:outline-none focus:border-brand"
                     >
                       <option value="Fintech & Credit">Fintech &amp; Credit</option>
                       <option value="Payroll & Remita">Payroll &amp; Remita</option>
@@ -778,47 +778,47 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
                   </div>
 
                   <div>
-                    <label className="text-[11px] uppercase font-bold text-slate-300 block mb-1">
+                    <label htmlFor="cmsportal-field-7" className="text-[11px] uppercase font-semibold text-muted block mb-1">
                       Author Name
                     </label>
-                    <input
+                    <input id="cmsportal-field-7"
                       type="text"
                       value={editingPost.author}
                       onChange={(e) => setEditingPost({ ...editingPost, author: e.target.value })}
-                      className="w-full px-3 py-2 rounded-xl bg-white/[0.04] border border-white/10 text-white focus:outline-none focus:border-[#00e575]"
+                      className="w-full px-3 py-2 rounded-xl bg-subtle border border-rule text-ink focus:outline-none focus:border-brand"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="text-[11px] uppercase font-bold text-slate-300 block mb-1">
+                  <label htmlFor="cmsportal-field-8" className="text-[11px] uppercase font-semibold text-muted block mb-1">
                     Image URL
                   </label>
-                  <input
+                  <input id="cmsportal-field-8"
                     type="text"
                     value={editingPost.image}
                     onChange={(e) => setEditingPost({ ...editingPost, image: e.target.value })}
-                    className="w-full px-3 py-2 rounded-xl bg-white/[0.04] border border-white/10 text-white focus:outline-none focus:border-[#00e575]"
+                    className="w-full px-3 py-2 rounded-xl bg-subtle border border-rule text-ink focus:outline-none focus:border-brand"
                   />
                 </div>
 
                 <div>
-                  <label className="text-[11px] uppercase font-bold text-slate-300 block mb-1">
+                  <label htmlFor="cmsportal-field-9" className="text-[11px] uppercase font-semibold text-muted block mb-1">
                     Excerpt Summary
                   </label>
-                  <textarea
+                  <textarea id="cmsportal-field-9"
                     rows={2}
                     value={editingPost.excerpt}
                     onChange={(e) => setEditingPost({ ...editingPost, excerpt: e.target.value })}
-                    className="w-full px-3 py-2 rounded-xl bg-white/[0.04] border border-white/10 text-white focus:outline-none focus:border-[#00e575]"
+                    className="w-full px-3 py-2 rounded-xl bg-subtle border border-rule text-ink focus:outline-none focus:border-brand"
                   />
                 </div>
 
                 <div>
-                  <label className="text-[11px] uppercase font-bold text-slate-300 block mb-1">
+                  <label htmlFor="cmsportal-field-10" className="text-[11px] uppercase font-semibold text-muted block mb-1">
                     Full Content (Paragraphs separated by double line break)
                   </label>
-                  <textarea
+                  <textarea id="cmsportal-field-10"
                     rows={6}
                     value={editingPost.content}
                     onChange={(e) =>
@@ -827,7 +827,7 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
                         content: e.target.value,
                       })
                     }
-                    className="w-full px-3 py-2 rounded-xl bg-white/[0.04] border border-white/10 text-white focus:outline-none focus:border-[#00e575]"
+                    className="w-full px-3 py-2 rounded-xl bg-subtle border border-rule text-ink focus:outline-none focus:border-brand"
                   />
                 </div>
 
@@ -837,19 +837,19 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
                     id="featCheck"
                     checked={editingPost.featured}
                     onChange={(e) => setEditingPost({ ...editingPost, featured: e.target.checked })}
-                    className="accent-[#00e575]"
+                    className="accent-brand"
                   />
-                  <label htmlFor="featCheck" className="text-slate-300 cursor-pointer">
+                  <label htmlFor="featCheck" className="text-muted cursor-pointer">
                     Display as Featured Article on Blog Header
                   </label>
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-white/10 flex justify-end gap-2">
+              <div className="pt-3 border-t border-rule flex justify-end gap-2">
                 <button
                   type="button"
                   onClick={() => setIsPostFormOpen(false)}
-                  className="px-4 py-2 rounded-xl bg-white/5 text-slate-300 text-xs font-semibold cursor-pointer"
+                  className="px-4 py-2 rounded-xl bg-subtle text-muted text-xs font-semibold cursor-pointer"
                 >
                   Cancel
                 </button>
@@ -864,7 +864,7 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
                     }
                     setIsPostFormOpen(false);
                   }}
-                  className="px-5 py-2 rounded-xl bg-[#00e575] text-black text-xs font-bold cursor-pointer"
+                  className="px-5 py-2 rounded-xl bg-action text-on-action text-xs font-semibold cursor-pointer"
                 >
                   Save Article
                 </button>
@@ -882,14 +882,14 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
             aria-modal="true"
             className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md overflow-y-auto p-4 sm:p-6 flex items-center justify-center"
           >
-            <div className="max-w-xl w-full max-h-[90vh] bg-[#0d121e] border border-white/20 rounded-3xl p-6 sm:p-8 space-y-4 shadow-2xl overflow-y-auto">
-              <div className="flex items-center justify-between border-b border-white/10 pb-3">
-                <h3 className="text-lg font-bold text-white font-display">
+            <div className="max-w-xl w-full max-h-[90vh] bg-surface border border-rule rounded-xl p-6 sm:p-8 space-y-4 shadow-sm overflow-y-auto">
+              <div className="flex items-center justify-between border-b border-rule pb-3">
+                <h3 className="text-lg font-semibold text-ink font-display">
                   {galleryItems.some((i) => i.id === editingGalleryItem.id) ? 'Edit Gallery Item' : 'Add Image to Gallery'}
                 </h3>
                 <button
                   onClick={() => setIsGalleryFormOpen(false)}
-                  className="p-1 text-slate-400 hover:text-white"
+                  className="p-1 text-muted hover:text-ink"
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -897,24 +897,24 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
 
               <div className="space-y-3 text-xs">
                 <div>
-                  <label className="text-[11px] uppercase font-bold text-slate-300 block mb-1">
+                  <label className="text-[11px] uppercase font-semibold text-muted block mb-1">
                     Image Title
                   </label>
                   <input
                     type="text"
                     value={editingGalleryItem.title}
                     onChange={(e) => setEditingGalleryItem({ ...editingGalleryItem, title: e.target.value })}
-                    className="w-full px-3 py-2 rounded-xl bg-white/[0.04] border border-white/10 text-white focus:outline-none focus:border-[#00e575]"
+                    className="w-full px-3 py-2 rounded-xl bg-subtle border border-rule text-ink focus:outline-none focus:border-brand"
                     placeholder="e.g. NICON Insurance Building Abuja Central Wing"
                   />
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
-                    <label className="text-[11px] uppercase font-bold text-slate-300 block mb-1">
+                    <label htmlFor="cmsportal-field-11" className="text-[11px] uppercase font-semibold text-muted block mb-1">
                       Folder Category
                     </label>
-                    <select
+                    <select id="cmsportal-field-11"
                       value={editingGalleryItem.category}
                       onChange={(e) =>
                         setEditingGalleryItem({
@@ -922,7 +922,7 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
                           category: e.target.value as GalleryFolder,
                         })
                       }
-                      className="w-full px-3 py-2 rounded-xl bg-[#080b12] border border-white/10 text-white focus:outline-none focus:border-[#00e575]"
+                      className="w-full px-3 py-2 rounded-xl bg-surface border border-rule text-ink focus:outline-none focus:border-brand"
                     >
                       <option value="Office">Office</option>
                       <option value="CSR">CSR</option>
@@ -933,41 +933,41 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
                   </div>
 
                   <div>
-                    <label className="text-[11px] uppercase font-bold text-slate-300 block mb-1">
+                    <label htmlFor="cmsportal-field-12" className="text-[11px] uppercase font-semibold text-muted block mb-1">
                       Date / Year
                     </label>
-                    <input
+                    <input id="cmsportal-field-12"
                       type="text"
                       value={editingGalleryItem.date}
                       onChange={(e) => setEditingGalleryItem({ ...editingGalleryItem, date: e.target.value })}
-                      className="w-full px-3 py-2 rounded-xl bg-white/[0.04] border border-white/10 text-white focus:outline-none focus:border-[#00e575]"
+                      className="w-full px-3 py-2 rounded-xl bg-subtle border border-rule text-ink focus:outline-none focus:border-brand"
                       placeholder="e.g. March 2026"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="text-[11px] uppercase font-bold text-slate-300 block mb-1">
+                  <label htmlFor="cmsportal-field-13" className="text-[11px] uppercase font-semibold text-muted block mb-1">
                     Location
                   </label>
-                  <input
+                  <input id="cmsportal-field-13"
                     type="text"
                     value={editingGalleryItem.location}
                     onChange={(e) => setEditingGalleryItem({ ...editingGalleryItem, location: e.target.value })}
-                    className="w-full px-3 py-2 rounded-xl bg-white/[0.04] border border-white/10 text-white focus:outline-none focus:border-[#00e575]"
+                    className="w-full px-3 py-2 rounded-xl bg-subtle border border-rule text-ink focus:outline-none focus:border-brand"
                     placeholder="e.g. NICON Insurance Building, CBD Abuja"
                   />
                 </div>
 
                 <div>
-                  <label className="text-[11px] uppercase font-bold text-slate-300 block mb-1">
+                  <label htmlFor="cmsportal-field-14" className="text-[11px] uppercase font-semibold text-muted block mb-1">
                     Image File URL
                   </label>
-                  <input
+                  <input id="cmsportal-field-14"
                     type="text"
                     value={editingGalleryItem.image}
                     onChange={(e) => setEditingGalleryItem({ ...editingGalleryItem, image: e.target.value })}
-                    className="w-full px-3 py-2 rounded-xl bg-white/[0.04] border border-white/10 text-white focus:outline-none focus:border-[#00e575]"
+                    className="w-full px-3 py-2 rounded-xl bg-subtle border border-rule text-ink focus:outline-none focus:border-brand"
                     placeholder="./assets/nexus/..."
                   />
                   <div className="flex gap-2 mt-1.5 flex-wrap">
@@ -982,7 +982,7 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
                         key={pre.label}
                         type="button"
                         onClick={() => setEditingGalleryItem({ ...editingGalleryItem, image: pre.url })}
-                        className="text-[10px] px-2 py-0.5 rounded bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 cursor-pointer"
+                        className="text-[10px] px-2 py-0.5 rounded bg-subtle hover:bg-subtle text-muted border border-rule cursor-pointer"
                       >
                         {pre.label}
                       </button>
@@ -991,24 +991,24 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
                 </div>
 
                 <div>
-                  <label className="text-[11px] uppercase font-bold text-slate-300 block mb-1">
+                  <label htmlFor="cmsportal-field-15" className="text-[11px] uppercase font-semibold text-muted block mb-1">
                     Description &amp; Highlights
                   </label>
-                  <textarea
+                  <textarea id="cmsportal-field-15"
                     rows={3}
                     value={editingGalleryItem.description}
                     onChange={(e) => setEditingGalleryItem({ ...editingGalleryItem, description: e.target.value })}
-                    className="w-full px-3 py-2 rounded-xl bg-white/[0.04] border border-white/10 text-white focus:outline-none focus:border-[#00e575]"
+                    className="w-full px-3 py-2 rounded-xl bg-subtle border border-rule text-ink focus:outline-none focus:border-brand"
                     placeholder="Describe the occasion, facility or event..."
                   />
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-white/10 flex justify-end gap-2">
+              <div className="pt-3 border-t border-rule flex justify-end gap-2">
                 <button
                   type="button"
                   onClick={() => setIsGalleryFormOpen(false)}
-                  className="px-4 py-2 rounded-xl bg-white/5 text-slate-300 text-xs font-semibold cursor-pointer"
+                  className="px-4 py-2 rounded-xl bg-subtle text-muted text-xs font-semibold cursor-pointer"
                 >
                   Cancel
                 </button>
@@ -1023,7 +1023,7 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
                     }
                     setIsGalleryFormOpen(false);
                   }}
-                  className="px-5 py-2 rounded-xl bg-[#00e575] text-black text-xs font-bold cursor-pointer"
+                  className="px-5 py-2 rounded-xl bg-action text-on-action text-xs font-semibold cursor-pointer"
                 >
                   Save Gallery Item
                 </button>
@@ -1041,14 +1041,14 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
             aria-modal="true"
             className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md overflow-y-auto p-4 sm:p-6 flex items-center justify-center"
           >
-            <div className="max-w-2xl w-full max-h-[90vh] bg-[#0d121e] border border-white/20 rounded-3xl p-6 sm:p-8 space-y-4 shadow-2xl overflow-y-auto">
-              <div className="flex items-center justify-between border-b border-white/10 pb-3">
-                <h3 className="text-lg font-bold text-white font-display">
+            <div className="max-w-2xl w-full max-h-[90vh] bg-surface border border-rule rounded-xl p-6 sm:p-8 space-y-4 shadow-sm overflow-y-auto">
+              <div className="flex items-center justify-between border-b border-rule pb-3">
+                <h3 className="text-lg font-semibold text-ink font-display">
                   {careersList.some((j) => j.id === editingJob.id) ? 'Edit Job Opening' : 'Post New Job Opening'}
                 </h3>
                 <button
                   onClick={() => setIsJobFormOpen(false)}
-                  className="p-1 text-slate-400 hover:text-white"
+                  className="p-1 text-muted hover:text-ink"
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -1056,27 +1056,27 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
 
               <div className="space-y-3 text-xs">
                 <div>
-                  <label className="text-[11px] uppercase font-bold text-slate-300 block mb-1">
+                  <label htmlFor="cmsportal-field-16" className="text-[11px] uppercase font-semibold text-muted block mb-1">
                     Job Title
                   </label>
-                  <input
+                  <input id="cmsportal-field-16"
                     type="text"
                     value={editingJob.title}
                     onChange={(e) => setEditingJob({ ...editingJob, title: e.target.value })}
-                    className="w-full px-3 py-2 rounded-xl bg-white/[0.04] border border-white/10 text-white focus:outline-none focus:border-[#00e575]"
+                    className="w-full px-3 py-2 rounded-xl bg-subtle border border-rule text-ink focus:outline-none focus:border-brand"
                     placeholder="e.g. Senior Underwriter"
                   />
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
-                    <label className="text-[11px] uppercase font-bold text-slate-300 block mb-1">
+                    <label htmlFor="cmsportal-field-17" className="text-[11px] uppercase font-semibold text-muted block mb-1">
                       Department
                     </label>
-                    <select
+                    <select id="cmsportal-field-17"
                       value={editingJob.department}
                       onChange={(e) => setEditingJob({ ...editingJob, department: e.target.value as any })}
-                      className="w-full px-3 py-2 rounded-xl bg-[#080b12] border border-white/10 text-white focus:outline-none focus:border-[#00e575]"
+                      className="w-full px-3 py-2 rounded-xl bg-surface border border-rule text-ink focus:outline-none focus:border-brand"
                     >
                       <option value="Credit Risk & Underwriting">Credit Risk &amp; Underwriting</option>
                       <option value="Operations & Branch">Operations &amp; Branch</option>
@@ -1087,36 +1087,36 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
                   </div>
 
                   <div>
-                    <label className="text-[11px] uppercase font-bold text-slate-300 block mb-1">
+                    <label htmlFor="cmsportal-field-18" className="text-[11px] uppercase font-semibold text-muted block mb-1">
                       Salary Range
                     </label>
-                    <input
+                    <input id="cmsportal-field-18"
                       type="text"
                       value={editingJob.salaryRange}
                       onChange={(e) => setEditingJob({ ...editingJob, salaryRange: e.target.value })}
-                      className="w-full px-3 py-2 rounded-xl bg-white/[0.04] border border-white/10 text-white focus:outline-none focus:border-[#00e575]"
+                      className="w-full px-3 py-2 rounded-xl bg-subtle border border-rule text-ink focus:outline-none focus:border-brand"
                       placeholder="e.g. Competitive + Quarterly Bonus"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="text-[11px] uppercase font-bold text-slate-300 block mb-1">
+                  <label htmlFor="cmsportal-field-19" className="text-[11px] uppercase font-semibold text-muted block mb-1">
                     Job Description Overview
                   </label>
-                  <textarea
+                  <textarea id="cmsportal-field-19"
                     rows={3}
                     value={editingJob.description}
                     onChange={(e) => setEditingJob({ ...editingJob, description: e.target.value })}
-                    className="w-full px-3 py-2 rounded-xl bg-white/[0.04] border border-white/10 text-white focus:outline-none focus:border-[#00e575]"
+                    className="w-full px-3 py-2 rounded-xl bg-subtle border border-rule text-ink focus:outline-none focus:border-brand"
                   />
                 </div>
 
                 <div>
-                  <label className="text-[11px] uppercase font-bold text-slate-300 block mb-1">
+                  <label htmlFor="cmsportal-field-20" className="text-[11px] uppercase font-semibold text-muted block mb-1">
                     Responsibilities (One per line)
                   </label>
-                  <textarea
+                  <textarea id="cmsportal-field-20"
                     rows={4}
                     value={editingJob.responsibilities.join('\n')}
                     onChange={(e) =>
@@ -1125,15 +1125,15 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
                         responsibilities: e.target.value.split('\n').filter((l) => l.trim() !== ''),
                       })
                     }
-                    className="w-full px-3 py-2 rounded-xl bg-white/[0.04] border border-white/10 text-white focus:outline-none focus:border-[#00e575]"
+                    className="w-full px-3 py-2 rounded-xl bg-subtle border border-rule text-ink focus:outline-none focus:border-brand"
                   />
                 </div>
 
                 <div>
-                  <label className="text-[11px] uppercase font-bold text-slate-300 block mb-1">
+                  <label htmlFor="cmsportal-field-21" className="text-[11px] uppercase font-semibold text-muted block mb-1">
                     Requirements &amp; Qualifications (One per line)
                   </label>
-                  <textarea
+                  <textarea id="cmsportal-field-21"
                     rows={4}
                     value={editingJob.requirements.join('\n')}
                     onChange={(e) =>
@@ -1142,16 +1142,16 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
                         requirements: e.target.value.split('\n').filter((l) => l.trim() !== ''),
                       })
                     }
-                    className="w-full px-3 py-2 rounded-xl bg-white/[0.04] border border-white/10 text-white focus:outline-none focus:border-[#00e575]"
+                    className="w-full px-3 py-2 rounded-xl bg-subtle border border-rule text-ink focus:outline-none focus:border-brand"
                   />
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-white/10 flex justify-end gap-2">
+              <div className="pt-3 border-t border-rule flex justify-end gap-2">
                 <button
                   type="button"
                   onClick={() => setIsJobFormOpen(false)}
-                  className="px-4 py-2 rounded-xl bg-white/5 text-slate-300 text-xs font-semibold cursor-pointer"
+                  className="px-4 py-2 rounded-xl bg-subtle text-muted text-xs font-semibold cursor-pointer"
                 >
                   Cancel
                 </button>
@@ -1166,7 +1166,7 @@ export const CmsPortal: React.FC<CmsPortalProps> = ({ onNavigate }) => {
                     }
                     setIsJobFormOpen(false);
                   }}
-                  className="px-5 py-2 rounded-xl bg-[#00e575] text-black text-xs font-bold cursor-pointer"
+                  className="px-5 py-2 rounded-xl bg-action text-on-action text-xs font-semibold cursor-pointer"
                 >
                   Save Job Opening
                 </button>

@@ -29,20 +29,20 @@ export const Footer: React.FC<FooterProps> = ({ onOpenApply, onNavigate }) => {
   };
 
   return (
-    <footer className="bg-black text-neutral-400 font-sans pt-20 pb-14 border-t border-white/10 relative">
+    <footer className="bg-canvas text-muted font-sans pt-20 pb-14 border-t border-rule relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-16">
           {/* Col 1: Who We Are */}
           <div>
-            <div className="text-xs uppercase tracking-wider text-white font-bold mb-4 font-sans">
+            <div className="text-xs uppercase tracking-wider text-ink font-semibold mb-4 font-sans">
               Who We Are
             </div>
-            <ul className="space-y-3 text-xs text-neutral-400 font-sans">
+            <ul className="space-y-3 text-xs text-muted font-sans">
               <li>
                 <button
                   type="button"
                   onClick={() => handleNav('about')}
-                  className="hover:text-white transition-colors cursor-pointer text-left"
+                  className="hover:text-ink transition-colors cursor-pointer text-left"
                 >
                   About Us
                 </button>
@@ -51,7 +51,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenApply, onNavigate }) => {
                 <button
                   type="button"
                   onClick={() => handleNav('leadership')}
-                  className="hover:text-white transition-colors cursor-pointer text-left"
+                  className="hover:text-ink transition-colors cursor-pointer text-left"
                 >
                   Leadership Team
                 </button>
@@ -60,7 +60,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenApply, onNavigate }) => {
                 <button
                   type="button"
                   onClick={() => handleNav('gallery')}
-                  className="hover:text-white transition-colors cursor-pointer text-left"
+                  className="hover:text-ink transition-colors cursor-pointer text-left"
                 >
                   Gallery
                 </button>
@@ -69,7 +69,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenApply, onNavigate }) => {
                 <button
                   type="button"
                   onClick={() => handleNav('blog')}
-                  className="hover:text-white transition-colors cursor-pointer text-left"
+                  className="hover:text-ink transition-colors cursor-pointer text-left"
                 >
                   Blog &amp; News
                 </button>
@@ -78,7 +78,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenApply, onNavigate }) => {
                 <button
                   type="button"
                   onClick={() => handleNav('careers')}
-                  className="hover:text-white transition-colors cursor-pointer text-left"
+                  className="hover:text-ink transition-colors cursor-pointer text-left"
                 >
                   Careers
                 </button>
@@ -87,7 +87,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenApply, onNavigate }) => {
                 <button
                   type="button"
                   onClick={() => handleNav('calculator')}
-                  className="hover:text-white transition-colors cursor-pointer text-left"
+                  className="hover:text-ink transition-colors cursor-pointer text-left"
                 >
                   Loan Calculator
                 </button>
@@ -97,15 +97,15 @@ export const Footer: React.FC<FooterProps> = ({ onOpenApply, onNavigate }) => {
 
           {/* Col 2: Products */}
           <div>
-            <div className="text-xs uppercase tracking-wider text-white font-bold mb-4 font-sans">
+            <div className="text-xs uppercase tracking-wider text-ink font-semibold mb-4 font-sans">
               Products
             </div>
-            <ul className="space-y-3 text-xs text-neutral-400 font-sans">
+            <ul className="space-y-3 text-xs text-muted font-sans">
               <li>
                 <button
                   type="button"
                   onClick={() => handleNav('product-detail', 'suremoney-loan')}
-                  className="hover:text-white transition-colors text-left cursor-pointer"
+                  className="hover:text-ink transition-colors text-left cursor-pointer"
                 >
                   Suremoney
                 </button>
@@ -114,7 +114,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenApply, onNavigate }) => {
                 <button
                   type="button"
                   onClick={() => handleNav('product-detail', 'nexus-credit')}
-                  className="hover:text-white transition-colors text-left cursor-pointer"
+                  className="hover:text-ink transition-colors text-left cursor-pointer"
                 >
                   Nexus Credit
                 </button>
@@ -123,7 +123,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenApply, onNavigate }) => {
                 <button
                   type="button"
                   onClick={() => handleNav('product-detail', 'car-for-cash')}
-                  className="hover:text-white transition-colors text-left cursor-pointer"
+                  className="hover:text-ink transition-colors text-left cursor-pointer"
                 >
                   Cash for Cash
                 </button>
@@ -132,7 +132,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenApply, onNavigate }) => {
                 <button
                   type="button"
                   onClick={() => handleNav('product-detail', 'women-empowerment')}
-                  className="hover:text-white transition-colors text-left cursor-pointer"
+                  className="hover:text-ink transition-colors text-left cursor-pointer"
                 >
                   NWEL
                 </button>
@@ -141,7 +141,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenApply, onNavigate }) => {
                 <button
                   type="button"
                   onClick={() => handleNav('product-detail', 'travel-financing')}
-                  className="hover:text-white transition-colors text-left cursor-pointer"
+                  className="hover:text-ink transition-colors text-left cursor-pointer"
                 >
                   Travel Financing
                 </button>
@@ -151,15 +151,15 @@ export const Footer: React.FC<FooterProps> = ({ onOpenApply, onNavigate }) => {
 
           {/* Col 3: Others */}
           <div>
-            <div className="text-xs uppercase tracking-wider text-white font-bold mb-4 font-sans">
+            <div className="text-xs uppercase tracking-wider text-ink font-semibold mb-4 font-sans">
               Others
             </div>
-            <ul className="space-y-3 text-xs text-neutral-400 font-sans">
+            <ul className="space-y-3 text-xs text-muted font-sans">
               <li>
                 <button
                   type="button"
                   onClick={() => handleNav('product-detail', 'invoice-discounting')}
-                  className="hover:text-white transition-colors text-left cursor-pointer"
+                  className="hover:text-ink transition-colors text-left cursor-pointer"
                 >
                   Invoice Discounting Facility
                 </button>
@@ -168,7 +168,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenApply, onNavigate }) => {
                 <button
                   type="button"
                   onClick={() => handleNav('product-detail', 'shop-owned-sme')}
-                  className="hover:text-white transition-colors text-left cursor-pointer"
+                  className="hover:text-ink transition-colors text-left cursor-pointer"
                 >
                   Shop-owned-Based Loan
                 </button>
@@ -177,7 +177,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenApply, onNavigate }) => {
                 <button
                   type="button"
                   onClick={() => handleNav('product-detail', 'gold-for-cash')}
-                  className="hover:text-white transition-colors text-left cursor-pointer"
+                  className="hover:text-ink transition-colors text-left cursor-pointer"
                 >
                   Gold-for-Cash
                 </button>
@@ -186,7 +186,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenApply, onNavigate }) => {
                 <button
                   type="button"
                   onClick={() => handleNav('product-detail', 'suremoney-loan')}
-                  className="hover:text-white transition-colors text-left cursor-pointer"
+                  className="hover:text-ink transition-colors text-left cursor-pointer"
                 >
                   Payday &amp; Auto Loans
                 </button>
@@ -196,25 +196,25 @@ export const Footer: React.FC<FooterProps> = ({ onOpenApply, onNavigate }) => {
 
           {/* Col 4: Quick Contacts */}
           <div>
-            <div className="text-xs uppercase tracking-wider text-white font-bold mb-4 font-sans">
+            <div className="text-xs uppercase tracking-wider text-ink font-semibold mb-4 font-sans">
               Quick Contacts
             </div>
-            <ul className="space-y-3 text-xs text-neutral-400 font-sans">
+            <ul className="space-y-3 text-xs text-muted font-sans">
               <li>
                 <a
                   href="mailto:support@nexusfinance.com"
-                  className="hover:text-[#00e575] transition-colors flex items-center gap-2 group"
+                  className="hover:text-brand transition-colors flex items-center gap-2 group"
                 >
-                  <EnvelopeSimple className="w-4 h-4 text-[#00e575]" />
+                  <EnvelopeSimple className="w-4 h-4 text-brand" />
                   <span>Tap to send us a mail</span>
                 </a>
               </li>
               <li>
                 <a
                   href="tel:+2348091212224"
-                  className="hover:text-[#00e575] transition-colors flex items-center gap-2 font-medium text-neutral-200"
+                  className="hover:text-brand transition-colors flex items-center gap-2 font-medium text-ink"
                 >
-                  <PhoneCall className="w-4 h-4 text-[#00e575]" />
+                  <PhoneCall className="w-4 h-4 text-brand" />
                   <span>+234 809-1212-224</span>
                 </a>
               </li>
@@ -223,13 +223,13 @@ export const Footer: React.FC<FooterProps> = ({ onOpenApply, onNavigate }) => {
                   href="https://maps.google.com/?q=NICON+Insurance+Building,+Central+Business+District,+Abuja,+Nigeria"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white transition-colors flex items-start gap-1.5 pt-1 text-[11px] text-neutral-400"
+                  className="hover:text-ink transition-colors flex items-start gap-1.5 pt-1 text-[11px] text-muted"
                 >
-                  <MapPin className="w-3.5 h-3.5 text-[#00e575] shrink-0 mt-0.5" />
+                  <MapPin className="w-3.5 h-3.5 text-brand shrink-0 mt-0.5" />
                   <span>2nd Floor, Right Wing, NICON Insurance Building, Central Business District (CBD), Abuja.</span>
                 </a>
               </li>
-              <li className="text-[11px] text-neutral-400">
+              <li className="text-[11px] text-muted">
                 Hours: Mon – Fri, 8:00 AM – 5:00 PM
               </li>
             </ul>
@@ -245,24 +245,25 @@ export const Footer: React.FC<FooterProps> = ({ onOpenApply, onNavigate }) => {
               <img
                 src="./assets/nexus/NEXUS-BW-HOR-WH.png"
                 alt="Nexus Finance"
-                className="h-8 sm:h-9 w-auto object-contain"
+                className="nx-logo-dark h-8 sm:h-9 w-auto object-contain"
               />
+              <img src="./assets/nexus/NEXUS-coloured-HOR.png" alt="Nexus Finance" className="nx-logo-light h-8 sm:h-9 w-auto object-contain" />
             </button>
-            <p className="text-xs text-neutral-400 font-normal leading-relaxed">
+            <p className="text-xs text-muted font-normal leading-relaxed">
               Your money companion. Earn, invest and access liquidity in one unified ecosystem.
             </p>
 
             <div className="pt-2">
-              <div className="text-xs uppercase tracking-wider text-white font-bold mb-3 font-sans">
+              <div className="text-xs uppercase tracking-wider text-ink font-semibold mb-3 font-sans">
                 Connect With Us
               </div>
-              <div className="flex flex-wrap gap-2 text-neutral-400">
+              <div className="flex flex-wrap gap-2 text-muted">
                 <a
                   href="https://facebook.com/nexusfinance"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Facebook @nexusfinance"
-                  className="p-2.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.1] hover:text-[#00e575] border border-white/10 transition-colors"
+                  className="p-2.5 rounded-xl bg-subtle hover:bg-subtle hover:text-brand border border-rule transition-colors"
                 >
                   <FacebookLogo className="w-4 h-4" weight="fill" />
                 </a>
@@ -271,7 +272,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenApply, onNavigate }) => {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Instagram @nexusfinance"
-                  className="p-2.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.1] hover:text-[#00e575] border border-white/10 transition-colors"
+                  className="p-2.5 rounded-xl bg-subtle hover:bg-subtle hover:text-brand border border-rule transition-colors"
                 >
                   <InstagramLogo className="w-4 h-4" weight="fill" />
                 </a>
@@ -280,7 +281,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenApply, onNavigate }) => {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="LinkedIn @nexusfinance"
-                  className="p-2.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.1] hover:text-[#00e575] border border-white/10 transition-colors"
+                  className="p-2.5 rounded-xl bg-subtle hover:bg-subtle hover:text-brand border border-rule transition-colors"
                 >
                   <LinkedinLogo className="w-4 h-4" weight="fill" />
                 </a>
@@ -289,7 +290,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenApply, onNavigate }) => {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="TikTok @nexusfinance"
-                  className="p-2.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.1] hover:text-[#00e575] border border-white/10 transition-colors"
+                  className="p-2.5 rounded-xl bg-subtle hover:bg-subtle hover:text-brand border border-rule transition-colors"
                 >
                   <TiktokLogo className="w-4 h-4" weight="fill" />
                 </a>
@@ -298,7 +299,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenApply, onNavigate }) => {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="YouTube @nexusfinance"
-                  className="p-2.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.1] hover:text-[#00e575] border border-white/10 transition-colors"
+                  className="p-2.5 rounded-xl bg-subtle hover:bg-subtle hover:text-brand border border-rule transition-colors"
                 >
                   <YoutubeLogo className="w-4 h-4" weight="fill" />
                 </a>
@@ -307,30 +308,30 @@ export const Footer: React.FC<FooterProps> = ({ onOpenApply, onNavigate }) => {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="X @nexusfinance"
-                  className="p-2.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.1] hover:text-[#00e575] border border-white/10 transition-colors"
+                  className="p-2.5 rounded-xl bg-subtle hover:bg-subtle hover:text-brand border border-rule transition-colors"
                 >
-                  <XLogo className="w-4 h-4" weight="bold" />
+                  <XLogo className="w-4 h-4" weight="regular" />
                 </a>
                 <a
                   href="https://wa.me/2348091212224"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="WhatsApp @nexusfinance"
-                  className="p-2.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.1] hover:text-[#00e575] border border-white/10 transition-colors"
+                  className="p-2.5 rounded-xl bg-subtle hover:bg-subtle hover:text-brand border border-rule transition-colors"
                 >
                   <WhatsappLogo className="w-4 h-4" weight="fill" />
                 </a>
               </div>
             </div>
 
-            <div className="text-[11px] text-neutral-400 font-sans pt-2">
+            <div className="text-[11px] text-muted font-sans pt-2">
               <span>&copy; 2026 Nexus Finance. All rights reserved.</span>
             </div>
           </div>
         </div>
 
         {/* Regulatory Disclosure Block */}
-        <div className="pt-8 border-t border-white/10 space-y-4 text-xs leading-relaxed text-neutral-400 font-sans">
+        <div className="pt-8 border-t border-rule space-y-4 text-xs leading-relaxed text-muted font-sans">
           <p>
             Nexus Finance is a premier financial services provider delivering fast, flexible loan and liquidity solutions across Nigeria. Established and regulated under the National Cooperative Societies, the National Cooperative Financing Agency, and the Abuja Cooperative Federation. Serving as a dependable financial safety net for public servants, paramilitary officers, and enterprise contractors.
           </p>

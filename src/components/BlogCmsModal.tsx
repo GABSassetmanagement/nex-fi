@@ -127,21 +127,21 @@ export const BlogCmsModal: React.FC<BlogCmsModalProps> = ({
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-5xl my-auto max-h-[90vh] flex flex-col bg-[#0b0f19] border border-white/15 rounded-3xl shadow-2xl text-left font-sans overflow-hidden"
+        className="relative w-full max-w-5xl my-auto max-h-[90vh] flex flex-col bg-surface border border-rule rounded-xl shadow-sm text-left font-sans overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-white/10 shrink-0">
+        <div className="flex items-center justify-between p-6 border-b border-rule shrink-0">
           <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#00e575] animate-pulse" />
-            <h2 className="text-lg font-bold text-white font-display">
+            <span className="w-2.5 h-2.5 rounded-full bg-action" />
+            <h2 className="text-lg font-semibold text-ink font-display">
               Nexus Finance CMS — Article &amp; Media Manager
             </h2>
           </div>
           <div className="flex items-center gap-2">
             <button
               onClick={onResetDefaults}
-              className="px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer"
+              className="px-3 py-1.5 rounded-xl bg-subtle hover:bg-subtle text-muted text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer"
               title="Reset sample articles to default"
             >
               <ArrowCounterClockwise className="w-3.5 h-3.5" />
@@ -149,7 +149,7 @@ export const BlogCmsModal: React.FC<BlogCmsModalProps> = ({
             </button>
             <button
               onClick={onClose}
-              className="p-2 rounded-xl bg-white/5 hover:bg-white/15 text-slate-300 hover:text-white transition-colors cursor-pointer"
+              className="p-2 rounded-xl bg-subtle hover:bg-subtle text-muted hover:text-ink transition-colors cursor-pointer"
             >
               <X className="w-5 h-5" />
             </button>
@@ -161,14 +161,14 @@ export const BlogCmsModal: React.FC<BlogCmsModalProps> = ({
           {isCreatingNew || editingPost ? (
             /* Create / Edit Form */
             <form onSubmit={handleSaveForm} className="space-y-5">
-              <div className="flex items-center justify-between pb-3 border-b border-white/10">
-                <h3 className="text-base font-bold text-[#00e575]">
+              <div className="flex items-center justify-between pb-3 border-b border-rule">
+                <h3 className="text-base font-semibold text-brand">
                   {isCreatingNew ? 'Create New Article' : `Editing: ${editingPost?.title}`}
                 </h3>
                 <button
                   type="button"
                   onClick={cancelEdit}
-                  className="text-xs text-slate-400 hover:text-white"
+                  className="text-xs text-muted hover:text-ink"
                 >
                   Cancel
                 </button>
@@ -176,27 +176,27 @@ export const BlogCmsModal: React.FC<BlogCmsModalProps> = ({
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs uppercase font-semibold text-slate-300 mb-1.5">
+                  <label htmlFor="blogcmsmodal-field-1" className="block text-xs uppercase font-semibold text-muted mb-1.5">
                     Article Title *
                   </label>
-                  <input
+                  <input id="blogcmsmodal-field-1"
                     type="text"
                     required
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                     placeholder="e.g. How Remita Payroll Speeds Up Personal Loan Approvals"
-                    className="w-full px-4 py-2.5 rounded-xl bg-black/40 border border-white/10 text-white text-sm focus:outline-none focus:border-[#00e575]"
+                    className="w-full px-4 py-2.5 rounded-xl bg-subtle border border-rule text-ink text-sm focus:outline-none focus:border-brand"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs uppercase font-semibold text-slate-300 mb-1.5">
+                  <label htmlFor="blogcmsmodal-field-2" className="block text-xs uppercase font-semibold text-muted mb-1.5">
                     Category *
                   </label>
-                  <select
+                  <select id="blogcmsmodal-field-2"
                     value={category}
                     onChange={(e) => setCategory(e.target.value as any)}
-                    className="w-full px-4 py-2.5 rounded-xl bg-black/40 border border-white/10 text-white text-sm focus:outline-none focus:border-[#00e575] cursor-pointer"
+                    className="w-full px-4 py-2.5 rounded-xl bg-subtle border border-rule text-ink text-sm focus:outline-none focus:border-brand cursor-pointer"
                   >
                     <option value="Fintech & Credit">Fintech &amp; Credit</option>
                     <option value="SME Growth">SME Growth</option>
@@ -209,53 +209,53 @@ export const BlogCmsModal: React.FC<BlogCmsModalProps> = ({
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div>
-                  <label className="block text-xs uppercase font-semibold text-slate-300 mb-1.5">
+                  <label htmlFor="blogcmsmodal-field-3" className="block text-xs uppercase font-semibold text-muted mb-1.5">
                     Author Name
                   </label>
-                  <input
+                  <input id="blogcmsmodal-field-3"
                     type="text"
                     value={author}
                     onChange={(e) => setAuthor(e.target.value)}
-                    className="w-full px-4 py-2 rounded-xl bg-black/40 border border-white/10 text-white text-xs"
+                    className="w-full px-4 py-2 rounded-xl bg-subtle border border-rule text-ink text-xs"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs uppercase font-semibold text-slate-300 mb-1.5">
+                  <label htmlFor="blogcmsmodal-field-4" className="block text-xs uppercase font-semibold text-muted mb-1.5">
                     Author Designation
                   </label>
-                  <input
+                  <input id="blogcmsmodal-field-4"
                     type="text"
                     value={authorRole}
                     onChange={(e) => setAuthorRole(e.target.value)}
-                    className="w-full px-4 py-2 rounded-xl bg-black/40 border border-white/10 text-white text-xs"
+                    className="w-full px-4 py-2 rounded-xl bg-subtle border border-rule text-ink text-xs"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs uppercase font-semibold text-slate-300 mb-1.5">
+                  <label htmlFor="blogcmsmodal-field-5" className="block text-xs uppercase font-semibold text-muted mb-1.5">
                     Read Time (e.g. 4 min read)
                   </label>
-                  <input
+                  <input id="blogcmsmodal-field-5"
                     type="text"
                     value={readTime}
                     onChange={(e) => setReadTime(e.target.value)}
-                    className="w-full px-4 py-2 rounded-xl bg-black/40 border border-white/10 text-white text-xs"
+                    className="w-full px-4 py-2 rounded-xl bg-subtle border border-rule text-ink text-xs"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs uppercase font-semibold text-slate-300 mb-1.5">
+                <label htmlFor="blogcmsmodal-field-6" className="block text-xs uppercase font-semibold text-muted mb-1.5">
                   Cover Image URL
                 </label>
                 <div className="flex gap-2">
-                  <input
+                  <input id="blogcmsmodal-field-6"
                     type="text"
                     value={image}
                     onChange={(e) => setImage(e.target.value)}
                     placeholder="./assets/nexus/naira_1000_stacks.jpg"
-                    className="w-full px-4 py-2 rounded-xl bg-black/40 border border-white/10 text-white text-xs font-mono"
+                    className="w-full px-4 py-2 rounded-xl bg-subtle border border-rule text-ink text-xs font-mono"
                   />
                   <div className="flex gap-1">
                     {[
@@ -269,7 +269,7 @@ export const BlogCmsModal: React.FC<BlogCmsModalProps> = ({
                         key={preset.label}
                         type="button"
                         onClick={() => setImage(preset.path)}
-                        className="px-2 py-1 rounded-lg bg-white/5 hover:bg-white/15 text-[11px] text-slate-300"
+                        className="px-2 py-1 rounded-lg bg-subtle hover:bg-subtle text-[11px] text-muted"
                       >
                         {preset.label}
                       </button>
@@ -279,46 +279,46 @@ export const BlogCmsModal: React.FC<BlogCmsModalProps> = ({
               </div>
 
               <div>
-                <label className="block text-xs uppercase font-semibold text-slate-300 mb-1.5">
+                <label htmlFor="blogcmsmodal-field-7" className="block text-xs uppercase font-semibold text-muted mb-1.5">
                   Short Summary / Excerpt *
                 </label>
-                <textarea
+                <textarea id="blogcmsmodal-field-7"
                   rows={2}
                   required
                   value={excerpt}
                   onChange={(e) => setExcerpt(e.target.value)}
                   placeholder="A concise 1-2 sentence preview for the card..."
-                  className="w-full px-4 py-2.5 rounded-xl bg-black/40 border border-white/10 text-white text-xs focus:outline-none focus:border-[#00e575] resize-none"
+                  className="w-full px-4 py-2.5 rounded-xl bg-subtle border border-rule text-ink text-xs focus:outline-none focus:border-brand resize-none"
                 />
               </div>
 
               <div>
-                <label className="block text-xs uppercase font-semibold text-slate-300 mb-1.5">
+                <label htmlFor="blogcmsmodal-field-8" className="block text-xs uppercase font-semibold text-muted mb-1.5">
                   Full Article Body (Markdown / Plain Text) *
                 </label>
-                <textarea
+                <textarea id="blogcmsmodal-field-8"
                   rows={8}
                   required
                   value={content}
                   onChange={(e) => setContent(e.target.value)}
                   placeholder="Write the full comprehensive article body here..."
-                  className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white text-xs leading-relaxed focus:outline-none focus:border-[#00e575] font-sans"
+                  className="w-full px-4 py-3 rounded-xl bg-subtle border border-rule text-ink text-xs leading-relaxed focus:outline-none focus:border-brand font-sans"
                 />
               </div>
 
-              <div className="flex justify-end gap-3 pt-3 border-t border-white/10">
+              <div className="flex justify-end gap-3 pt-3 border-t border-rule">
                 <button
                   type="button"
                   onClick={cancelEdit}
-                  className="px-5 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-white text-xs font-semibold cursor-pointer"
+                  className="px-5 py-2.5 rounded-xl bg-subtle hover:bg-subtle text-ink text-xs font-semibold cursor-pointer"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  className="px-6 py-2.5 rounded-xl bg-[#00e575] hover:bg-[#15f38a] text-black text-xs font-bold transition-all shadow-md cursor-pointer flex items-center gap-1.5"
+                  className="px-6 py-2.5 rounded-xl bg-action hover:bg-action-hover text-on-action text-xs font-semibold transition-all shadow-sm cursor-pointer flex items-center gap-1.5"
                 >
-                  <Check className="w-4 h-4" weight="bold" />
+                  <Check className="w-4 h-4" weight="regular" />
                   <span>{isCreatingNew ? 'Publish Article' : 'Save Changes'}</span>
                 </button>
               </div>
@@ -328,14 +328,14 @@ export const BlogCmsModal: React.FC<BlogCmsModalProps> = ({
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="text-base font-bold text-white">All Published Articles ({posts.length})</h3>
-                  <p className="text-xs text-slate-400">Manage or publish news, loan tutorials, and announcements</p>
+                  <h3 className="text-base font-semibold text-ink">All Published Articles ({posts.length})</h3>
+                  <p className="text-xs text-muted">Manage or publish news, loan tutorials, and announcements</p>
                 </div>
                 <button
                   onClick={startCreate}
-                  className="px-4 py-2 rounded-xl bg-[#00e575] hover:bg-[#15f38a] text-black text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer shadow-md"
+                  className="px-4 py-2 rounded-xl bg-action hover:bg-action-hover text-on-action text-xs font-semibold transition-all flex items-center gap-1.5 cursor-pointer shadow-sm"
                 >
-                  <Plus className="w-4 h-4" weight="bold" />
+                  <Plus className="w-4 h-4" weight="regular" />
                   <span>New Article</span>
                 </button>
               </div>
@@ -344,38 +344,38 @@ export const BlogCmsModal: React.FC<BlogCmsModalProps> = ({
                 {posts.map((post) => (
                   <div
                     key={post.id}
-                    className="p-4 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-white/20 transition-all flex items-center justify-between gap-4"
+                    className="p-4 rounded-xl bg-subtle border border-rule hover:border-rule transition-all flex items-center justify-between gap-4"
                   >
                     <div className="flex items-center gap-3.5 min-w-0">
                       <img
                         src={post.image}
                         alt={post.title}
-                        className="w-14 h-14 rounded-xl object-cover shrink-0 border border-white/10"
+                        className="w-14 h-14 rounded-xl object-cover shrink-0 border border-rule"
                       />
                       <div className="min-w-0">
                         <div className="flex items-center gap-2 mb-1">
-                          <span className="text-[10px] font-semibold text-[#00e575] uppercase tracking-wider">
+                          <span className="text-[10px] font-semibold text-brand uppercase tracking-wider">
                             {post.category}
                           </span>
-                          <span className="text-[10px] text-slate-500">&middot;</span>
-                          <span className="text-[10px] text-slate-400">{post.date}</span>
+                          <span className="text-[10px] text-muted">&middot;</span>
+                          <span className="text-[10px] text-muted">{post.date}</span>
                         </div>
-                        <h4 className="text-sm font-bold text-white truncate max-w-lg">{post.title}</h4>
-                        <p className="text-xs text-slate-400 truncate max-w-xl">{post.excerpt}</p>
+                        <h4 className="text-sm font-semibold text-ink truncate max-w-lg">{post.title}</h4>
+                        <p className="text-xs text-muted truncate max-w-xl">{post.excerpt}</p>
                       </div>
                     </div>
 
                     <div className="flex items-center gap-2 shrink-0">
                       <button
                         onClick={() => startEdit(post)}
-                        className="p-2 rounded-xl bg-white/5 hover:bg-white/15 text-slate-300 hover:text-white transition-colors cursor-pointer"
+                        className="p-2 rounded-xl bg-subtle hover:bg-subtle text-muted hover:text-ink transition-colors cursor-pointer"
                         title="Edit article"
                       >
                         <PencilSimple className="w-4 h-4" />
                       </button>
                       <button
                         onClick={() => handleDelete(post.id)}
-                        className="p-2 rounded-xl bg-red-500/10 hover:bg-red-500/20 text-red-400 hover:text-red-300 transition-colors cursor-pointer"
+                        className="p-2 rounded-xl bg-danger-soft hover:bg-danger-soft text-danger hover:text-danger transition-colors cursor-pointer"
                         title="Delete article"
                       >
                         <Trash className="w-4 h-4" />

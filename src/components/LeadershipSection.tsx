@@ -58,17 +58,17 @@ export const LeadershipSection: React.FC = () => {
   const currentLeader = LEADERSHIP_TEAM[selectedLeaderIndex];
 
   return (
-    <section id="leadership" className="py-24 bg-[#07090e] border-t border-white/5 relative font-body">
+    <section id="leadership" className="py-24 bg-canvas border-t border-rule relative font-body">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-5 text-balance font-display">
-            Led by veterans of <span className="text-gradient-emerald">Tier-1 banking.</span>
+          <h2 className="nx-section-title text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-ink mb-5 text-balance font-display">
+            Led by veterans of <span className="text-brand">Tier-1 banking.</span>
           </h2>
-          <p className="text-base sm:text-lg text-slate-300 font-sans">
+          <p className="text-base sm:text-lg text-muted font-sans">
             Our multidisciplinary executive team brings decades of institutional excellence from FCMB, GTBank, Fidelity Bank, Access Bank, LAPO, and national defence technology architectures.
           </p>
-          <div className="mt-3 text-xs text-slate-400 font-sans">
+          <div className="mt-3 text-xs text-muted font-sans">
             Click any executive card below to view their comprehensive institutional dossier, full career trajectory, and credentials.
           </div>
         </div>
@@ -79,14 +79,14 @@ export const LeadershipSection: React.FC = () => {
             <div
               key={idx}
               onClick={() => handleOpenDossier(leader)}
-              className="group rounded-3xl bg-gradient-to-br from-[#0e1320] via-[#090d16] to-[#07090e] border border-white/10 hover:border-emerald-500/50 transition-all duration-300 p-5 flex flex-col justify-between cursor-pointer hover:shadow-2xl hover:shadow-emerald-950/30 hover:-translate-y-1 relative overflow-hidden"
+              className="group rounded-xl bg-gradient-to-br from-surface via-surface to-surface border border-rule hover:border-brand/25 transition-all duration-300 p-5 flex flex-col justify-between cursor-pointer hover:shadow-sm hover:-translate-y-1 relative overflow-hidden"
             >
               {/* Top ambient glow */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-full blur-2xl group-hover:bg-emerald-500/10 transition-colors pointer-events-none" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-accent-soft rounded-full blur-2xl group-hover:bg-accent-soft transition-colors pointer-events-none" />
 
               <div>
                 {/* Fuller, Taller Executive Portrait */}
-                <div className="relative aspect-[3/4] min-h-[360px] sm:min-h-[400px] w-full rounded-2xl overflow-hidden mb-5 border border-white/10 bg-slate-900 group-hover:border-emerald-500/40 transition-colors">
+                <div className="relative aspect-[3/4] min-h-[360px] sm:min-h-[400px] w-full rounded-xl overflow-hidden mb-5 border border-rule bg-subtle group-hover:border-brand/25 transition-colors">
                   {leader.image ? (
                     <img
                       src={leader.image}
@@ -95,11 +95,11 @@ export const LeadershipSection: React.FC = () => {
                       referrerPolicy="no-referrer"
                     />
                   ) : (
-                    <div className="w-full h-full flex flex-col items-center justify-center bg-[#121829] text-center p-6">
-                      <div className="w-20 h-20 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-[#00e575] mb-4">
+                    <div className="w-full h-full flex flex-col items-center justify-center bg-surface text-center p-6">
+                      <div className="w-20 h-20 rounded-full bg-accent-soft border border-brand/25 flex items-center justify-center text-brand mb-4">
                         <User className="w-10 h-10" />
                       </div>
-                      <span className="text-white font-bold font-display text-lg">{leader.name}</span>
+                      <span className="text-ink font-semibold font-display text-lg">{leader.name}</span>
                     </div>
                   )}
 
@@ -108,30 +108,30 @@ export const LeadershipSection: React.FC = () => {
 
                   {/* Role Badge in bottom left */}
                   <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between pointer-events-none">
-                    <span className="text-[11px] font-semibold tracking-wider uppercase px-2.5 py-1 rounded-md bg-black/80 backdrop-blur-md text-[#00e575] border border-white/10">
+                    <span className="text-[11px] font-semibold tracking-wider uppercase px-2.5 py-1 rounded-md nx-image-badge bg-black/80 backdrop-blur-md text-brand border border-rule">
                       {leader.role}
                     </span>
-                    <span className="text-[11px] font-medium text-slate-300 bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md flex items-center gap-1">
-                      <ShieldCheck className="w-3 h-3 text-[#00e575]" />
+                    <span className="text-[11px] font-medium text-muted nx-image-badge bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md flex items-center gap-1">
+                      <ShieldCheck className="w-3 h-3 text-brand" />
                       Executive
                     </span>
                   </div>
                 </div>
 
                 {/* Name & Department */}
-                <h3 className="text-xl sm:text-2xl font-bold text-white font-display mb-1 group-hover:text-[#00e575] transition-colors">
+                <h3 className="text-xl sm:text-2xl font-semibold text-ink font-display mb-1 group-hover:text-brand transition-colors">
                   {leader.name}
                 </h3>
-                <div className="text-xs text-slate-400 font-sans mb-3">
+                <div className="text-xs text-muted font-sans mb-3">
                   {leader.department || leader.role}
                 </div>
 
                 {/* Prior Institutional background pill */}
-                <div className="p-3 rounded-xl bg-white/[0.03] border border-white/5 mb-4 text-xs">
-                  <span className="text-slate-400 block text-[10px] uppercase font-bold tracking-wider mb-1">
+                <div className="p-3 rounded-xl bg-subtle border border-rule mb-4 text-xs">
+                  <span className="text-muted block text-[10px] uppercase font-semibold tracking-wider mb-1">
                     Institutional Pedigree
                   </span>
-                  <p className="text-slate-200 font-medium leading-relaxed">
+                  <p className="text-ink font-medium leading-relaxed">
                     {leader.formerBackground}
                   </p>
                 </div>
@@ -144,35 +144,35 @@ export const LeadershipSection: React.FC = () => {
                   e.stopPropagation();
                   handleOpenDossier(leader);
                 }}
-                className="w-full py-3 px-4 rounded-xl bg-white/[0.06] group-hover:bg-[#00e575] group-hover:text-black text-white border border-white/10 group-hover:border-[#00e575] text-xs font-semibold flex items-center justify-center gap-2 transition-all duration-200 cursor-pointer"
+                className="w-full py-3 px-4 rounded-xl bg-subtle group-hover:bg-action group-hover:text-on-action text-ink border border-rule group-hover:border-brand text-xs font-semibold flex items-center justify-center gap-2 transition-all duration-200 cursor-pointer"
               >
                 <span>View Full Executive Dossier</span>
-                <ArrowUpRight className="w-3.5 h-3.5" weight="bold" />
+                <ArrowUpRight className="w-3.5 h-3.5" weight="regular" />
               </button>
             </div>
           ))}
         </div>
 
         {/* Corporate Trust Strip */}
-        <div className="p-6 rounded-3xl bg-white/[0.02] border border-white/10 grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-slate-300 font-sans">
+        <div className="p-6 rounded-xl bg-subtle border border-rule grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-muted font-sans">
           <div className="flex items-start gap-3">
-            <CheckCircle className="w-5 h-5 text-[#00e575] shrink-0" weight="bold" />
+            <CheckCircle className="w-5 h-5 text-brand shrink-0" weight="regular" />
             <div>
-              <span className="font-semibold text-white block mb-0.5">Statutory Governance</span>
+              <span className="font-semibold text-ink block mb-0.5">Statutory Governance</span>
               Licensed by National Cooperative Societies, National Cooperative Financing Agency &amp; Abuja Cooperative Federation.
             </div>
           </div>
           <div className="flex items-start gap-3">
-            <CheckCircle className="w-5 h-5 text-[#00e575] shrink-0" weight="bold" />
+            <CheckCircle className="w-5 h-5 text-brand shrink-0" weight="regular" />
             <div>
-              <span className="font-semibold text-white block mb-0.5">Zero Bureaucratic Bottlenecks</span>
+              <span className="font-semibold text-ink block mb-0.5">Zero Bureaucratic Bottlenecks</span>
               Automated algorithmic credit risk screening combined with seasoned institutional credit underwriters.
             </div>
           </div>
           <div className="flex items-start gap-3">
-            <CheckCircle className="w-5 h-5 text-[#00e575] shrink-0" weight="bold" />
+            <CheckCircle className="w-5 h-5 text-brand shrink-0" weight="regular" />
             <div>
-              <span className="font-semibold text-white block mb-0.5">Physical HQ in Capital</span>
+              <span className="font-semibold text-ink block mb-0.5">Physical HQ in Capital</span>
               Operating out of 2nd Floor, Right Wing, NICON Insurance Building, Central Business District (CBD), Abuja.
             </div>
           </div>
@@ -189,14 +189,14 @@ export const LeadershipSection: React.FC = () => {
             onClick={() => setModalLeader(null)}
           >
             <div
-              className="relative w-full max-w-4xl max-h-[90vh] my-auto flex flex-col bg-gradient-to-b from-[#0f1422] to-[#080b12] border border-white/20 rounded-3xl shadow-2xl text-left font-sans overflow-hidden"
+              className="relative w-full max-w-4xl max-h-[90vh] my-auto flex flex-col bg-gradient-to-b from-surface to-surface border border-rule rounded-xl shadow-sm text-left font-sans overflow-hidden"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Modal Header controls (Pinned top bar) */}
-              <div className="flex items-center justify-between p-5 sm:p-6 border-b border-white/10 shrink-0 bg-[#0f1422]/95 backdrop-blur-md">
+              <div className="flex items-center justify-between p-5 sm:p-6 border-b border-rule shrink-0 bg-surface backdrop-blur-md">
                 <div className="flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#00e575] animate-pulse" />
-                  <span className="text-xs font-bold uppercase tracking-widest text-[#00e575]">
+                  <span className="w-2.5 h-2.5 rounded-full bg-action" />
+                  <span className="text-xs font-semibold uppercase tracking-widest text-brand">
                     Executive Profile &amp; Credentials Dossier
                   </span>
                 </div>
@@ -205,7 +205,7 @@ export const LeadershipSection: React.FC = () => {
                     type="button"
                     onClick={handlePrevInModal}
                     aria-label="Previous profile"
-                    className="p-2 rounded-xl bg-white/[0.05] hover:bg-white/[0.1] text-slate-300 hover:text-white border border-white/10 transition-colors cursor-pointer"
+                    className="p-2 rounded-xl bg-subtle hover:bg-subtle text-muted hover:text-ink border border-rule transition-colors cursor-pointer"
                   >
                     <CaretLeft className="w-4 h-4" />
                   </button>
@@ -213,7 +213,7 @@ export const LeadershipSection: React.FC = () => {
                     type="button"
                     onClick={handleNextInModal}
                     aria-label="Next profile"
-                    className="p-2 rounded-xl bg-white/[0.05] hover:bg-white/[0.1] text-slate-300 hover:text-white border border-white/10 transition-colors cursor-pointer"
+                    className="p-2 rounded-xl bg-subtle hover:bg-subtle text-muted hover:text-ink border border-rule transition-colors cursor-pointer"
                   >
                     <CaretRight className="w-4 h-4" />
                   </button>
@@ -221,7 +221,7 @@ export const LeadershipSection: React.FC = () => {
                     type="button"
                     onClick={() => setModalLeader(null)}
                     aria-label="Close dossier modal"
-                    className="p-2 rounded-xl bg-white/[0.05] hover:bg-white/[0.15] text-slate-300 hover:text-white border border-white/10 transition-colors ml-2 cursor-pointer"
+                    className="p-2 rounded-xl bg-subtle hover:bg-subtle text-muted hover:text-ink border border-rule transition-colors ml-2 cursor-pointer"
                   >
                     <X className="w-4 h-4" />
                   </button>
@@ -233,7 +233,7 @@ export const LeadershipSection: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
                   {/* Col 1: Executive Portrait */}
                   <div className="md:col-span-5 flex flex-col items-center">
-                    <div className="relative aspect-[3/4] h-72 sm:h-80 md:h-[360px] w-full max-w-sm rounded-2xl overflow-hidden border border-white/20 bg-slate-900 shadow-2xl mb-4">
+                    <div className="relative aspect-[3/4] h-72 sm:h-80 md:h-[360px] w-full max-w-sm rounded-xl overflow-hidden border border-rule bg-subtle shadow-sm mb-4">
                       {modalLeader.image ? (
                         <img
                           src={modalLeader.image}
@@ -242,41 +242,41 @@ export const LeadershipSection: React.FC = () => {
                           referrerPolicy="no-referrer"
                         />
                       ) : (
-                        <div className="w-full h-full flex items-center justify-center bg-slate-900 text-[#00e575]">
+                        <div className="w-full h-full flex items-center justify-center bg-subtle text-brand">
                           <User className="w-16 h-16" />
                         </div>
                       )}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent pointer-events-none" />
                       <div className="absolute bottom-4 left-4 right-4">
-                        <span className="text-xs font-bold uppercase tracking-wider text-[#00e575] bg-black/80 px-2.5 py-1 rounded-md border border-white/10">
+                        <span className="text-xs font-semibold uppercase tracking-wider text-brand nx-image-badge bg-black/80 px-2.5 py-1 rounded-md border border-rule">
                           {modalLeader.role}
                         </span>
-                        <h3 className="text-2xl font-black text-white font-display mt-2">
+                        <h3 className="text-2xl font-semibold text-ink font-display mt-2">
                           {modalLeader.name}
                         </h3>
                       </div>
                     </div>
 
                     {/* Prior Institution Card */}
-                    <div className="w-full p-4 rounded-2xl bg-white/[0.03] border border-white/10 text-xs">
-                      <div className="flex items-center gap-2 text-slate-400 font-semibold mb-1 text-[11px] uppercase tracking-wider">
-                        <Buildings className="w-4 h-4 text-[#00e575]" />
+                    <div className="w-full p-4 rounded-xl bg-subtle border border-rule text-xs">
+                      <div className="flex items-center gap-2 text-muted font-semibold mb-1 text-[11px] uppercase tracking-wider">
+                        <Buildings className="w-4 h-4 text-brand" />
                         <span>Prior Institutional Pedigree</span>
                       </div>
-                      <p className="text-slate-200 font-medium">
+                      <p className="text-ink font-medium">
                         {modalLeader.formerBackground}
                       </p>
                     </div>
                   </div>
 
                   {/* Col 2: Unabridged Biography & Comprehensive Credentials */}
-                  <div className="md:col-span-7 space-y-6 text-slate-200 text-sm">
+                  <div className="md:col-span-7 space-y-6 text-ink text-sm">
                     {/* Full Biography */}
                     <div>
-                      <h4 className="text-xs uppercase font-bold tracking-widest text-[#00e575] mb-2 flex items-center gap-2">
+                      <h4 className="text-xs uppercase font-semibold tracking-widest text-brand mb-2 flex items-center gap-2">
                         <span>Executive Biography &amp; Track Record</span>
                       </h4>
-                      <p className="text-slate-300 leading-relaxed text-sm sm:text-base font-normal">
+                      <p className="text-muted leading-relaxed text-sm sm:text-base font-normal">
                         {modalLeader.fullBio || modalLeader.bio}
                       </p>
                     </div>
@@ -284,14 +284,14 @@ export const LeadershipSection: React.FC = () => {
                     {/* Education & Academic Credentials */}
                     {modalLeader.education && modalLeader.education.length > 0 && (
                       <div>
-                        <h4 className="text-xs uppercase font-bold tracking-widest text-[#00e575] mb-2.5 flex items-center gap-2">
-                          <GraduationCap className="w-4 h-4 text-[#00e575]" />
+                        <h4 className="text-xs uppercase font-semibold tracking-widest text-brand mb-2.5 flex items-center gap-2">
+                          <GraduationCap className="w-4 h-4 text-brand" />
                           <span>Academic Background &amp; Universities</span>
                         </h4>
                         <ul className="space-y-1.5">
                           {modalLeader.education.map((edu, eIdx) => (
-                            <li key={eIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
-                              <CheckCircle className="w-4 h-4 text-[#00e575] shrink-0 mt-0.5" />
+                            <li key={eIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-muted">
+                              <CheckCircle className="w-4 h-4 text-brand shrink-0 mt-0.5" />
                               <span>{edu}</span>
                             </li>
                           ))}
@@ -302,14 +302,14 @@ export const LeadershipSection: React.FC = () => {
                     {/* Career Milestones */}
                     {modalLeader.careerHighlights && modalLeader.careerHighlights.length > 0 && (
                       <div>
-                        <h4 className="text-xs uppercase font-bold tracking-widest text-[#00e575] mb-2.5 flex items-center gap-2">
-                          <Medal className="w-4 h-4 text-[#00e575]" />
+                        <h4 className="text-xs uppercase font-semibold tracking-widest text-brand mb-2.5 flex items-center gap-2">
+                          <Medal className="w-4 h-4 text-brand" />
                           <span>Key Career Achievements &amp; Milestones</span>
                         </h4>
                         <ul className="space-y-1.5">
                           {modalLeader.careerHighlights.map((hl, hIdx) => (
-                            <li key={hIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
-                              <CheckCircle className="w-4 h-4 text-[#00e575] shrink-0 mt-0.5" />
+                            <li key={hIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-muted">
+                              <CheckCircle className="w-4 h-4 text-brand shrink-0 mt-0.5" />
                               <span>{hl}</span>
                             </li>
                           ))}
@@ -320,14 +320,14 @@ export const LeadershipSection: React.FC = () => {
                     {/* Core Responsibilities at Nexus */}
                     {modalLeader.coreResponsibilities && modalLeader.coreResponsibilities.length > 0 && (
                       <div>
-                        <h4 className="text-xs uppercase font-bold tracking-widest text-[#00e575] mb-2.5 flex items-center gap-2">
-                          <Briefcase className="w-4 h-4 text-[#00e575]" />
+                        <h4 className="text-xs uppercase font-semibold tracking-widest text-brand mb-2.5 flex items-center gap-2">
+                          <Briefcase className="w-4 h-4 text-brand" />
                           <span>Nexus Finance Mandate &amp; Strategic Oversight</span>
                         </h4>
                         <ul className="space-y-1.5">
                           {modalLeader.coreResponsibilities.map((resp, rIdx) => (
-                            <li key={rIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
-                              <CheckCircle className="w-4 h-4 text-[#00e575] shrink-0 mt-0.5" />
+                            <li key={rIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-muted">
+                              <CheckCircle className="w-4 h-4 text-brand shrink-0 mt-0.5" />
                               <span>{resp}</span>
                             </li>
                           ))}
@@ -337,15 +337,15 @@ export const LeadershipSection: React.FC = () => {
 
                     {/* Certifications & Fellowships */}
                     <div>
-                      <h4 className="text-xs uppercase font-bold tracking-widest text-[#00e575] mb-2.5 flex items-center gap-2">
-                        <ShieldCheck className="w-4 h-4 text-[#00e575]" />
+                      <h4 className="text-xs uppercase font-semibold tracking-widest text-brand mb-2.5 flex items-center gap-2">
+                        <ShieldCheck className="w-4 h-4 text-brand" />
                         <span>Chartered Certifications &amp; Professional Fellowships</span>
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {modalLeader.certifications.map((cert, cIdx) => (
                           <span
                             key={cIdx}
-                            className="text-xs px-3 py-1.5 rounded-lg bg-white/[0.05] border border-white/10 text-slate-200 font-medium"
+                            className="text-xs px-3 py-1.5 rounded-lg bg-subtle border border-rule text-ink font-medium"
                           >
                             {cert}
                           </span>
@@ -354,11 +354,11 @@ export const LeadershipSection: React.FC = () => {
                     </div>
 
                     {/* Close Button at bottom */}
-                    <div className="pt-4 border-t border-white/10 flex justify-end">
+                    <div className="pt-4 border-t border-rule flex justify-end">
                       <button
                         type="button"
                         onClick={() => setModalLeader(null)}
-                        className="px-6 py-2.5 rounded-xl bg-white text-black font-semibold text-xs hover:bg-[#00e575] transition-colors cursor-pointer"
+                        className="px-6 py-2.5 rounded-xl bg-surface text-ink font-semibold text-xs hover:bg-action transition-colors cursor-pointer"
                       >
                         Close Dossier
                       </button>

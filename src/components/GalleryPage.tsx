@@ -95,7 +95,7 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onNavigate, onOpenAppl
   const activeItem = slideshowIndex !== null ? filteredItems[slideshowIndex] : null;
 
   return (
-    <div className="pt-24 pb-20 bg-[#07090e] text-white font-sans min-h-screen">
+    <div className="pt-24 pb-20 bg-canvas text-ink font-sans min-h-screen">
       {/* FULLSCREEN SLIDESHOW MODAL */}
       {activeItem && slideshowIndex !== null && (
         <div
@@ -105,16 +105,16 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onNavigate, onOpenAppl
           onClick={() => setSlideshowIndex(null)}
         >
           <div
-            className="relative max-w-5xl w-full max-h-[92vh] flex flex-col bg-[#0b0f19] border border-white/20 rounded-3xl overflow-hidden shadow-2xl"
+            className="relative max-w-5xl w-full max-h-[92vh] flex flex-col bg-surface border border-rule rounded-xl overflow-hidden shadow-sm"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Top Toolbar */}
-            <div className="flex items-center justify-between p-4 sm:p-5 border-b border-white/10 bg-[#0b0f19]/90 shrink-0">
+            <div className="flex items-center justify-between p-4 sm:p-5 border-b border-rule bg-surface shrink-0">
               <div className="flex items-center gap-3">
-                <span className="text-xs uppercase font-bold text-[#00e575] bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/20">
+                <span className="text-xs uppercase font-semibold text-brand bg-accent-soft px-2.5 py-1 rounded-md border border-brand/25">
                   Folder: {activeItem.category}
                 </span>
-                <span className="text-xs text-slate-400 font-mono">
+                <span className="text-xs text-muted font-mono">
                   {slideshowIndex + 1} of {filteredItems.length}
                 </span>
               </div>
@@ -127,19 +127,19 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onNavigate, onOpenAppl
                   onClick={() => setIsPlaying(!isPlaying)}
                   className={`p-2 rounded-xl text-xs font-semibold flex items-center gap-1.5 border transition-colors cursor-pointer ${
                     isPlaying
-                      ? 'bg-emerald-500/20 text-[#00e575] border-[#00e575]/40'
-                      : 'bg-white/5 text-slate-400 border-white/10 hover:text-white'
+                      ? 'bg-accent-soft text-brand border-brand/25'
+                      : 'bg-subtle text-muted border-rule hover:text-ink'
                   }`}
                   title={isPlaying ? 'Pause Auto-Play' : 'Start Auto-Play'}
                 >
                   {isPlaying ? (
                     <>
-                      <Pause className="w-4 h-4" weight="bold" />
+                      <Pause className="w-4 h-4" weight="regular" />
                       <span className="hidden sm:inline">Auto-Playing (4.5s)</span>
                     </>
                   ) : (
                     <>
-                      <Play className="w-4 h-4" weight="bold" />
+                      <Play className="w-4 h-4" weight="regular" />
                       <span className="hidden sm:inline">Play Slideshow</span>
                     </>
                   )}
@@ -149,7 +149,7 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onNavigate, onOpenAppl
                 <button
                   type="button"
                   onClick={handlePrev}
-                  className="p-2 rounded-xl bg-white/5 hover:bg-white/15 text-slate-200 border border-white/10 transition-colors cursor-pointer"
+                  className="p-2 rounded-xl bg-subtle hover:bg-subtle text-ink border border-rule transition-colors cursor-pointer"
                   aria-label="Previous image"
                 >
                   <CaretLeft className="w-4 h-4" />
@@ -159,7 +159,7 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onNavigate, onOpenAppl
                 <button
                   type="button"
                   onClick={handleNext}
-                  className="p-2 rounded-xl bg-white/5 hover:bg-white/15 text-slate-200 border border-white/10 transition-colors cursor-pointer"
+                  className="p-2 rounded-xl bg-subtle hover:bg-subtle text-ink border border-rule transition-colors cursor-pointer"
                   aria-label="Next image"
                 >
                   <CaretRight className="w-4 h-4" />
@@ -169,7 +169,7 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onNavigate, onOpenAppl
                 <button
                   type="button"
                   onClick={() => setSlideshowIndex(null)}
-                  className="p-2 rounded-xl bg-white/5 hover:bg-white/15 text-slate-200 border border-white/10 transition-colors cursor-pointer ml-1"
+                  className="p-2 rounded-xl bg-subtle hover:bg-subtle text-ink border border-rule transition-colors cursor-pointer ml-1"
                   aria-label="Close slideshow"
                 >
                   <X className="w-4 h-4" />
@@ -178,7 +178,7 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onNavigate, onOpenAppl
             </div>
 
             {/* Slideshow Image Area */}
-            <div className="relative aspect-[16/10] sm:aspect-[16/9] w-full bg-black overflow-hidden flex items-center justify-center">
+            <div className="relative aspect-[16/10] sm:aspect-[16/9] w-full bg-canvas overflow-hidden flex items-center justify-center">
               <img
                 src={activeItem.image}
                 alt={activeItem.title}
@@ -189,7 +189,7 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onNavigate, onOpenAppl
               <button
                 type="button"
                 onClick={handlePrev}
-                className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/60 hover:bg-black/90 text-white border border-white/20 transition-all cursor-pointer opacity-75 hover:opacity-100 hover:scale-105"
+                className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-subtle hover:bg-accent-soft text-ink border border-rule transition-all cursor-pointer opacity-75 hover:opacity-100 hover:scale-105"
                 aria-label="Previous slide"
               >
                 <CaretLeft className="w-5 h-5" />
@@ -199,7 +199,7 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onNavigate, onOpenAppl
               <button
                 type="button"
                 onClick={handleNext}
-                className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/60 hover:bg-black/90 text-white border border-white/20 transition-all cursor-pointer opacity-75 hover:opacity-100 hover:scale-105"
+                className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-subtle hover:bg-accent-soft text-ink border border-rule transition-all cursor-pointer opacity-75 hover:opacity-100 hover:scale-105"
                 aria-label="Next slide"
               >
                 <CaretRight className="w-5 h-5" />
@@ -207,23 +207,23 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onNavigate, onOpenAppl
             </div>
 
             {/* Slideshow Metadata Footer */}
-            <div className="p-5 sm:p-6 bg-gradient-to-t from-[#080b12] to-[#0b0f19] space-y-2 shrink-0 border-t border-white/10">
+            <div className="p-5 sm:p-6 bg-gradient-to-t from-surface to-surface space-y-2 shrink-0 border-t border-rule">
               <div className="flex flex-wrap items-center justify-between gap-2">
-                <h3 className="text-lg sm:text-xl font-bold text-white font-display">
+                <h3 className="text-lg sm:text-xl font-semibold text-ink font-display">
                   {activeItem.title}
                 </h3>
-                <div className="flex items-center gap-2 text-xs text-slate-400">
-                  <Calendar className="w-3.5 h-3.5 text-[#00e575]" />
+                <div className="flex items-center gap-2 text-xs text-muted">
+                  <Calendar className="w-3.5 h-3.5 text-brand" />
                   <span>{activeItem.date}</span>
                 </div>
               </div>
 
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-3xl">
+              <p className="text-xs sm:text-sm text-muted leading-relaxed max-w-3xl">
                 {activeItem.description}
               </p>
 
-              <div className="pt-2 flex items-center gap-2 text-xs text-slate-400">
-                <MapPin className="w-4 h-4 text-[#00e575]" />
+              <div className="pt-2 flex items-center gap-2 text-xs text-muted">
+                <MapPin className="w-4 h-4 text-brand" />
                 <span>{activeItem.location}</span>
               </div>
             </div>
@@ -232,16 +232,16 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onNavigate, onOpenAppl
       )}
 
       {/* Hero Header */}
-      <div className="relative overflow-hidden py-14 sm:py-16 border-b border-white/10 bg-gradient-to-b from-[#0e1320] via-[#090d16] to-[#07090e]">
+      <div className="relative overflow-hidden py-14 sm:py-16 border-b border-rule bg-gradient-to-b from-surface via-surface to-surface">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <span className="text-xs uppercase tracking-widest text-[#00e575] font-bold">
+            <span className="text-xs uppercase tracking-widest text-brand font-semibold">
               Visual Archives &amp; Office Highlights
             </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white font-display mt-2 mb-4 leading-[1.1]">
-              Inside Nexus: Our <span className="text-gradient-emerald">Spaces &amp; Field Milestones.</span>
+            <h1 className="nx-page-title text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-ink font-display mt-2 mb-4 leading-[1.1]">
+              Inside Nexus: Our <span className="text-brand">Spaces &amp; Field Milestones.</span>
             </h1>
-            <p className="text-base text-slate-300 leading-relaxed font-sans">
+            <p className="text-base text-muted leading-relaxed font-sans">
               Explore our operations across 5 curated folders: Office Headquarters, CSR Community Drives, Store Marketing, Store Operations, and Executive Summits.
             </p>
           </div>
@@ -261,17 +261,17 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onNavigate, onOpenAppl
               <button
                 key={fld}
                 onClick={() => setActiveFolder(fld)}
-                className={`flex items-center gap-2 px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-semibold whitespace-nowrap transition-all cursor-pointer ${
+                className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition-all cursor-pointer ${
                   isSelected
-                    ? 'bg-[#00e575] text-black shadow-lg shadow-[#00e575]/20'
-                    : 'bg-white/[0.03] text-slate-300 hover:text-white border border-white/5 hover:border-white/15'
+                    ? 'bg-action text-on-action shadow-sm '
+                    : 'bg-subtle text-muted hover:text-ink border border-rule hover:border-rule'
                 }`}
               >
                 <FolderSimple className="w-4 h-4 shrink-0" weight={isSelected ? 'fill' : 'regular'} />
                 <span>{fld}</span>
                 <span
                   className={`text-[10px] px-2 py-0.2 rounded-full font-mono ${
-                    isSelected ? 'bg-black/20 text-black' : 'bg-white/10 text-slate-400'
+                    isSelected ? 'bg-subtle text-ink' : 'bg-subtle text-muted'
                   }`}
                 >
                   {count}
@@ -290,47 +290,47 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onNavigate, onOpenAppl
                 setSlideshowIndex(idx);
                 setIsPlaying(true);
               }}
-              className="group rounded-3xl bg-gradient-to-br from-[#0e1320] via-[#090d16] to-[#07090e] border border-white/10 hover:border-emerald-500/40 p-5 flex flex-col justify-between transition-all duration-300 cursor-pointer shadow-xl hover:-translate-y-1.5"
+              className="group rounded-xl bg-gradient-to-br from-surface via-surface to-surface border border-rule hover:border-brand/25 p-5 flex flex-col justify-between transition-all duration-300 cursor-pointer shadow-sm hover:-translate-y-1.5"
             >
               <div>
                 {/* Image Frame */}
-                <div className="relative aspect-[16/11] rounded-2xl overflow-hidden mb-4 bg-slate-900 border border-white/10">
+                <div className="relative aspect-[16/11] rounded-xl overflow-hidden mb-4 bg-subtle border border-rule">
                   <img
                     src={item.image}
                     alt={item.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute top-3 left-3 bg-black/80 backdrop-blur-md px-3 py-1 rounded-md text-[10px] font-bold text-[#00e575] border border-white/10 uppercase tracking-wider">
+                  <div className="absolute top-3 left-3 nx-image-badge bg-black/80 backdrop-blur-md px-3 py-1 rounded-md text-[10px] font-semibold text-brand border border-rule uppercase tracking-wider">
                     {item.category}
                   </div>
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <span className="px-4 py-2 rounded-full bg-[#00e575] text-black font-bold text-xs flex items-center gap-1.5 shadow-lg shadow-black/50">
-                      <Play className="w-3.5 h-3.5" weight="fill" />
+                  <div className="absolute inset-0 bg-subtle opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <span className="px-4 py-2 rounded-full bg-action text-on-action font-semibold text-xs flex items-center gap-1.5 shadow-sm">
+                      <Play className="w-3.5 h-3.5" weight="regular" />
                       <span>Open Slideshow</span>
                     </span>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2 text-xs text-slate-400 mb-2">
-                  <Calendar className="w-3.5 h-3.5 text-[#00e575]" />
+                <div className="flex items-center gap-2 text-xs text-muted mb-2">
+                  <Calendar className="w-3.5 h-3.5 text-brand" />
                   <span>{item.date}</span>
                 </div>
 
-                <h3 className="text-base sm:text-lg font-bold text-white font-display mb-2 group-hover:text-[#00e575] transition-colors leading-snug">
+                <h3 className="text-base sm:text-lg font-semibold text-ink font-display mb-2 group-hover:text-brand transition-colors leading-snug">
                   {item.title}
                 </h3>
 
-                <p className="text-xs text-slate-300 line-clamp-2 leading-relaxed mb-4">
+                <p className="text-xs text-muted line-clamp-2 leading-relaxed mb-4">
                   {item.description}
                 </p>
               </div>
 
-              <div className="pt-3 border-t border-white/10 flex items-center justify-between text-xs text-slate-400">
+              <div className="pt-3 border-t border-rule flex items-center justify-between text-xs text-muted">
                 <span className="flex items-center gap-1.5 truncate max-w-[200px]">
-                  <MapPin className="w-3.5 h-3.5 text-[#00e575] shrink-0" />
+                  <MapPin className="w-3.5 h-3.5 text-brand shrink-0" />
                   <span className="truncate">{item.location}</span>
                 </span>
-                <span className="text-[#00e575] font-semibold text-[11px] shrink-0">
+                <span className="text-brand font-semibold text-[11px] shrink-0">
                   View Full &rarr;
                 </span>
               </div>
@@ -339,12 +339,12 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onNavigate, onOpenAppl
         </div>
 
         {/* Bottom Banner */}
-        <div className="p-8 sm:p-10 rounded-3xl bg-neutral-900/90 border border-white/10 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="p-8 sm:p-10 rounded-xl bg-subtle border border-rule flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2">
-            <h3 className="text-2xl font-bold text-white font-display">
+            <h3 className="text-2xl font-semibold text-ink font-display">
               Schedule an in-person visit to our Abuja headquarters
             </h3>
-            <p className="text-sm text-slate-300 max-w-xl">
+            <p className="text-sm text-muted max-w-xl">
               2nd Floor, Right Wing, NICON Insurance Building, Central Business District, Abuja. Meet with our executive underwriting team in private consultation.
             </p>
           </div>
@@ -352,7 +352,7 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onNavigate, onOpenAppl
             href="https://maps.google.com/?q=NICON+Insurance+Building,+Central+Business+District,+Abuja,+Nigeria"
             target="_blank"
             rel="noreferrer"
-            className="px-6 py-3.5 rounded-full bg-[#00e575] hover:bg-[#15f38a] text-black font-bold text-xs uppercase tracking-wider transition-all shadow-lg shadow-[#00e575]/25 cursor-pointer shrink-0"
+            className="px-6 py-3.5 rounded-lg bg-action hover:bg-action-hover text-on-action font-semibold text-xs uppercase tracking-wider transition-all shadow-sm cursor-pointer shrink-0"
           >
             Locate on Google Maps
           </a>

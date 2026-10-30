@@ -55,36 +55,36 @@ export const ComparisonSection: React.FC = () => {
   ];
 
   return (
-    <section id="comparison" className="py-24 bg-[#07090e] border-t border-white/5 relative font-body io-reveal">
+    <section id="comparison" className="py-24 bg-canvas border-t border-rule relative font-body io-reveal">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-5 text-balance font-display">
+          <h2 className="nx-section-title text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-ink mb-5 text-balance font-display">
             Why Nigeria’s professionals <br />
-            <span className="text-gradient-emerald">choose Nexus Finance.</span>
+            <span className="text-brand">choose Nexus Finance.</span>
           </h2>
-          <p className="text-base sm:text-lg text-slate-300 font-sans">
+          <p className="text-base sm:text-lg text-muted font-sans">
             Compare our institutional transparency against traditional commercial banks and predatory lending apps.
           </p>
         </div>
 
         {/* Comparison Table */}
-        <div className="overflow-x-auto rounded-3xl border border-white/10 bg-gradient-to-b from-[#0c101a] to-[#07090e] shadow-2xl font-sans">
+        <div className="overflow-x-auto rounded-xl border border-rule bg-gradient-to-b from-surface to-surface shadow-sm font-sans">
           <table className="w-full text-left border-collapse min-w-[700px]">
             <thead>
-              <tr className="border-b border-white/10 bg-white/[0.02]">
-                <th className="py-6 px-6 text-xs font-semibold uppercase tracking-wider text-slate-400 w-1/4">
+              <tr className="border-b border-rule bg-subtle">
+                <th className="py-6 px-6 text-xs font-semibold uppercase tracking-wider text-muted w-1/4">
                   Feature / Benefit
                 </th>
-                <th className="py-6 px-6 text-xs uppercase tracking-wider text-[#00e575] bg-emerald-500/[0.06] border-x border-emerald-500/20 w-1/3">
+                <th className="py-6 px-6 text-xs uppercase tracking-wider text-brand bg-accent-soft border-x border-brand/25 w-1/3">
                   <div className="flex items-center gap-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#00e575]" />
-                    <span className="text-base font-bold text-white font-display">Nexus Finance</span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-action" />
+                    <span className="text-base font-semibold text-ink font-display">Nexus Finance</span>
                   </div>
                 </th>
-                <th className="py-6 px-6 text-xs uppercase tracking-wider text-slate-400 w-1/5 font-semibold">
+                <th className="py-6 px-6 text-xs uppercase tracking-wider text-muted w-1/5 font-semibold">
                   Commercial Banks
                 </th>
-                <th className="py-6 px-6 text-xs uppercase tracking-wider text-slate-400 w-1/5 font-semibold">
+                <th className="py-6 px-6 text-xs uppercase tracking-wider text-muted w-1/5 font-semibold">
                   Lending Apps
                 </th>
               </tr>
@@ -93,28 +93,28 @@ export const ComparisonSection: React.FC = () => {
               {comparisonRows.map((row, idx) => (
                 <tr
                   key={idx}
-                  className={`hover:bg-white/[0.02] transition-colors ${
-                    row.highlight ? 'bg-emerald-500/[0.02]' : ''
+                  className={`hover:bg-subtle transition-colors ${
+                    row.highlight ? 'bg-accent-soft' : ''
                   }`}
                 >
-                  <td className="py-5 px-6 font-semibold text-white">
+                  <td className="py-5 px-6 font-semibold text-ink">
                     {row.feature}
                   </td>
-                  <td className="py-5 px-6 text-[#00e575] font-semibold bg-emerald-500/[0.05] border-x border-emerald-500/20">
+                  <td className="py-5 px-6 text-brand font-semibold bg-accent-soft border-x border-brand/25">
                     <div className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-[#00e575] shrink-0" weight="bold" />
+                      <Check className="w-4 h-4 text-brand shrink-0" weight="regular" />
                       <span>{row.nexus}</span>
                     </div>
                   </td>
-                  <td className="py-5 px-6 text-slate-400">
+                  <td className="py-5 px-6 text-muted">
                     <div className="flex items-center gap-2">
-                      <X className="w-4 h-4 text-red-400/80 shrink-0" weight="bold" />
+                      <X className="w-4 h-4 text-danger shrink-0" weight="regular" />
                       <span>{row.banks}</span>
                     </div>
                   </td>
-                  <td className="py-5 px-6 text-slate-400">
+                  <td className="py-5 px-6 text-muted">
                     <div className="flex items-center gap-2">
-                      <X className="w-4 h-4 text-red-400/80 shrink-0" weight="bold" />
+                      <X className="w-4 h-4 text-danger shrink-0" weight="regular" />
                       <span>{row.apps}</span>
                     </div>
                   </td>

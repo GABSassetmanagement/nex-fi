@@ -10,14 +10,14 @@ export const FAQSection: React.FC = () => {
   };
 
   return (
-    <section id="faq" className="py-24 bg-[#07090e] border-t border-white/5 relative font-body io-reveal">
+    <section id="faq" className="py-24 bg-canvas border-t border-rule relative font-body io-reveal">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header - Banner removed */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-5 text-balance font-display">
-            Frequently asked <span className="text-gradient-emerald">questions.</span>
+          <h2 className="nx-section-title text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-ink mb-5 text-balance font-display">
+            Frequently asked <span className="text-brand">questions.</span>
           </h2>
-          <p className="text-base text-slate-300 font-sans">
+          <p className="text-base text-muted font-sans">
             Everything you need to know about our lending criteria, verification processes, and institutional operations.
           </p>
         </div>
@@ -28,24 +28,24 @@ export const FAQSection: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="rounded-2xl border border-white/10 bg-white/[0.02] hover:border-white/20 transition-all duration-200 overflow-hidden"
+                className="rounded-xl border border-rule bg-subtle hover:border-rule transition-all duration-200 overflow-hidden"
               >
                 <button
                   onClick={() => toggle(idx)}
                   className="w-full py-5 px-6 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-base font-semibold text-white font-sans">{faq.question}</span>
+                  <span className="text-base font-semibold text-ink font-sans">{faq.question}</span>
                   <div
-                    className={`w-7 h-7 rounded-full bg-white/5 flex items-center justify-center text-slate-300 transition-transform duration-200 shrink-0 ${
-                      isOpen ? 'rotate-180 text-[#00e575] bg-emerald-500/10' : ''
+                    className={`w-7 h-7 rounded-full bg-subtle flex items-center justify-center text-muted transition-transform duration-200 shrink-0 ${
+                      isOpen ? 'rotate-180 text-brand bg-accent-soft' : ''
                     }`}
                   >
                     <CaretDown className="w-4 h-4" />
                   </div>
                 </button>
                 {isOpen && (
-                  <div className="px-6 pb-6 text-sm text-slate-300 leading-relaxed border-t border-white/5 pt-4">
+                  <div className="px-6 pb-6 text-sm text-muted leading-relaxed border-t border-rule pt-4">
                     {faq.answer}
                   </div>
                 )}

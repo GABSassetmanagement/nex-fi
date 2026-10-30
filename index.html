@@ -3,6 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // Apply the theme before first paint to avoid a flash of the wrong palette.
+      try {
+        const savedTheme = localStorage.getItem('nexus-theme');
+        const theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.classList.add(theme);
+        document.documentElement.style.colorScheme = theme;
+      } catch { document.documentElement.classList.add('light'); }
+    </script>
     <title>Nexus Finance — Modern Banking &amp; Lending Solutions</title>
     <meta name="description" content="Next-generation financial services delivering fast, accessible loans, asset-backed liquidity, and high-yield wealth management across Nigeria." />
     <meta property="og:title" content="Nexus Finance — Modern Banking &amp; Lending Solutions" />
